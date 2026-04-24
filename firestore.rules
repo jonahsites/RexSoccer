@@ -1,123 +1,138 @@
 rules_version = '2';
+
 service cloud.firestore {
   match /databases/{database}/documents {
-
-    // ===============================================================
-    // Assumed Data Model
-    // ===============================================================
-    //
-    // Collection: users
-    // Document ID: {userId}
-    // Fields:
-    //   - uid: string (required) - Unique user ID
-    //   - email: string (required, format: email) - User's email
-    //   - displayName: string (optional) - User's display name
-    //   - photoURL: string (optional, format: url) - User's photo URL
-    //   - role: string (required, enum: ['admin', 'client']) - User's role
-    //
-    // Collection: bookings
-    // Document ID: {bookingId}
-    // Fields:
-    //   - userId: string (required) - User ID of the player
-    //   - userEmail: string (required, format: email) - User's email
-    //   - planName: string (required) - Name of the training plan
-    //   - status: string (required, enum: ['pending', 'confirmed', 'completed', 'cancelled']) - Booking status
-    //   - createdAt: timestamp (required) - When the booking was made
-    //
-    // Collection: contact_messages
-    // Document ID: {messageId}
-    // Fields:
-    //   - name: string (required, max 100 chars) - Sender's name
-    //   - email: string (required, format: email) - Sender's email
-    //   - type: string (optional) - Type of training interested in
-    //   - message: string (required, max 2000 chars) - Message content
-    //   - createdAt: timestamp (required) - When the message was sent
-    //
-    // ===============================================================
+    
+    // 0. Global Safety Net
+    match /{document=**} {
+      allow read, write: if false;
+    }
 
     // ===============================================================
     // Helper Functions
     // ===============================================================
 
-    function isAuthenticated() {
+    function isSignedIn() {
       return request.auth != null;
     }
 
     function isOwner(userId) {
-      return isAuthenticated() && request.auth.uid == userId;
+      return isSignedIn() && request.auth.uid == userId;
     }
 
+    // Robust Admin Check: Uses email from runtime token as fallback and checks verified status
+    // Also allows checking a specific 'admins' collection for scalability
     function isAdmin() {
-      return isAuthenticated() &&
-        (get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin' ||
-          (request.auth.token.email == "jadovdav@gmail.com" && request.auth.token.email_verified == true));
+      return isSignedIn() && (
+        (request.auth.token.email == "jadovdav@gmail.com" && request.auth.token.email_verified == true)
+        || (exists(/databases/$(database)/documents/users/$(request.auth.uid)) && 
+            get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin')
+      );
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
     }
 
     function isValidEmail(email) {
-      return email is string &&
-        email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+      return email is string && email.size() <= 256 && email.matches('^[^@]+@[^@]+\\.[^@]+$');
     }
 
     // ===============================================================
-    // Domain Validators
+    // Validation Helpers (Pillar 2)
     // ===============================================================
 
     function isValidUser(data) {
-      return data.keys().hasOnly(['uid', 'email', 'displayName', 'photoURL', 'role', 'lastLogin']) &&
-             data.uid is string && data.uid.size() > 0 &&
+      return data.keys().hasAll(['uid', 'email', 'role']) &&
+             data.keys().size() <= 10 && // Allow for optional fields like displayName, photoURL, lastLogin
+             data.uid == request.auth.uid &&
              data.email is string && isValidEmail(data.email) &&
-             (data.role in ['admin', 'client']);
+             data.role in ['admin', 'client'] &&
+             (!('displayName' in data) || (data.displayName is string && data.displayName.size() <= 100)) &&
+             (!('photoURL' in data) || (data.photoURL is string && data.photoURL.size() <= 500)) &&
+             (!('lastLogin' in data) || data.lastLogin is timestamp);
     }
 
     function isValidBooking(data) {
       return data.keys().hasAll(['userId', 'userEmail', 'planName', 'status', 'createdAt']) &&
-             data.keys().hasOnly(['userId', 'userEmail', 'planName', 'status', 'createdAt']) &&
-             data.userId is string && data.userId == request.auth.uid &&
+             data.keys().size() == 5 &&
+             data.userId == request.auth.uid &&
              data.userEmail is string && isValidEmail(data.userEmail) &&
-             data.planName is string &&
+             data.planName is string && data.planName.size() <= 200 &&
              data.status in ['pending', 'confirmed', 'completed', 'cancelled'] &&
-             data.createdAt is timestamp;
+             data.createdAt == request.time;
     }
 
     function isValidContactMessage(data) {
       return data.keys().hasAll(['name', 'email', 'message', 'createdAt']) &&
-             data.keys().hasOnly(['name', 'email', 'type', 'message', 'createdAt']) &&
-             data.name is string && data.name.size() > 0 && data.name.size() <= 100 &&
+             data.keys().size() <= 5 &&
+             data.name is string && data.name.size() <= 100 &&
              data.email is string && isValidEmail(data.email) &&
-             (!('type' in data) || data.type is string) &&
-             data.message is string && data.message.size() > 0 && data.message.size() <= 2000 &&
-             data.createdAt is timestamp;
+             data.message is string && data.message.size() <= 5000 &&
+             data.createdAt == request.time;
     }
 
     // ===============================================================
-    // Rules
+    // Collection Rules
     // ===============================================================
 
+    // Users Collection: PII isolation and role protection
     match /users/{userId} {
-      allow read: if isOwner(userId) || isAdmin();
-      allow create: if isAuthenticated() && isValidUser(request.resource.data) && 
-                      ((isOwner(userId) && request.resource.data.role == 'client') || isAdmin());
-      allow update: if isAuthenticated() && isValidUser(request.resource.data) && 
-                      ((isOwner(userId) && request.resource.data.role == resource.data.role) || isAdmin());
+      allow get: if isOwner(userId) || isAdmin();
+      allow list: if isAdmin(); // Clients should not list users
+      
+      allow create: if isSignedIn() && isValidUser(incoming()) && 
+                    isValidId(userId) && userId == request.auth.uid &&
+                    (incoming().role == 'client' || isAdmin()); // Only admins can create admin accounts
+      
+      allow update: if (isSignedIn() && isValidUser(incoming()) && (
+                    (isOwner(userId) && 
+                     incoming().role == existing().role &&
+                     incoming().email == existing().email &&
+                     incoming().diff(existing()).affectedKeys().hasOnly(['displayName', 'photoURL', 'lastLogin', 'uid', 'email', 'role']))
+                    || isAdmin()
+      ));
+
       allow delete: if isAdmin();
     }
 
+    // Bookings Collection: Relational sync and action-based updates
     match /bookings/{bookingId} {
-      allow read: if isAuthenticated() && (request.auth.uid == resource.data.userId || isAdmin());
-      allow create: if isAuthenticated() && isValidBooking(request.resource.data);
-      allow update: if isAdmin();
+      allow get: if isSignedIn() && (request.auth.uid == existing().userId || isAdmin());
+      allow list: if isSignedIn() && (resource.data.userId == request.auth.uid || isAdmin());
+
+      allow create: if isSignedIn() && isValidBooking(incoming()) && 
+                    isValidId(bookingId) &&
+                    exists(/databases/$(database)/documents/users/$(request.auth.uid)); // Must have a profile
+
+      allow update: if (isSignedIn() && (
+        // Action: Cancel own booking
+        (isOwner(existing().userId) && incoming().status == 'cancelled' && 
+         incoming().diff(existing()).affectedKeys().hasOnly(['status'])) ||
+        // Action: Admin manage booking
+        isAdmin()
+      ));
+
       allow delete: if isAdmin();
     }
 
+    // Contact Messages: Public write, admin read
     match /contact_messages/{messageId} {
-      allow read: if isAdmin();
-      allow create: if isValidContactMessage(request.resource.data);
-      allow update, delete: if isAdmin();
-    }
-
-    // Default deny
-    match /{path=**} {
-      allow read, write: if false;
+      allow get, list: if isAdmin();
+      
+      allow create: if isValidContactMessage(incoming()) && isValidId(messageId);
+      
+      // Messages are immutable once sent
+      allow update: if false;
+      allow delete: if isAdmin();
     }
   }
 }

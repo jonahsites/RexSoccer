@@ -1,11 +1,9 @@
-import React, { useState, useEffect, createContext, useContext, Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import { onAuthStateChanged, User } from 'firebase/auth';
-import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { Builder } from '@builder.io/react';
 
-// Import Firebase
-import { auth, db, loginWithGoogle, logout } from './firebase';
+// Import Firebase context
+import { FirebaseProvider } from './contexts/FirebaseContext';
 
 // Import Builder components
 import { Navbar } from './components/builder/Navbar';
@@ -22,86 +20,6 @@ import { PhotosPage } from './components/builder/PhotosPage';
 import { TeamPage } from './components/builder/TeamPage';
 import { VisionPage } from './components/builder/VisionPage';
 import { MerchPage } from './components/builder/MerchPage';
-
-// --- Context & Types ---
-interface FirebaseContextType {
-  user: User | null;
-  loading: boolean;
-  isAdmin: boolean;
-  login: () => Promise<void>;
-  logout: () => Promise<void>;
-}
-
-const FirebaseContext = createContext<FirebaseContextType | undefined>(undefined);
-
-export const FirebaseProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [isAdmin, setIsAdmin] = useState(false);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (user) => {
-      setUser(user);
-      if (user) {
-        // Check if user exists in Firestore, if not create profile
-        const userRef = doc(db, 'users', user.uid);
-        try {
-          await setDoc(userRef, {
-            uid: user.uid,
-            email: user.email,
-            displayName: user.displayName,
-            photoURL: user.photoURL,
-            role: user.email === "jadovdav@gmail.com" ? 'admin' : 'client',
-            lastLogin: serverTimestamp()
-          }, { merge: true });
-          
-          setIsAdmin(user.email === "jadovdav@gmail.com");
-        } catch (error) {
-          console.error("Error syncing user profile:", error);
-        }
-      } else {
-        setIsAdmin(false);
-      }
-      setLoading(false);
-    });
-
-    return () => unsubscribe();
-  }, []);
-
-  const login = async () => {
-    try {
-      await loginWithGoogle();
-    } catch (error: any) {
-      if (error.code === 'auth/popup-closed-by-user') {
-        console.log("Login popup closed by user.");
-        return;
-      }
-      console.error("Login failed:", error);
-    }
-  };
-
-  const handleLogout = async () => {
-    try {
-      await logout();
-    } catch (error) {
-      console.error("Logout failed:", error);
-    }
-  };
-
-  return (
-    <FirebaseContext.Provider value={{ user, loading, isAdmin, login, logout: handleLogout }}>
-      {children}
-    </FirebaseContext.Provider>
-  );
-};
-
-export const useFirebase = () => {
-  const context = useContext(FirebaseContext);
-  if (context === undefined) {
-    throw new Error('useFirebase must be used within a FirebaseProvider');
-  }
-  return context;
-};
 
 // --- Error Boundary ---
 interface ErrorBoundaryProps {
@@ -141,8 +59,8 @@ function App() {
               exit={{ opacity: 0 }}
             >
               <Hero />
-              <StepSection />
               <MissionSection />
+              <StepSection />
               <QuoteSection 
                 quote='"1% BETTER EVERYDAY."' 
                 backgroundColor="bg-black" 

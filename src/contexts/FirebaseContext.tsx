@@ -33,20 +33,28 @@ export const FirebaseProvider = ({ children }: { children: React.ReactNode }) =>
         const userRef = doc(db, 'users', currentUser.uid);
         try {
           const userDoc = await getDoc(userRef);
+          const isBootstrappedAdmin = currentUser.email === "jadovdav@gmail.com";
+          
           if (!userDoc.exists()) {
             await setDoc(userRef, {
               uid: currentUser.uid,
               email: currentUser.email,
               displayName: currentUser.displayName,
               photoURL: currentUser.photoURL,
-              role: 'client',
+              role: isBootstrappedAdmin ? 'admin' : 'client',
               lastLogin: serverTimestamp()
             });
-            setIsAdmin(false);
+            setIsAdmin(isBootstrappedAdmin);
           } else {
             const userData = userDoc.data();
-            setIsAdmin(userData.role === 'admin');
-            await setDoc(userRef, { lastLogin: serverTimestamp() }, { merge: true });
+            // If they are the bootstrapped admin, ensure they have the admin role in the state
+            // even if it's not in the doc (rules will allow them to act as admin anyway)
+            setIsAdmin(userData.role === 'admin' || isBootstrappedAdmin);
+            await setDoc(userRef, { 
+              lastLogin: serverTimestamp(),
+              // Ensure bootstrapped admin actually stays admin in the doc too
+              ...(isBootstrappedAdmin && userData.role !== 'admin' ? { role: 'admin' } : {})
+            }, { merge: true });
           }
         } catch (error) {
           console.error("Error syncing user profile:", error);

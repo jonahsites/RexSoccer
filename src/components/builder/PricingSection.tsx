@@ -11,38 +11,27 @@ export const PricingSection = ({
   description = "Elite soccer training designed to accelerate your development. Join the academy and start your journey today.",
   plans = [
     {
-      name: "Private",
-      price: "55",
-      features: [
-        "1-on-1 Focus", 
-        "4 Sessions: $210 (1 month)", 
-        "8 Sessions: $410 (2 months)",
-        "Individual Game Film Analysis"
-      ],
+      name: "4 Private Training Package",
+      price: "300",
+      features: ["Includes four private training sessions. 1-2 Players."],
       popular: false
     },
     {
-      name: "Duo",
-      price: "40",
-      note: "player",
-      features: [
-        "Competitive Pairs", 
-        "4 Sessions: $150 (1 month)", 
-        "8 Sessions: $300 (2 months)",
-        "Positional Awareness"
-      ],
-      popular: true
+      name: "8 Private Training Package",
+      price: "550",
+      features: ["Includes eight private training sessions. 1-2 Players."],
+      popular: false
     },
     {
-      name: "Group",
-      price: "30",
-      note: "player",
-      features: [
-        "3+ Players", 
-        "4 Sessions: $110 (1 month)", 
-        "8 Sessions: $220 (2 months)",
-        "High Intensity Match Play"
-      ],
+      name: "Private Training",
+      price: "80",
+      features: ["1-2 Players"],
+      popular: false
+    },
+    {
+      name: "Group Session / Drop-in",
+      price: "65",
+      features: ["3+ Players"],
       popular: false
     }
   ],
@@ -72,52 +61,34 @@ export const PricingSection = ({
 
   return (
     <section id="pricing" className={`relative py-32 px-6 ${backgroundColor} overflow-hidden`}>
-      <div className="max-w-7xl mx-auto relative z-10">
-            <SectionReveal className="text-center mb-24">
-              <span className="text-ice-blue font-black uppercase tracking-[0.4em] text-xs mb-6 block">{badgeText}</span>
-              <h2 className="text-6xl md:text-9xl font-black mb-8 tracking-tighter text-white">PRICING.</h2>
-          <p className="text-white/40 text-lg max-w-2xl mx-auto font-light leading-relaxed font-sans">
-            {description}
+      <div className="max-w-6xl mx-auto relative z-10">
+            <SectionReveal className="text-center mb-16">
+              <h2 className="text-6xl md:text-8xl font-black mb-4 tracking-tighter text-white">DEVELOPMENT</h2>
+          <p className="text-white/60 text-xl font-medium tracking-tight">
+            Packages & Drop-in Rates.
           </p>
         </SectionReveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
           {plans.map((plan, i) => (
             <SectionReveal key={i}>
-              <div className={cn(
-                "relative p-10 rounded-[3rem] transition-all duration-500 group border h-full flex flex-col",
-                plan.popular 
-                  ? "bg-white text-black shadow-2xl shadow-white/5 border-transparent" 
-                  : "bg-zinc-900 text-white border-white/5 hover:border-white/10"
-              )}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-ice-blue text-black text-[10px] font-black px-6 py-2 rounded-full uppercase tracking-widest border border-white/10">
-                    Most Popular
-                  </div>
-                )}
-                <h3 className={cn("text-2xl font-black mb-2 uppercase tracking-tight", plan.popular ? "text-black" : "text-white")}>{plan.name}</h3>
-                <div className="flex items-baseline gap-1 mb-8">
-                  <span className="text-5xl font-black tracking-tighter">${plan.price}</span>
-                  <span className={cn("text-sm font-medium opacity-50")}>{plan.note ? `/${plan.note}` : "/session"}</span>
+              <div className="relative p-10 rounded-2xl transition-all duration-300 hover:scale-[1.02] bg-zinc-900/50 backdrop-blur-sm text-white border border-white/5 h-full flex flex-col shadow-2xl">
+                <span className="text-ice-blue font-medium mb-4 block uppercase tracking-widest text-xs font-display">{plan.name}</span>
+                <div className="flex items-baseline gap-1 mb-6">
+                  <span className="text-7xl font-black tracking-tighter text-white font-display">${plan.price}</span>
                 </div>
-                <ul className="space-y-5 mb-10 flex-grow">
+                <ul className="space-y-4 mb-8 flex-grow">
                   {plan.features.map((f, j) => (
-                    <li key={j} className="flex items-start gap-3 text-sm font-medium">
-                      <div className={cn("w-1.5 h-1.5 rounded-full mt-1.5 shrink-0", plan.popular ? "bg-black" : "bg-ice-blue")} />
-                      <span className={plan.popular ? "text-black/70" : "text-white/70"}>{f}</span>
+                    <li key={j} className="text-white/60 text-sm font-medium leading-relaxed font-sans">
+                      {f}
                     </li>
                   ))}
                 </ul>
                 <button 
                   onClick={() => handleBook()}
-                  className={cn(
-                    "w-full py-5 rounded-2xl font-black uppercase tracking-widest text-xs transition-all duration-300 flex items-center justify-center gap-2",
-                    plan.popular 
-                      ? "bg-black text-white hover:bg-zinc-800" 
-                      : "bg-white text-black hover:bg-ice-blue"
-                  )}
+                  className="w-full max-w-xs py-4 rounded-full font-black uppercase tracking-widest text-[10px] transition-all duration-300 flex items-center justify-center gap-2 bg-ice-blue text-black hover:bg-white hover:scale-105 active:scale-95 font-sans"
                 >
-                  Book Session
+                  Book Now {">"}
                 </button>
               </div>
             </SectionReveal>
@@ -207,37 +178,28 @@ Builder.registerComponent(PricingSection, {
       subFields: [
         { name: 'name', type: 'string' },
         { name: 'price', type: 'string' },
-        { name: 'note', type: 'string' },
         { name: 'features', type: 'list', subFields: [{ name: 'f', type: 'string' }] },
-        { name: 'popular', type: 'boolean' },
       ],
       defaultValue: [
         {
-          name: "Private",
-          price: "55",
-          features: [{ f: "1-on-1 Attention" }, { f: "Customized Drills" }, { f: "Performance Analysis" }, { f: "Flexible Scheduling" }],
-          popular: false
+          name: "4 Private Training Package",
+          price: "300",
+          features: [{ f: "Includes four private training sessions. 1-2 Players." }],
         },
         {
-          name: "Duo",
-          price: "40",
-          note: "each",
-          features: [{ f: "2 Players" }, { f: "Competitive Drills" }, { f: "Tactical Focus" }, { f: "Group Synergy" }],
-          popular: true
+          name: "8 Private Training Package",
+          price: "550",
+          features: [{ f: "Includes eight private training sessions. 1-2 Players." }],
         },
         {
-          name: "Small Group",
-          price: "30",
-          note: "each",
-          features: [{ f: "3-5 Players" }, { f: "Game Scenarios" }, { f: "Team Dynamics" }, { f: "High Intensity" }],
-          popular: false
+          name: "Private Training",
+          price: "80",
+          features: [{ f: "1-2 Players" }],
         },
         {
-          name: "Team Training",
-          price: "20",
-          note: "each",
-          features: [{ f: "6-10 Players" }, { f: "Tactical Intelligence" }, { f: "Game Scenarios" }, { f: "Team Chemistry" }],
-          popular: false
+          name: "Group Session / Drop-in",
+          price: "65",
+          features: [{ f: "3+ Players" }],
         }
       ],
     },

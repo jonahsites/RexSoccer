@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, LogOut, User as UserIcon, Loader2 } from 'lucide-react';
 import { Builder } from '@builder.io/react';
 import { cn } from '../../lib/utils';
-import { useFirebase } from '../../App';
+import { useFirebase } from '../../contexts/FirebaseContext';
 
 export const Navbar = ({
   logo = "https://image2url.com/r2/default/images/1774894049292-b9fe06c3-7e1a-4415-a0c6-1f107619d1bb.png",
