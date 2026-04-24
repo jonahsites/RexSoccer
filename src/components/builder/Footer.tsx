@@ -23,8 +23,8 @@ export const Footer = ({
     { label: "Privacy Policy", href: "#" },
     { label: "Terms of Service", href: "#" }
   ],
-  backgroundColor = "bg-white",
-  backgroundImage = "https://image2url.com/r2/default/images/1774894077016-e5ed3b4a-de71-4cf2-8645-d4cea0fb696f.png",
+  backgroundColor = "bg-black",
+  backgroundImage = "/23eaaee6-1741-4d38-9e76-d97160c3033f.png",
 }: {
   logo?: string;
   description?: string;
@@ -51,7 +51,7 @@ export const Footer = ({
       <img 
         src={backgroundImage}
         alt=""
-        className="absolute bottom-0 right-0 w-96 md:w-[600px] opacity-10 pointer-events-none translate-x-1/6 translate-y-1/6 brightness-0 invert"
+        className="absolute bottom-0 right-0 w-[400px] md:w-[800px] opacity-20 pointer-events-none translate-x-1/4 translate-y-1/4 brightness-0 invert"
         referrerPolicy="no-referrer"
       />
       <div className="max-w-7xl mx-auto relative z-10">
@@ -127,8 +127,8 @@ export const Footer = ({
 Builder.registerComponent(Footer, {
   name: 'Footer',
   inputs: [
-    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-white' },
-    { name: 'backgroundImage', type: 'file', defaultValue: "https://image2url.com/r2/default/images/1774894077016-e5ed3b4a-de71-4cf2-8645-d4cea0fb696f.png" },
+    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
+    { name: 'backgroundImage', type: 'file', defaultValue: "/23eaaee6-1741-4d38-9e76-d97160c3033f.png" },
     { name: 'logo', type: 'file', defaultValue: "https://image2url.com/r2/default/images/1774894049292-b9fe06c3-7e1a-4415-a0c6-1f107619d1bb.png" },
     { name: 'description', type: 'string', defaultValue: "Elite soccer training for the next generation of athletes. Built on discipline, technique, and tactical intelligence." },
     { name: 'navTitle', type: 'string', defaultValue: "Navigation" },

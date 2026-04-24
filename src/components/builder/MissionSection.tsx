@@ -68,7 +68,7 @@ export const MissionSection = ({
 Builder.registerComponent(MissionSection, {
   name: 'MissionSection',
   inputs: [
-    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-zinc-200' },
+    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
     { name: 'badgeText', type: 'string', defaultValue: "Our Mission" },
     { name: 'title', type: 'string', defaultValue: "Fixing the U.S.<br />Youth System." },
     { name: 'paragraphs', type: 'list', subFields: [{ name: 'p', type: 'string' }], defaultValue: [

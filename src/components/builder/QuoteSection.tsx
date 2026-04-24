@@ -36,6 +36,6 @@ Builder.registerComponent(QuoteSection, {
   name: 'QuoteSection',
   inputs: [
     { name: 'quote', type: 'string', defaultValue: '"1% BETTER EVERYDAY."' },
-    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-white' },
+    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
   ],
 });

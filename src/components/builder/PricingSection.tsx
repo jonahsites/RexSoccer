@@ -168,7 +168,7 @@ export const PricingSection = ({
 Builder.registerComponent(PricingSection, {
   name: 'PricingSection',
   inputs: [
-    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-white' },
+    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
     { name: 'badgeText', type: 'string', defaultValue: "Investment" },
     { name: 'title', type: 'string', defaultValue: "PRICING." },
     { name: 'description', type: 'string', defaultValue: "Elite training for players who are serious about their development. Choose the path that fits your ambition." },

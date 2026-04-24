@@ -60,7 +60,7 @@ export const StepSection = ({
 Builder.registerComponent(StepSection, {
   name: 'StepSection',
   inputs: [
-    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-light-grey' },
+    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-zinc-950' },
     {
       name: 'steps',
       type: 'list',

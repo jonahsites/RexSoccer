@@ -7,7 +7,7 @@ export const MerchPage = ({
   onBack = () => window.dispatchEvent(new CustomEvent('changePage', { detail: 'home' })),
   title = "Coming Soon.",
   subtitle = "REX Soccer Merch Store",
-  backgroundColor = "bg-white",
+  backgroundColor = "bg-black",
 }: {
   onBack?: () => void;
   title?: string;
@@ -35,7 +35,7 @@ export const MerchPage = ({
 Builder.registerComponent(MerchPage, {
   name: 'MerchPage',
   inputs: [
-    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-white' },
+    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
     { name: 'title', type: 'string', defaultValue: "Coming Soon." },
     { name: 'subtitle', type: 'string', defaultValue: "REX Soccer Merch Store" },
   ],

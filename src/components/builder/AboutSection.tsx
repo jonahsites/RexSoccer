@@ -115,7 +115,7 @@ export const AboutSection = ({
 Builder.registerComponent(AboutSection, {
   name: 'AboutSection',
   inputs: [
-    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-light-grey' },
+    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
     { name: 'badgeText', type: 'string', defaultValue: "Coach Raza" },
     { name: 'title', type: 'string', defaultValue: "TRAIN WITH<br />PURPOSE." },
     { name: 'paragraphs', type: 'list', subFields: [{ name: 'p', type: 'string' }], defaultValue: [

@@ -183,7 +183,7 @@ export const PhotosPage = ({
 Builder.registerComponent(PhotosPage, {
   name: 'PhotosPage',
   inputs: [
-    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-white' },
+    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
     { 
       name: 'photos', 
       type: 'list', 

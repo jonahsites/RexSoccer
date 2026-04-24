@@ -68,6 +68,14 @@ export const ContactSection = ({
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-24">
           <SectionReveal>
+            <div className="mb-12">
+              <img 
+                src="/23eaaee6-1741-4d38-9e76-d97160c3033f.png" 
+                alt="REX" 
+                className="h-20 w-auto opacity-20 brightness-0 invert pointer-events-none"
+                referrerPolicy="no-referrer"
+              />
+            </div>
             <span className="text-ice-blue font-black uppercase tracking-[0.4em] text-xs mb-6 block">{badgeText}</span>
             <h2 
               className="text-6xl md:text-9xl font-black mb-10 leading-[0.85] tracking-tighter text-white"
@@ -171,7 +179,7 @@ export const ContactSection = ({
 Builder.registerComponent(ContactSection, {
   name: 'ContactSection',
   inputs: [
-    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-white' },
+    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
     { name: 'badgeText', type: 'string', defaultValue: "Get Started" },
     { name: 'title', type: 'string', defaultValue: "READY TO<br /><span class=\"text-oxford-blue\">LEVEL UP</span>?" },
     { name: 'description', type: 'string', defaultValue: "Take the first step towards elite performance. Contact us to schedule your first session or ask any questions." },

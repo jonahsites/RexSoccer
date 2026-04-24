@@ -59,17 +59,17 @@ function App() {
               exit={{ opacity: 0 }}
             >
               <Hero />
-              <MissionSection />
-              <StepSection />
+              <MissionSection backgroundColor="bg-black" />
+              <StepSection backgroundColor="bg-black" />
               <QuoteSection 
                 quote='"1% BETTER EVERYDAY."' 
                 backgroundColor="bg-black" 
               />
               <AboutSection backgroundColor="bg-black" />
-              <PricingSection />
-              <LocationsSection />
-              <ContactSection />
-              <Footer />
+              <PricingSection backgroundColor="bg-black" />
+              <LocationsSection backgroundColor="bg-black" />
+              <ContactSection backgroundColor="bg-black" />
+              <Footer backgroundColor="bg-black" />
             </motion.main>
           )}
 
@@ -80,7 +80,7 @@ function App() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <PhotosPage onBack={() => setCurrentPage('home')} />
+              <PhotosPage onBack={() => setCurrentPage('home')} backgroundColor="bg-black" />
             </motion.div>
           )}
 
@@ -91,7 +91,7 @@ function App() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <TeamPage onBack={() => setCurrentPage('home')} />
+              <TeamPage onBack={() => setCurrentPage('home')} backgroundColor="bg-black" />
             </motion.div>
           )}
 
@@ -102,7 +102,7 @@ function App() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <VisionPage onBack={() => setCurrentPage('home')} />
+              <VisionPage onBack={() => setCurrentPage('home')} backgroundColor="bg-black" />
             </motion.div>
           )}
 
@@ -113,7 +113,7 @@ function App() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <MerchPage onBack={() => setCurrentPage('home')} />
+              <MerchPage onBack={() => setCurrentPage('home')} backgroundColor="bg-black" />
             </motion.div>
           )}
         </AnimatePresence>

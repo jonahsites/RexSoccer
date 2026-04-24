@@ -131,7 +131,7 @@ export const LocationsSection = ({
 Builder.registerComponent(LocationsSection, {
   name: 'LocationsSection',
   inputs: [
-    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-light-grey' },
+    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
     { name: 'badgeText', type: 'string', defaultValue: "Where We Train" },
     { name: 'title', type: 'string', defaultValue: "PORT ST.<br />LUCIE." },
     { name: 'description', type: 'string', defaultValue: "Availability is open to the needs of the individual. Train at our elite facilities designed for high performance." },

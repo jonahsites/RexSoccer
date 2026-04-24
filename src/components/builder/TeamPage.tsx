@@ -60,7 +60,7 @@ export const TeamPage = ({
 Builder.registerComponent(TeamPage, {
   name: 'TeamPage',
   inputs: [
-    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-white' },
+    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
     { name: 'title', type: 'string', defaultValue: "The <span class=\"text-oxford-blue\">Team</span>." },
     {
       name: 'team',

@@ -13,7 +13,7 @@ export const VisionPage = ({
     { title: "Pro Pathway.", content: "We are committed to creating direct pathways for our players to reach professional levels, attracting scouts and professional partners who recognize the REX standard of excellence." }
   ],
   videoUrl = "/make_it_rotate_202604161205.mp4",
-  backgroundColor = "bg-white",
+  backgroundColor = "bg-black",
 }: {
   onBack?: () => void;
   title?: string;
@@ -38,7 +38,7 @@ export const VisionPage = ({
 
   return (
     <div 
-      className="min-h-screen bg-black pt-40 pb-20 px-6"
+      className={`min-h-screen ${backgroundColor} pt-40 pb-20 px-6`}
     >
       <div className="max-w-7xl mx-auto relative z-10">
         <button onClick={onBack} className="mb-12 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white/40 hover:text-ice-blue transition-all">
@@ -90,7 +90,7 @@ export const VisionPage = ({
 Builder.registerComponent(VisionPage, {
   name: 'VisionPage',
   inputs: [
-    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-white' },
+    { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
     { name: 'title', type: 'string', defaultValue: "Vision." },
     {
       name: 'sections',
