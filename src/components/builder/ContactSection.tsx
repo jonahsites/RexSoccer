@@ -70,9 +70,9 @@ export const ContactSection = ({
           <SectionReveal>
             <div className="mb-12">
               <img 
-                src="/23eaaee6-1741-4d38-9e76-d97160c3033f.png" 
+                src="https://image2url.com/r2/default/images/1774894049292-b9fe06c3-7e1a-4415-a0c6-1f107619d1bb.png" 
                 alt="REX" 
-                className="h-20 w-auto opacity-20 brightness-0 invert pointer-events-none"
+                className="h-16 w-auto opacity-40 brightness-0 invert pointer-events-none"
                 referrerPolicy="no-referrer"
               />
             </div>

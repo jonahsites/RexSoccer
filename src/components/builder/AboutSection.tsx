@@ -72,7 +72,7 @@ export const AboutSection = ({
                   >
                     {p === "REX is where serious players train." ? (
                       <>
-                        REX IS WHERE <span className="text-white/20">SERIOUS</span> PLAYERS TRAIN.
+                        REX IS WHERE <span className="text-zinc-700">SERIOUS</span> PLAYERS TRAIN.
                       </>
                     ) : p}
                   </p>

@@ -12,7 +12,7 @@ export const MissionSection = ({
     "Whether it's field player development or specialized goalkeeper training, we foster a culture of discipline and a relentless passion for self-improvement."
   ],
   ctaText = "Learn More",
-  image = "https://lh3.googleusercontent.com/d/1gzQX9jBQTAhaBYWETX9h_j8th411HmCH",
+  image = "/IMG_6582.JPG.jpg",
   backgroundColor = "bg-black",
 }: {
   badgeText?: string;
@@ -49,12 +49,11 @@ export const MissionSection = ({
               </div>
             </SectionReveal>
           <SectionReveal>
-            <div className="aspect-square rounded-[3rem] overflow-hidden">
+            <div className="relative h-fit">
               <img 
                 src={image} 
                 alt="Mission" 
-                className="w-full h-full object-cover"
-                style={{ objectPosition: '50% 90%' }}
+                className="w-full h-auto rounded-[2rem] shadow-2xl"
                 referrerPolicy="no-referrer"
               />
             </div>
@@ -77,6 +76,6 @@ Builder.registerComponent(MissionSection, {
       { p: "Whether it's field player development or specialized goalkeeper training, we foster a culture of discipline and a relentless passion for self-improvement." }
     ] },
     { name: 'ctaText', type: 'string', defaultValue: "Learn More" },
-    { name: 'image', type: 'file', defaultValue: "https://lh3.googleusercontent.com/d/1gzQX9jBQTAhaBYWETX9h_j8th411HmCH" },
+    { name: 'image', type: 'file', defaultValue: "/IMG_6582.JPG.jpg" },
   ],
 });
