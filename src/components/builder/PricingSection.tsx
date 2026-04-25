@@ -34,16 +34,13 @@ export const PricingSection = ({
       price: "30",
       description: "Small group environment (3+ players) for tactical awareness and game-speed drills.",
       perPlayer: true,
-      packages: [
-        { name: "4 Sessions Package", price: "$110", note: "Expires in 1 month" },
-        { name: "8 Sessions Package", price: "$220", note: "Expires in 2 months" }
-      ]
+      packages: []
     }
   ],
   policies = [
     "All packages must be used within their time limit (no rollovers).",
     "24-hour notice is required for any cancellations. If canceled less than 24 hours before, the session will still be charged.",
-    "If a duo session is canceled last minute, it will proceed as a private session, and the price will adjust to $55.",
+    "If a duo session is canceled, it will proceed as a private session, and the price will adjust to $55.",
     "Group sessions are priced per player and will remain as booked.",
     "Sessions must be scheduled in advance, based on availability.",
     "Payment is required upfront before the first session of any package.",
@@ -100,24 +97,26 @@ export const PricingSection = ({
                     {plan.description}
                   </p>
 
-                  <div className="pt-8 border-t border-white/10">
-                    <span className="text-white/20 font-black uppercase tracking-[0.2em] text-[9px] mb-6 block">Available Packages</span>
-                    <div className="grid gap-4">
-                      {plan.packages.map((pkg, j) => (
-                        <button
-                          key={j}
-                          onClick={() => handleBook()}
-                          className="w-full p-6 rounded-2xl bg-white/5 border border-white/5 text-left transition-all duration-300 hover:border-ice-blue/50 hover:bg-white/10 group/pkg"
-                        >
-                          <div className="flex justify-between items-center mb-1">
-                            <span className="text-sm font-black uppercase tracking-tight text-white">{pkg.name}</span>
-                            <span className="text-xl font-black text-ice-blue">{pkg.price}</span>
-                          </div>
-                          <span className="text-[10px] font-bold text-white/30 uppercase tracking-widest">{pkg.note}</span>
-                        </button>
-                      ))}
+                  {plan.packages && plan.packages.length > 0 && (
+                    <div className="pt-8 border-t border-white/10">
+                      <span className="text-white/20 font-black uppercase tracking-[0.2em] text-[9px] mb-6 block">Available Packages</span>
+                      <div className="grid gap-4">
+                        {plan.packages.map((pkg, j) => (
+                          <button
+                            key={j}
+                            onClick={() => handleBook()}
+                            className="w-full p-6 rounded-2xl bg-white/5 border border-white/5 text-left transition-all duration-300 hover:border-ice-blue/50 hover:bg-white/10 group/pkg"
+                          >
+                            <div className="flex justify-between items-center mb-1">
+                              <span className="text-sm font-black uppercase tracking-tight text-white">{pkg.name}</span>
+                              <span className="text-xl font-black text-ice-blue">{pkg.price}</span>
+                            </div>
+                            <span className="text-[10px] font-bold text-white/30 uppercase tracking-widest">{pkg.note}</span>
+                          </button>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
 
                 <button 
@@ -250,9 +249,7 @@ Builder.registerComponent(PricingSection, {
           price: "30",
           features: [
             { f: "3+ players, per player" },
-            { f: "Single Session: $30" },
-            { f: "4 Sessions Package: $110 (Expires in 1 month)" },
-            { f: "8 Sessions Package: $220 (Expires in 2 months)" }
+            { f: "Single Session: $30" }
           ],
         }
       ],

@@ -67,16 +67,16 @@ export const Hero = ({
 
         <div className="relative z-30 text-center px-6 w-full">
           <motion.div style={{ y, opacity }}>
-            <div className="absolute inset-0 z-[-1] opacity-[0.08] pointer-events-none overflow-hidden">
+            <div className="absolute inset-0 z-[-1] opacity-10 pointer-events-none overflow-hidden">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2 w-[110%] h-[110%] -translate-x-5 -translate-y-5">
-                <img src="https://lh3.googleusercontent.com/d/1etZ43OxAu9o0txlet_IVg5o2SBpjEl1I" className="w-full h-full object-cover brightness-0 invert" referrerPolicy="no-referrer" />
-                <img src="https://lh3.googleusercontent.com/d/1IIry7hEJtJuvOzPFOXIRZWcI4AkBLUpE" className="w-full h-full object-cover brightness-0 invert" referrerPolicy="no-referrer" />
-                <img src="https://lh3.googleusercontent.com/d/1dgo0R5kV4CiFJbPrbWYXXkiEYZB_tpur" className="w-full h-full object-cover brightness-0 invert" referrerPolicy="no-referrer" />
-                <img src="https://lh3.googleusercontent.com/d/1A3lkSZxONgKu2WuIMG5SMIDFaVpDcK4B" className="w-full h-full object-cover brightness-0 invert" referrerPolicy="no-referrer" />
-                <img src="https://lh3.googleusercontent.com/d/1nDdhtbVYEKRYTPZhMk7KAtUj_CGVMgwx" className="w-full h-full object-cover brightness-0 invert" referrerPolicy="no-referrer" />
-                <img src="https://lh3.googleusercontent.com/d/1A7uH4tuMDmH07CD_Z7zY3Iwt91md92vU" className="w-full h-full object-cover brightness-0 invert" referrerPolicy="no-referrer" />
-                <img src="https://lh3.googleusercontent.com/d/1vhEBQOJfure9bxmb_HcjSN8Iy5xBeXwl" className="w-full h-full object-cover brightness-0 invert" referrerPolicy="no-referrer" />
-                <img src="https://lh3.googleusercontent.com/d/1l3xOIw56gIqJ3z0LRsq_vQyd-rkO7w-9" className="w-full h-full object-cover brightness-0 invert" referrerPolicy="no-referrer" />
+                <img src="/Screenshot 2026-04-25 at 10.18.38 AM.png" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src="https://lh3.googleusercontent.com/d/1IIry7hEJtJuvOzPFOXIRZWcI4AkBLUpE" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src="https://lh3.googleusercontent.com/d/1dgo0R5kV4CiFJbPrbWYXXkiEYZB_tpur" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src="https://lh3.googleusercontent.com/d/1etZ43OxAu9o0txlet_IVg5o2SBpjEl1I" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src="https://lh3.googleusercontent.com/d/1nDdhtbVYEKRYTPZhMk7KAtUj_CGVMgwx" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src="https://lh3.googleusercontent.com/d/1A7uH4tuMDmH07CD_Z7zY3Iwt91md92vU" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src="https://lh3.googleusercontent.com/d/1vhEBQOJfure9bxmb_HcjSN8Iy5xBeXwl" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src="https://lh3.googleusercontent.com/d/1l3xOIw56gIqJ3z0LRsq_vQyd-rkO7w-9" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               </div>
             </div>
 
