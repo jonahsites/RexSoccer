@@ -12,30 +12,21 @@ export const VisionPage = ({
     { title: "Expansion & Facilities.", content: "In the coming years, REX Soccer aims to open a state-of-the-art training facility, equipped with the latest technology in performance analysis and recovery. We plan to expand our reach across Florida and eventually nationwide." },
     { title: "Pro Pathway.", content: "We are committed to creating direct pathways for our players to reach professional levels, attracting scouts and professional partners who recognize the REX standard of excellence." }
   ],
-  videoUrl = "/make_it_rotate_202604161205.mp4",
+  visionImages = [
+    { image: "/Screenshot 2026-04-25 at 6.43.24 PM.png" },
+    { image: "/Screenshot 2026-04-25 at 6.43.59 PM.png" },
+    { image: "/Screenshot 2026-04-25 at 6.45.04 PM.png" },
+    { image: "/Screenshot 2026-04-25 at 6.45.28 PM.png" }
+  ],
   backgroundColor = "bg-black",
 }: {
   onBack?: () => void;
   title?: string;
   sections?: { title: string, content: string }[];
-  videoUrl?: string;
+  visionImages?: { image: string }[];
   backgroundColor?: string;
   key?: React.Key;
 }) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const handleMouseEnter = () => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(err => console.error("Video play failed:", err));
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (videoRef.current) {
-      videoRef.current.pause();
-    }
-  };
-
   return (
     <div 
       className={`min-h-screen ${backgroundColor} pt-40 pb-20 px-6`}
@@ -45,42 +36,38 @@ export const VisionPage = ({
           <ArrowRight className="w-4 h-4 rotate-180" /> Back to Home
         </button>
 
-        <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-12 items-start">
-          <div>
-            <h2 className="text-6xl md:text-9xl font-black mb-16 tracking-tighter text-white uppercase">{title}</h2>
-            
-            <div className="space-y-12">
-              {sections.map((section, i) => (
-                <SectionReveal key={i}>
-                  <h3 
-                    className="text-3xl font-black text-white mb-6 uppercase"
-                    dangerouslySetInnerHTML={{ __html: section.title.replace('text-oxford-blue', 'text-ice-blue') }}
-                  />
-                  <p className="text-white/60 text-xl font-medium leading-relaxed">
-                    {section.content}
-                  </p>
-                </SectionReveal>
-              ))}
-            </div>
-          </div>
+        <SectionReveal>
+          <h2 className="text-6xl md:text-9xl font-black mb-20 tracking-tighter text-white uppercase text-center">{title}</h2>
+        </SectionReveal>
+        
+        {/* Vertical Images Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mb-32">
+          {visionImages.map((item, i) => (
+            <SectionReveal key={i} className="h-full">
+              <div className="aspect-[1/2] overflow-hidden border border-white/5 bg-zinc-900 group">
+                <img 
+                  src={item.image} 
+                  alt={`Vision ${i + 1}`} 
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            </SectionReveal>
+          ))}
+        </div>
 
-          <div className="lg:sticky lg:top-40">
-            <div 
-              className="relative group cursor-pointer w-full border border-white/5 rounded-[3rem] p-20"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <video 
-                ref={videoRef}
-                src={videoUrl}
-                className="w-full h-auto block object-contain transition-transform duration-500 group-hover:scale-105"
-                muted
-                loop
-                playsInline
-                preload="auto"
+        <div className="grid md:grid-cols-3 gap-16">
+          {sections.map((section, i) => (
+            <SectionReveal key={i}>
+              <h3 
+                className="text-2xl font-black text-white mb-6 uppercase tracking-tighter"
+                dangerouslySetInnerHTML={{ __html: section.title.replace('text-oxford-blue', 'text-ice-blue') }}
               />
-            </div>
-          </div>
+              <p className="text-white/50 text-base font-medium leading-relaxed">
+                {section.content}
+              </p>
+            </SectionReveal>
+          ))}
         </div>
       </div>
     </div>
@@ -105,6 +92,16 @@ Builder.registerComponent(VisionPage, {
         { title: "Pro Pathway.", content: "We are committed to creating direct pathways for our players to reach professional levels, attracting scouts and professional partners who recognize the REX standard of excellence." }
       ],
     },
-    { name: 'videoUrl', type: 'string', defaultValue: "/make_it_rotate_202604161205.mp4" },
+    {
+      name: 'visionImages',
+      type: 'list',
+      subFields: [{ name: 'image', type: 'file' }],
+      defaultValue: [
+        { image: "/Screenshot 2026-04-25 at 6.43.24 PM.png" },
+        { image: "/Screenshot 2026-04-25 at 6.43.59 PM.png" },
+        { image: "/Screenshot 2026-04-25 at 6.45.04 PM.png" },
+        { image: "/Screenshot 2026-04-25 at 6.45.28 PM.png" }
+      ]
+    },
   ],
 });
