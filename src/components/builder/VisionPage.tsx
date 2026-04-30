@@ -13,12 +13,13 @@ export const VisionPage = ({
     { title: "Pro Pathway.", content: "We are committed to creating direct pathways for our players to reach professional levels, attracting scouts and professional partners who recognize the REX standard of excellence." }
   ],
   visionImages = [
-    { image: "/Gemini_Generated_Image_hxrz19hxrz19hxrz.png", chapter: "CHAPTER 1", title: "THE GROUND" },
-    { image: "/Gemini_Generated_Image_g3thd4g3thd4g3th.png", chapter: "CHAPTER 2", title: "THE GROUND" }
+    { image: "/ChatGPT Image Apr 30, 2026, 05_14_11 PM.png", chapter: "", title: "" },
+    { image: "/ChatGPT Image Apr 30, 2026, 05_09_55 PM.png", chapter: "", title: "" },
+    { image: "/ChatGPT Image Apr 30, 2026, 05_08_08 PM.png", chapter: "", title: "" }
   ],
   backgroundColor = "bg-black",
 }: {
-  onBack?: () => void;
+  onBack: () => void;
   title?: string;
   sections?: { title: string, content: string }[];
   visionImages?: { image: string, chapter: string, title: string }[];
@@ -33,7 +34,6 @@ export const VisionPage = ({
         <button onClick={onBack} className="mb-12 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white/40 hover:text-ice-blue transition-all">
           <ArrowRight className="w-4 h-4 rotate-180" /> Back to Home
         </button>
-
         <SectionReveal>
           <div className="relative">
             <h2 className="text-[12rem] md:text-[24rem] font-black leading-none tracking-tighter text-white uppercase opacity-10 absolute -top-40 left-0 w-full text-center pointer-events-none select-none">
@@ -49,28 +49,14 @@ export const VisionPage = ({
       {/* Layout Inspired by Annotation (Seamless Edge-to-Edge) */}
       <div className="relative w-full mb-32 border-t border-white/5">
         {/* Image Grid (Seamless Edge-to-Edge) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-start">
           {visionImages.map((item, i) => (
-            <SectionReveal key={i}>
+            <SectionReveal key={i} className={i === 2 && visionImages.length === 3 ? "md:col-span-2" : ""}>
               <div className="group relative overflow-hidden bg-zinc-900 border-none">
-                {/* Content Overlay */}
-                <div className="absolute inset-x-0 bottom-0 p-8 md:p-12 z-20">
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                  >
-                    <span className="text-[10px] font-black text-ice-blue uppercase tracking-[0.4em] mb-2 block">{item.chapter}</span>
-                    <h4 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">{item.title}</h4>
-                  </motion.div>
-                </div>
-
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
-                
                 <img 
                   src={item.image} 
-                  alt={item.title} 
-                  className="w-full h-auto aspect-video object-cover transition-transform duration-[3000ms] group-hover:scale-110"
+                  alt={item.title || `Vision ${i}`} 
+                  className="w-full h-auto block transition-transform duration-[3000ms] group-hover:scale-110"
                   referrerPolicy="no-referrer"
                 />
               </div>
@@ -125,8 +111,9 @@ Builder.registerComponent(VisionPage, {
         { name: 'title', type: 'string' }
       ],
       defaultValue: [
-        { image: "/Gemini_Generated_Image_hxrz19hxrz19hxrz.png", chapter: "CHAPTER 1", title: "THE GROUND" },
-        { image: "/Gemini_Generated_Image_g3thd4g3thd4g3th.png", chapter: "CHAPTER 2", title: "THE GROUND" }
+        { image: "/ChatGPT Image Apr 30, 2026, 05_14_11 PM.png", chapter: "", title: "" },
+        { image: "/ChatGPT Image Apr 30, 2026, 05_09_55 PM.png", chapter: "", title: "" },
+        { image: "/ChatGPT Image Apr 30, 2026, 05_08_08 PM.png", chapter: "", title: "" }
       ]
     },
   ],
