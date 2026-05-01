@@ -24,7 +24,7 @@ export const Footer = ({
     { label: "Terms of Service", href: "#" }
   ],
   backgroundColor = "bg-black",
-  backgroundImage = "/23eaaee6-1741-4d38-9e76-d97160c3033f.png",
+  backgroundImage = "https://lh3.googleusercontent.com/d/1ZXBGv_nDOk4sAUp7rPwcXHaNo_niAJwS",
 }: {
   logo?: string;
   description?: string;
@@ -128,7 +128,7 @@ Builder.registerComponent(Footer, {
   name: 'Footer',
   inputs: [
     { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
-    { name: 'backgroundImage', type: 'file', defaultValue: "/23eaaee6-1741-4d38-9e76-d97160c3033f.png" },
+    { name: 'backgroundImage', type: 'file', defaultValue: "https://lh3.googleusercontent.com/d/1ZXBGv_nDOk4sAUp7rPwcXHaNo_niAJwS" },
     { name: 'logo', type: 'file', defaultValue: "https://image2url.com/r2/default/images/1774894049292-b9fe06c3-7e1a-4415-a0c6-1f107619d1bb.png" },
     { name: 'description', type: 'string', defaultValue: "Elite soccer training for the next generation of athletes. Built on discipline, technique, and tactical intelligence." },
     { name: 'navTitle', type: 'string', defaultValue: "Navigation" },

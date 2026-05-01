@@ -12,7 +12,7 @@ export const MissionSection = ({
     "Whether it's field player development or specialized goalkeeper training, we foster a culture of discipline and a relentless passion for self-improvement."
   ],
   ctaText = "Learn More",
-  image = "/IMG_6582.JPG.jpg",
+  image = "https://lh3.googleusercontent.com/d/1bIRqt6PKuxzBpde8q-EjC4HkoHzG7mQu",
   backgroundColor = "bg-black",
 }: {
   badgeText?: string;
@@ -76,6 +76,6 @@ Builder.registerComponent(MissionSection, {
       { p: "Whether it's field player development or specialized goalkeeper training, we foster a culture of discipline and a relentless passion for self-improvement." }
     ] },
     { name: 'ctaText', type: 'string', defaultValue: "Learn More" },
-    { name: 'image', type: 'file', defaultValue: "/IMG_6582.JPG.jpg" },
+    { name: 'image', type: 'file', defaultValue: "https://lh3.googleusercontent.com/d/1bIRqt6PKuxzBpde8q-EjC4HkoHzG7mQu" },
   ],
 });
