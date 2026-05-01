@@ -7,16 +7,9 @@ export const AboutSection = ({
   badgeText = "Coach Raza",
   title = "TRAIN WITH<br />PURPOSE.",
   paragraphs = [
-    "I’m Faqir Raza, founder of REX Soccer. Soccer has been my environment since the age of 4. The game has taken me through high-level competition, including NCAA Division I soccer and long-term experience training within the Panama Youth National Team system.",
-    "That experience shapes how I develop players.",
-    "REX Soccer is built for players who want to separate themselves. This is specialized, high-level training — not beginner sessions, not generic drills.",
-    "Every session is structured with a clear objective. No wasted reps. No random work. Everything we do shows up in real matches.",
-    "We develop:",
-    "- Technical precision under pressure",
-    "- Game intelligence and faster decision-making",
-    "- Speed, conditioning, and explosiveness",
-    "- Discipline and consistency that separates players over time",
-    "Most players train hard. Very few train with purpose.",
+    "REX Soccer was founded in 2025 by professional and NCAA Division I player, and Panama Youth National Team member, Faqir Raza. Built from top-level competition and international experience, REX Soccer is designed for players who don't just need more practice—they need specialized training.",
+    "Every session at REX is laser-focused, built around game-specific demands and the exact weaknesses holding a player back. No wasted reps, no generic drills—everything we do directly elevates match performance.",
+    "We develop technical precision, faster decision-making, speed, and discipline—qualities that separate players over time. Most players train hard. Few train with purpose.",
     "REX is where serious players train."
   ],
   stats = [
@@ -119,16 +112,9 @@ Builder.registerComponent(AboutSection, {
     { name: 'badgeText', type: 'string', defaultValue: "Coach Raza" },
     { name: 'title', type: 'string', defaultValue: "TRAIN WITH<br />PURPOSE." },
     { name: 'paragraphs', type: 'list', subFields: [{ name: 'p', type: 'string' }], defaultValue: [
-      { p: "I’m Faqir Raza, founder of REX Soccer. Soccer has been my environment since the age of 4. The game has taken me through high-level competition, including NCAA Division I soccer and long-term experience training within the Panama Youth National Team system." },
-      { p: "That experience shapes how I develop players." },
-      { p: "REX Soccer is built for players who want to separate themselves. This is specialized, high-level training — not beginner sessions, not generic drills." },
-      { p: "Every session is structured with a clear objective. No wasted reps. No random work. Everything we do shows up in real matches." },
-      { p: "We develop:" },
-      { p: "- Technical precision under pressure" },
-      { p: "- Game intelligence and faster decision-making" },
-      { p: "- Speed, conditioning, and explosiveness" },
-      { p: "- Discipline and consistency that separates players over time" },
-      { p: "Most players train hard. Very few train with purpose." },
+      { p: "REX Soccer was founded in 2025 by professional and NCAA Division I player, and Panama Youth National Team member, Faqir Raza. Built from top-level competition and international experience, REX Soccer is designed for players who don't just need more practice—they need specialized training." },
+      { p: "Every session at REX is laser-focused, built around game-specific demands and the exact weaknesses holding a player back. No wasted reps, no generic drills—everything we do directly elevates match performance." },
+      { p: "We develop technical precision, faster decision-making, speed, and discipline—qualities that separate players over time. Most players train hard. Few train with purpose." },
       { p: "REX is where serious players train." }
     ] },
     { name: 'stats', type: 'list', subFields: [{ name: 'value', type: 'string' }, { name: 'label', type: 'string' }], defaultValue: [
