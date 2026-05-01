@@ -8,7 +8,7 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 export const ContactSection = ({
   badgeText = "Get Started",
-  title = "“THE TRAINING YOUR CLUB<br /><span class=\"text-oxford-blue\">DOESN’T HAVE TIME FOR.”</span>",
+  title = "THE TRAINING YOUR CLUB<br /><span class=\"text-oxford-blue\">DOESN’T HAVE TIME FOR.</span>",
   description = "Take the first step towards elite performance. Contact us to schedule your first session or ask any questions.",
   contactMethods = [
     { icon: 'mail', label: "Email Us", value: "info.rexsoccer@gmail.com", href: "mailto:info.rexsoccer@gmail.com" },

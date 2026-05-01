@@ -23,7 +23,7 @@ export const LocationsSection = ({
       name: "Location 2",
       address: "Port St. Lucie FL",
       city: "12151 SW Community Blvd, Port St. Lucie, FL 34987",
-      img: "https://image2url.com/r2/default/images/1775342742359-a5cde3a0-1bb0-42f7-bfec-a9b31e743293.png",
+      img: "https://lh3.googleusercontent.com/d/16fQvw_EPauX9Sgr_0TaNVz1nmBChNYqa",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=12151+SW+Community+Blvd+Port+St.+Lucie+FL+34987",
       objectPosition: "center",
       zoom: 0.85
@@ -33,7 +33,7 @@ export const LocationsSection = ({
       name: "Location 3",
       address: "Palm Beach Gardens",
       city: "Palm Beach Gardens, FL",
-      img: "https://image2url.com/r2/default/images/1775342660072-e8a552b4-ed8e-4a03-82d7-1fc0b708d302.png",
+      img: "https://lh3.googleusercontent.com/d/15Ye5MRvXJrODBozkzgzcYqPleTaA_x5h",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=Palm+Beach+Gardens+FL",
       objectPosition: "center",
       zoom: 0.85
@@ -183,7 +183,7 @@ Builder.registerComponent(LocationsSection, {
           name: "Location 2",
           address: "Port St. Lucie FL",
           city: "12151 SW Community Blvd, Port St. Lucie, FL 34987",
-          img: "https://image2url.com/r2/default/images/1775342742359-a5cde3a0-1bb0-42f7-bfec-a9b31e743293.png",
+          img: "https://lh3.googleusercontent.com/d/16fQvw_EPauX9Sgr_0TaNVz1nmBChNYqa",
           mapUrl: "https://www.google.com/maps/search/?api=1&query=12151+SW+Community+Blvd+Port+St.+Lucie+FL+34987",
           objectPosition: "center",
           zoom: 0.85
@@ -193,7 +193,7 @@ Builder.registerComponent(LocationsSection, {
           name: "Location 3",
           address: "Palm Beach Gardens",
           city: "Palm Beach Gardens, FL",
-          img: "https://image2url.com/r2/default/images/1775342660072-e8a552b4-ed8e-4a03-82d7-1fc0b708d302.png",
+          img: "https://lh3.googleusercontent.com/d/15Ye5MRvXJrODBozkzgzcYqPleTaA_x5h",
           mapUrl: "https://www.google.com/maps/search/?api=1&query=Palm+Beach+Gardens+FL",
           objectPosition: "center",
           zoom: 0.85

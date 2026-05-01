@@ -49,11 +49,11 @@ export const MissionSection = ({
               </div>
             </SectionReveal>
           <SectionReveal>
-            <div className="relative h-fit max-w-xl ml-auto">
+            <div className="relative h-fit max-w-lg ml-auto">
               <img 
                 src={image} 
                 alt="Mission" 
-                className="w-full h-[800px] object-cover rounded-[3rem] shadow-2xl"
+                className="w-full h-auto rounded-[3rem] shadow-2xl"
                 referrerPolicy="no-referrer"
               />
             </div>
