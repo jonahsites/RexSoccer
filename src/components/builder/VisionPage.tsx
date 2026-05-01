@@ -13,9 +13,9 @@ export const VisionPage = ({
     { title: "Pro Pathway.", content: "We are committed to creating direct pathways for our players to reach professional levels, attracting scouts and professional partners who recognize the REX standard of excellence." }
   ],
   visionImages = [
-    { image: "/ChatGPT Image Apr 30, 2026, 05_14_11 PM.png", chapter: "", title: "" },
-    { image: "/ChatGPT Image Apr 30, 2026, 05_09_55 PM.png", chapter: "", title: "" },
-    { image: "/ChatGPT Image Apr 30, 2026, 05_08_08 PM.png", chapter: "", title: "" }
+    { image: "/vision_1.png", chapter: "", title: "" },
+    { image: "/vision_2.png", chapter: "", title: "" },
+    { image: "/vision_3.png", chapter: "", title: "" }
   ],
   backgroundColor = "bg-black",
 }: {
@@ -111,9 +111,9 @@ Builder.registerComponent(VisionPage, {
         { name: 'title', type: 'string' }
       ],
       defaultValue: [
-        { image: "/ChatGPT Image Apr 30, 2026, 05_14_11 PM.png", chapter: "", title: "" },
-        { image: "/ChatGPT Image Apr 30, 2026, 05_09_55 PM.png", chapter: "", title: "" },
-        { image: "/ChatGPT Image Apr 30, 2026, 05_08_08 PM.png", chapter: "", title: "" }
+        { image: "/vision_1.png", chapter: "", title: "" },
+        { image: "/vision_2.png", chapter: "", title: "" },
+        { image: "/vision_3.png", chapter: "", title: "" }
       ]
     },
   ],
