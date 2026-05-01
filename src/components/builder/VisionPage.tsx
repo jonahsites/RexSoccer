@@ -13,9 +13,9 @@ export const VisionPage = ({
     { title: "Pro Pathway.", content: "We are committed to creating direct pathways for our players to reach professional levels, attracting scouts and professional partners who recognize the REX standard of excellence." }
   ],
   visionImages = [
-    { image: "https://drive.google.com/uc?id=17LSOlQkMb1ABuoEvGZuBMmBjRVfqpP74", chapter: "", title: "" },
-    { image: "https://drive.google.com/uc?id=1CYoCpZPtLkJZVi9IyWjvgh7MGi7UyEzD", chapter: "", title: "" },
-    { image: "https://drive.google.com/uc?id=1yyS1QFnP3mw5b914Q2xsAY6_QhoIsLbe", chapter: "", title: "" }
+    { image: "/vision_1.png", chapter: "", title: "" },
+    { image: "/vision_2.png", chapter: "", title: "" },
+    { image: "/vision_3.png", chapter: "", title: "" }
   ],
   backgroundColor = "bg-black",
 }: {
@@ -111,9 +111,9 @@ Builder.registerComponent(VisionPage, {
         { name: 'title', type: 'string' }
       ],
       defaultValue: [
-        { image: "https://drive.google.com/uc?id=17LSOlQkMb1ABuoEvGZuBMmBjRVfqpP74", chapter: "", title: "" },
-        { image: "https://drive.google.com/uc?id=1CYoCpZPtLkJZVi9IyWjvgh7MGi7UyEzD", chapter: "", title: "" },
-        { image: "https://drive.google.com/uc?id=1yyS1QFnP3mw5b914Q2xsAY6_QhoIsLbe", chapter: "", title: "" }
+        { image: "/vision_1.png", chapter: "", title: "" },
+        { image: "/vision_2.png", chapter: "", title: "" },
+        { image: "/vision_3.png", chapter: "", title: "" }
       ]
     },
   ],
