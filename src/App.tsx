@@ -16,7 +16,6 @@ import { PricingSection } from './components/builder/PricingSection';
 import { LocationsSection } from './components/builder/LocationsSection';
 import { ContactSection } from './components/builder/ContactSection';
 import { Footer } from './components/builder/Footer';
-import { PhotosPage } from './components/builder/PhotosPage';
 import { TeamPage } from './components/builder/TeamPage';
 import { VisionPage } from './components/builder/VisionPage';
 import { MerchPage } from './components/builder/MerchPage';
@@ -71,17 +70,6 @@ function App() {
               <ContactSection backgroundColor="bg-black" />
               <Footer backgroundColor="bg-black" />
             </motion.main>
-          )}
-
-          {currentPage === 'photos' && (
-            <motion.div 
-              key="photos"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            >
-              <PhotosPage onBack={() => setCurrentPage('home')} backgroundColor="bg-black" />
-            </motion.div>
           )}
 
           {currentPage === 'team' && (
