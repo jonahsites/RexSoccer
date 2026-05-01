@@ -8,7 +8,7 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 export const ContactSection = ({
   badgeText = "Get Started",
-  title = "READY TO<br /><span class=\"text-oxford-blue\">LEVEL UP?</span>",
+  title = "“THE TRAINING YOUR CLUB<br /><span class=\"text-oxford-blue\">DOESN’T HAVE TIME FOR.”</span>",
   description = "Take the first step towards elite performance. Contact us to schedule your first session or ask any questions.",
   contactMethods = [
     { icon: 'mail', label: "Email Us", value: "info.rexsoccer@gmail.com", href: "mailto:info.rexsoccer@gmail.com" },
@@ -181,7 +181,7 @@ Builder.registerComponent(ContactSection, {
   inputs: [
     { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
     { name: 'badgeText', type: 'string', defaultValue: "Get Started" },
-    { name: 'title', type: 'string', defaultValue: "READY TO<br /><span class=\"text-oxford-blue\">LEVEL UP</span>?" },
+    { name: 'title', type: 'string', defaultValue: "“THE TRAINING YOUR CLUB<br /><span class=\"text-oxford-blue\">DOESN’T HAVE TIME FOR.”</span>" },
     { name: 'description', type: 'string', defaultValue: "Take the first step towards elite performance. Contact us to schedule your first session or ask any questions." },
     {
       name: 'contactMethods',
