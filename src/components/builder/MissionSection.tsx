@@ -24,7 +24,7 @@ export const MissionSection = ({
 }) => {
   return (
     <section className={`py-32 px-6 ${backgroundColor} relative overflow-hidden`}>
-      <div className="absolute top-0 right-0 w-64 h-64 bg-ice-blue/20 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-64 h-84 bg-ice-blue/20 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-24 items-center">
             <SectionReveal>
@@ -49,11 +49,11 @@ export const MissionSection = ({
               </div>
             </SectionReveal>
           <SectionReveal>
-            <div className="relative h-fit">
+            <div className="relative h-fit max-w-xl ml-auto">
               <img 
                 src={image} 
                 alt="Mission" 
-                className="w-full h-auto rounded-[2rem] shadow-2xl"
+                className="w-full h-[800px] object-cover rounded-[3rem] shadow-2xl"
                 referrerPolicy="no-referrer"
               />
             </div>

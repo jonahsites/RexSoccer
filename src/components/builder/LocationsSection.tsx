@@ -4,15 +4,15 @@ import { ArrowRight } from 'lucide-react';
 import { SectionReveal } from './common';
 
 export const LocationsSection = ({
-  badgeText = "Where We Train",
-  title = "PORT ST.<br />LUCIE.",
-  description = "Availability is open to the needs of the individual. Train at our elite facilities designed for high performance.",
+  badgeText = "locations",
+  title = "Come train with us in person",
+  description = "Availability is open to the needs of the individual. Train at elite facilities designed for high performance.",
   locations = [
     {
       id: 1,
       name: "Location 1",
-      address: "1585 SW Cashmere Blvd",
-      city: "Port St. Lucie, FL 34986",
+      address: "Port St. Lucie FL",
+      city: "1585 SW Cashmere Blvd, Port St. Lucie, FL 34986",
       img: "https://image2url.com/r2/default/images/1775342660072-e8a552b4-ed8e-4a03-82d7-1fc0b708d302.png",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=1585+SW+Cashmere+Blvd+Port+St.+Lucie+FL+34986",
       objectPosition: "center 20%",
@@ -21,10 +21,20 @@ export const LocationsSection = ({
     {
       id: 2,
       name: "Location 2",
-      address: "12151 SW Community Blvd",
-      city: "Port St. Lucie, FL 34987",
+      address: "Port St. Lucie FL",
+      city: "12151 SW Community Blvd, Port St. Lucie, FL 34987",
       img: "https://image2url.com/r2/default/images/1775342742359-a5cde3a0-1bb0-42f7-bfec-a9b31e743293.png",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=12151+SW+Community+Blvd+Port+St.+Lucie+FL+34987",
+      objectPosition: "center",
+      zoom: 0.85
+    },
+    {
+      id: 3,
+      name: "Location 3",
+      address: "Palm Beach Gardens",
+      city: "Palm Beach Gardens, FL",
+      img: "https://image2url.com/r2/default/images/1775342660072-e8a552b4-ed8e-4a03-82d7-1fc0b708d302.png",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=Palm+Beach+Gardens+FL",
       objectPosition: "center",
       zoom: 0.85
     }
@@ -53,48 +63,57 @@ export const LocationsSection = ({
   return (
     <section id="locations" className={`py-32 px-6 ${backgroundColor} overflow-hidden`}>
       <div className="max-w-7xl mx-auto">
-        <SectionReveal className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-12">
-          <div>
-              <span className="text-ice-blue font-black uppercase tracking-[0.4em] text-xs mb-6 block">{badgeText}</span>
-              <h2 
-                className="text-6xl md:text-9xl font-black leading-[0.85] tracking-tighter text-white"
-                dangerouslySetInnerHTML={{ __html: title.replace('PORT ST.<br />LUCIE.', 'PORT ST.<br /><span class="text-ice-blue">LUCIE.</span>') }}
-              />
+        <SectionReveal className="flex flex-col lg:flex-row lg:items-start justify-between mb-24 gap-12">
+          <div className="max-w-2xl">
+              <div className="flex items-center gap-4 mb-8">
+                <span className="text-ice-blue font-black uppercase tracking-[0.2em] text-[10px]">08 / {badgeText}</span>
+                <div className="h-[1px] w-12 bg-white/20" />
+              </div>
+              <h2 className="text-5xl md:text-6xl font-black leading-[0.8] tracking-tighter text-white uppercase break-words">
+                {title}
+              </h2>
           </div>
-          <p className="max-w-md text-white/40 text-xl font-light leading-relaxed">
+          <p className="max-w-md text-white/40 text-xl font-light leading-relaxed lg:mt-32">
             {description}
           </p>
         </SectionReveal>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {locations.map((loc, i) => (
             <SectionReveal key={loc.id}>
-              <div className="group relative h-[600px] rounded-[3rem] overflow-hidden bg-zinc-900 border border-white/5 p-3 shadow-sm">
-                <div className="relative h-full w-full rounded-[2.5rem] overflow-hidden bg-zinc-800">
-                  <img 
-                    src={loc.img} 
-                    alt={loc.name}
-                    className="w-full h-full object-contain group-hover:scale-110 transition-all duration-1000 brightness-110"
-                    style={{ 
-                      objectPosition: loc.objectPosition || 'center',
-                      transform: `scale(${loc.zoom || 1})`
-                    }}
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                  <div className="absolute bottom-12 left-12 right-12">
-                    <span className="text-white font-black uppercase tracking-[0.3em] text-[10px] mb-4 block">{loc.name}</span>
-                    <h3 className="text-4xl font-black mb-4 tracking-tight text-white">{loc.address}</h3>
-                    <p className="text-white/50 mb-10 text-lg font-medium">{loc.city}</p>
-                    <a 
-                      href={loc.mapUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-4 text-white font-black uppercase tracking-[0.3em] text-[10px] group-hover:text-ice-blue transition-all"
-                    >
-                      Open in Maps <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:border-ice-blue"><ArrowRight className="w-4 h-4" /></div>
-                    </a>
+              <div className="group relative h-[600px] overflow-hidden bg-zinc-900 border border-white/5 shadow-2xl">
+                <img 
+                  src={loc.img} 
+                  alt={loc.name}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] opacity-60"
+                  style={{ objectPosition: loc.objectPosition || 'center' }}
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                
+                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                  <div className="mb-6">
+                    <span className="text-ice-blue font-bold uppercase tracking-[0.2em] text-[10px] mb-4 block">
+                      // {loc.name}
+                    </span>
+                    <h3 className="text-4xl md:text-5xl font-black mb-4 tracking-tighter text-white uppercase leading-none">
+                      {loc.address}
+                    </h3>
+                    <div className="space-y-1 text-white/50 font-medium text-sm max-w-xs mb-8 leading-tight">
+                      {loc.city.split(',').map((part, idx) => (
+                        <p key={idx}>{part.trim()}</p>
+                      ))}
+                    </div>
                   </div>
+                  
+                  <a 
+                    href={loc.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-ice-blue font-black uppercase tracking-[0.1em] text-[10px] hover:text-white transition-colors"
+                  >
+                    BOOK IN {loc.address.split(' ')[0]} <span className="text-lg">→</span>
+                  </a>
                 </div>
               </div>
             </SectionReveal>
@@ -132,9 +151,9 @@ Builder.registerComponent(LocationsSection, {
   name: 'LocationsSection',
   inputs: [
     { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
-    { name: 'badgeText', type: 'string', defaultValue: "Where We Train" },
-    { name: 'title', type: 'string', defaultValue: "PORT ST.<br />LUCIE." },
-    { name: 'description', type: 'string', defaultValue: "Availability is open to the needs of the individual. Train at our elite facilities designed for high performance." },
+    { name: 'badgeText', type: 'string', defaultValue: "locations" },
+    { name: 'title', type: 'string', defaultValue: "TRAIN WITH US<br />IN PERSON." },
+    { name: 'description', type: 'string', defaultValue: "Two flagship training environments — plus on-demand sessions through the SAT Plus app. Book the one closest to you." },
     {
       name: 'locations',
       type: 'list',
@@ -152,8 +171,8 @@ Builder.registerComponent(LocationsSection, {
         {
           id: 1,
           name: "Location 1",
-          address: "1585 SW Cashmere Blvd",
-          city: "Port St. Lucie, FL 34986",
+          address: "Port St. Lucie FL",
+          city: "1585 SW Cashmere Blvd, Port St. Lucie, FL 34986",
           img: "https://image2url.com/r2/default/images/1775342660072-e8a552b4-ed8e-4a03-82d7-1fc0b708d302.png",
           mapUrl: "https://www.google.com/maps/search/?api=1&query=1585+SW+Cashmere+Blvd+Port+St.+Lucie+FL+34986",
           objectPosition: "center 20%",
@@ -162,10 +181,20 @@ Builder.registerComponent(LocationsSection, {
         {
           id: 2,
           name: "Location 2",
-          address: "12151 SW Community Blvd",
-          city: "Port St. Lucie, FL 34987",
+          address: "Port St. Lucie FL",
+          city: "12151 SW Community Blvd, Port St. Lucie, FL 34987",
           img: "https://image2url.com/r2/default/images/1775342742359-a5cde3a0-1bb0-42f7-bfec-a9b31e743293.png",
           mapUrl: "https://www.google.com/maps/search/?api=1&query=12151+SW+Community+Blvd+Port+St.+Lucie+FL+34987",
+          objectPosition: "center",
+          zoom: 0.85
+        },
+        {
+          id: 3,
+          name: "Location 3",
+          address: "Palm Beach Gardens",
+          city: "Palm Beach Gardens, FL",
+          img: "https://image2url.com/r2/default/images/1775342660072-e8a552b4-ed8e-4a03-82d7-1fc0b708d302.png",
+          mapUrl: "https://www.google.com/maps/search/?api=1&query=Palm+Beach+Gardens+FL",
           objectPosition: "center",
           zoom: 0.85
         }
