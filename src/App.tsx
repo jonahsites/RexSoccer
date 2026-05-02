@@ -60,7 +60,7 @@ function App() {
               <Hero />
               <MissionSection backgroundColor="bg-black" />
               <QuoteSection
-                quote='"1% BETTER EVERYDAY."'
+                quote='1% BETTER EVERYDAY.'
                 backgroundColor="bg-black"
               />
               <StepSection backgroundColor="bg-black" />
