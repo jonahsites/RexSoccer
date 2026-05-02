@@ -13,7 +13,7 @@ export const LocationsSection = ({
       name: "Location 1",
       address: "Port St. Lucie FL",
       city: "1585 SW Cashmere Blvd, Port St. Lucie, FL 34986",
-      img: "https://image2url.com/r2/default/images/1775342660072-e8a552b4-ed8e-4a03-82d7-1fc0b708d302.png",
+      img: "https://lh3.googleusercontent.com/d/1NdipT27Mnet9X7WZB0o28-lVTMbNAp61",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=1585+SW+Cashmere+Blvd+Port+St.+Lucie+FL+34986",
       objectPosition: "center 20%",
       zoom: 0.85
