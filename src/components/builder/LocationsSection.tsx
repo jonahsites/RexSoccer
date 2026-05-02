@@ -65,11 +65,8 @@ export const LocationsSection = ({
       <div className="max-w-7xl mx-auto">
         <SectionReveal className="flex flex-col lg:flex-row lg:items-start justify-between mb-24 gap-12">
           <div className="max-w-2xl">
-              <div className="flex items-center gap-4 mb-8">
-                <span className="text-ice-blue font-black uppercase tracking-[0.2em] text-[10px]">{badgeText}</span>
-                <div className="h-[1px] w-12 bg-white/20" />
-              </div>
-              <h2 className="text-5xl md:text-6xl font-black leading-[0.8] tracking-tighter text-white uppercase break-words">
+              <span className="text-ice-blue font-black uppercase tracking-widest text-xs mb-6 block">{badgeText}</span>
+              <h2 className="text-5xl md:text-7xl font-black mb-10 leading-[0.9] tracking-tighter text-white uppercase">
                 {title}
               </h2>
           </div>
