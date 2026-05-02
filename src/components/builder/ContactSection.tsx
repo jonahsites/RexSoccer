@@ -69,14 +69,6 @@ export const ContactSection = ({
         <div className="flex flex-col items-center gap-16">
           <SectionReveal>
             <div className="text-center flex flex-col items-center max-w-4xl mx-auto">
-              <div className="mb-12">
-                <img 
-                  src="https://image2url.com/r2/default/images/1774894049292-b9fe06c3-7e1a-4415-a0c6-1f107619d1bb.png" 
-                  alt="REX" 
-                  className="h-16 w-auto opacity-40 brightness-0 invert pointer-events-none"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
               <span className="text-ice-blue font-black uppercase tracking-[0.4em] text-xs mb-6 block">{badgeText}</span>
               <h2 
                 className="text-4xl md:text-5xl font-black mb-10 leading-[0.8] tracking-tighter text-white uppercase break-words"
