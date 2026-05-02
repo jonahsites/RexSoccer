@@ -57,7 +57,7 @@ export const AboutSection = ({
                   <p
                     key={i}
                     className={cn(
-                      p === "REX is where serious players train." ? "text-white text-4xl md:text-6xl font-black uppercase tracking-tighter mt-12 leading-[0.85]" : "text-white font-medium"
+                      p === "REX is where serious players train." ? "text-white text-4xl md:text-6xl font-black uppercase tracking-tighter mt-12 leading-[0.85]" : "text-white font-light"
                     )}
                   >
                     {p === "REX is where serious players train." ? (
