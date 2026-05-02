@@ -40,7 +40,7 @@ export const AboutSection = ({
                   className="text-5xl md:text-7xl font-black mb-10 leading-[0.9] tracking-tighter text-white uppercase"
                   dangerouslySetInnerHTML={{ __html: title.replace('PURPOSE.', '<span class="text-ice-blue">PURPOSE.</span>') }}
                 />
-            <div className="space-y-8 text-white/60 text-lg font-medium leading-relaxed max-w-xl">
+            <div className="space-y-8 text-white/60 text-xl font-medium leading-relaxed max-w-xl">
               {paragraphs.map((p, i) => {
                 const isBullet = p.startsWith('- ');
                 const prevIsBullet = i > 0 && paragraphs[i-1].startsWith('- ');
