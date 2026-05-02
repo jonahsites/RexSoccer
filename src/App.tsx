@@ -59,11 +59,11 @@ function App() {
             >
               <Hero />
               <MissionSection backgroundColor="bg-black" />
-              <StepSection backgroundColor="bg-black" />
-              <QuoteSection 
-                quote='"1% BETTER EVERYDAY."' 
-                backgroundColor="bg-black" 
+              <QuoteSection
+                quote='"1% BETTER EVERYDAY."'
+                backgroundColor="bg-black"
               />
+              <StepSection backgroundColor="bg-black" />
               <AboutSection backgroundColor="bg-black" />
               <PricingSection backgroundColor="bg-black" />
               <LocationsSection backgroundColor="bg-black" />
