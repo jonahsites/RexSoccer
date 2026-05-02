@@ -44,8 +44,8 @@ export const LocationsSection = ({
   mobileDesc = "Can't make it to our locations? No problem. We bring the elite training experience to your local field or backyard.",
   travelFees = [
     { label: "Under 10 miles", price: "FREE" },
-    { label: "10 - 20 miles", price: "+$15" },
-    { label: "20+ miles", price: "+$25" }
+    { label: "10 - 20 miles", price: "$25" },
+    { label: "20+ miles", price: "$35" }
   ],
   backgroundColor = "bg-black",
 }: {
@@ -209,8 +209,8 @@ Builder.registerComponent(LocationsSection, {
       ],
       defaultValue: [
         { label: "Under 10 miles", price: "FREE" },
-        { label: "10 - 20 miles", price: "+$15" },
-        { label: "20+ miles", price: "+$25" }
+        { label: "10 - 20 miles", price: "$25" },
+        { label: "20+ miles", price: "$35" }
       ],
     },
   ],
