@@ -54,13 +54,10 @@ export const AboutSection = ({
                   );
                 }
                 return (
-                  <p 
+                  <p
                     key={i}
                     className={cn(
-                      i === 0 ? "text-white text-xl font-medium" : "",
-                      i === 1 ? "text-white/80 font-medium" : "",
-                      (i === 2 || i === 3 || i === 4 || i === 9) ? "text-white/90 font-medium" : "",
-                      p === "REX is where serious players train." ? "text-white text-4xl md:text-6xl font-black uppercase tracking-tighter mt-12 leading-[0.85]" : ""
+                      p === "REX is where serious players train." ? "text-white text-4xl md:text-6xl font-black uppercase tracking-tighter mt-12 leading-[0.85]" : "text-white font-medium"
                     )}
                   >
                     {p === "REX is where serious players train." ? (
