@@ -139,11 +139,11 @@ export const Hero = ({
               </motion.div>
             </div>
 
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 1 }}
-              className="max-w-2xl mx-auto text-white text-base md:text-2xl font-black mb-2 uppercase tracking-[0.2em]"
+              className="max-w-2xl mx-auto text-ice-blue text-base md:text-2xl font-black mb-2 uppercase tracking-[0.2em]"
             >
               {mainTitle}
             </motion.p>
