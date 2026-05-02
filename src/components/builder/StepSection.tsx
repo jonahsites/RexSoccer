@@ -21,7 +21,7 @@ export const StepSection = ({
       id: "03",
       title: "Elite Conditioning",
       desc: "High-performance speed, strength, and agility training.",
-      img: "https://image2url.com/r2/default/files/1775315003673-d45660e4-c5d9-470b-a5db-c795786b88c2.png"
+      img: "https://lh3.googleusercontent.com/d/1vWFlEKsJB_5guDEv7Gj4lXpndSEkY7k_"
     }
   ],
   backgroundColor = "bg-zinc-900",
