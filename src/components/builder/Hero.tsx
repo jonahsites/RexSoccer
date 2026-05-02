@@ -69,8 +69,8 @@ export const Hero = ({
           <motion.div style={{ y, opacity }}>
             <div className="absolute inset-0 z-[-1] opacity-30 pointer-events-none overflow-hidden">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2 w-[110%] h-[110%] -translate-x-5 -translate-y-5 bg-black">
-                <img src="https://lh3.googleusercontent.com/d/170QQBtPjfPeMJDmy-8WMSCXQWSW_SUIk" className="w-full h-full object-cover contrast-[1.1]" referrerPolicy="no-referrer" />
                 <img src="https://lh3.googleusercontent.com/d/1maxTUPXlGr4-ZQRY4lxazQ-tlGQwIgtO" className="w-full h-full object-cover contrast-[1.1]" referrerPolicy="no-referrer" />
+                <img src="https://lh3.googleusercontent.com/d/170QQBtPjfPeMJDmy-8WMSCXQWSW_SUIk" className="w-full h-full object-cover contrast-[1.1]" referrerPolicy="no-referrer" />
                 <img src="https://lh3.googleusercontent.com/d/1dgo0R5kV4CiFJbPrbWYXXkiEYZB_tpur" className="w-full h-full object-cover contrast-[1.1]" referrerPolicy="no-referrer" />
                 <img src="https://lh3.googleusercontent.com/d/1IIry7hEJtJuvOzPFOXIRZWcI4AkBLUpE" className="w-full h-full object-cover contrast-[1.1]" referrerPolicy="no-referrer" />
                 <div className="w-full h-full bg-black" />
