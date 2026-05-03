@@ -51,7 +51,7 @@ export const Footer = ({
       <img 
         src={backgroundImage}
         alt=""
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-7xl pointer-events-none"
+        className="absolute right-0 top-0 h-full w-auto opacity-30 pointer-events-none object-contain object-right"
         referrerPolicy="no-referrer"
       />
       <div className="max-w-7xl mx-auto relative z-10">
