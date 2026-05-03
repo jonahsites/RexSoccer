@@ -4,7 +4,7 @@ import { SectionReveal } from './common';
 import { cn } from '../../lib/utils';
 
 export const AboutSection = ({
-  badgeText = "Coach Raza",
+  badgeText = "THE FUTURE",
   title = "TRAIN WITH<br />PURPOSE.",
   paragraphs = [
     "REX Soccer was founded in 2025 by professional and NCAA Division I player, and Panama Youth National Team member, Faqir Raza. Built from top-level competition and international experience, REX Soccer is designed for players who don’t just need more practice—they need specialized training.",
@@ -81,7 +81,7 @@ Builder.registerComponent(AboutSection, {
   name: 'AboutSection',
   inputs: [
     { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
-    { name: 'badgeText', type: 'string', defaultValue: "Coach Raza" },
+    { name: 'badgeText', type: 'string', defaultValue: "THE FUTURE" },
     { name: 'title', type: 'string', defaultValue: "TRAIN WITH<br />PURPOSE." },
     { name: 'paragraphs', type: 'list', subFields: [{ name: 'p', type: 'string' }], defaultValue: [
       { p: "REX Soccer was founded in 2025 by professional and NCAA Division I player, and Panama Youth National Team member, Faqir Raza. Built from top-level competition and international experience, REX Soccer is designed for players who don’t just need more practice—they need specialized training." },

@@ -10,7 +10,7 @@ export const Hero = ({
   soccerBall = "https://lh3.googleusercontent.com/d/1_0Zz9I3EBG0HB1jdFZ8nJuuFg-QFaiDM",
   xLogo = "https://image2url.com/r2/default/images/1774365460719-25193da0-b4be-4342-bcd6-7d809edf0367.png",
   mainTitle = "REX SOCCER",
-  subtext = "FIXING THE U.S YOUTH SOCCER SYSTEM.",
+  subtext = "",
   cta1Text = "Book Training",
   cta2Text = "Our Mission",
 }: {
@@ -139,11 +139,11 @@ export const Hero = ({
               </motion.div>
             </div>
 
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 1 }}
-              className="max-w-2xl mx-auto text-white text-base md:text-2xl font-black mb-2 uppercase tracking-[0.2em]"
+              className="max-w-2xl mx-auto text-ice-blue text-base md:text-2xl font-black mb-2 uppercase tracking-[0.2em]"
             >
               {mainTitle}
             </motion.p>
