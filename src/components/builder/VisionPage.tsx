@@ -15,7 +15,7 @@ export const VisionPage = ({
   visionImages = [
     { image: "https://lh3.googleusercontent.com/d/17LSOlQkMb1ABuoEvGZuBMmBjRVfqpP74", chapter: "", title: "" },
     { image: "https://lh3.googleusercontent.com/d/1CYoCpZPtLkJZVi9IyWjvgh7MGi7UyEzD", chapter: "", title: "" },
-    { image: "https://chatgpt.com/backend-api/estuary/content?id=file_000000000fc871fd94c7dab0f4965682&ts=493821&p=fs&cid=1&sig=63ab2f2311f9a501458929f3c0e89d6b9633540e2794268cb4a21f3c74777970&v=0", chapter: "", title: "" }
+    { image: "https://lh3.googleusercontent.com/d/1IS35oPaRpGRR5qIca0PS4PDNd3YdBJ9b", chapter: "", title: "" }
   ],
   backgroundColor = "bg-black",
 }: {
