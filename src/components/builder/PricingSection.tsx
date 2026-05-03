@@ -68,6 +68,7 @@ export const PricingSection = ({
     <section id="pricing" className={`relative py-32 px-6 ${backgroundColor} overflow-hidden`}>
       <div className="max-w-7xl mx-auto relative z-10">
             <SectionReveal className="text-center mb-24">
+              <span className="text-ice-blue font-black uppercase tracking-widest text-xs mb-6 block">THE COMMITMENT</span>
               <h2 className="text-6xl md:text-9xl font-black mb-4 tracking-tighter text-white">THE INVESTMENT</h2>
           <p className="text-white/40 text-xl font-medium tracking-tight max-w-2xl mx-auto uppercase">
             Consistency is the only pathway to elite development. Choose your path.
