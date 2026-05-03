@@ -5,7 +5,7 @@ import { Builder } from '@builder.io/react';
 
 export const TeamPage = ({
   onBack = () => window.dispatchEvent(new CustomEvent('changePage', { detail: 'home' })),
-  title = "The <span class=\"text-ice-blue\">Team</span>.",
+  title = "The <span class=\"text-ice-blue\">Team.</span>",
   team = [
     { name: "Faiqr Raza", role: "CEO/Trainer", bio: "Former NCAA D1 player with international experience.", img: "https://lh3.googleusercontent.com/d/1rToMtbq6zUqA-3ojUoM974XEX5Cro1Er" },
     { name: "Santiago Pedraza", role: "Creative Strategist / Operations Manager", bio: "Driving REX's creative vision and operational excellence.", img: "https://lh3.googleusercontent.com/d/1etZ43OxAu9o0txlet_IVg5o2SBpjEl1I" },
