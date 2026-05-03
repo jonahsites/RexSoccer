@@ -46,6 +46,7 @@ export const ProcessSection = ({
       <div className="max-w-7xl mx-auto">
         <SectionReveal className="flex flex-col lg:flex-row lg:items-start justify-between mb-32 gap-12">
           <div className="max-w-2xl">
+            <span className="text-ice-blue font-black uppercase tracking-widest text-xs mb-6 block">THE DIFFERENCE</span>
             <h2 className="text-6xl md:text-8xl font-black leading-[0.85] tracking-tighter text-white uppercase break-words">
               {title}
             </h2>
