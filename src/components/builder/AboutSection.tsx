@@ -4,12 +4,19 @@ import { SectionReveal } from './common';
 import { cn } from '../../lib/utils';
 
 export const AboutSection = ({
-  badgeText = "THE FUTURE",
+  badgeText = "Coach Raza",
   title = "TRAIN WITH<br />PURPOSE.",
   paragraphs = [
-    "REX Soccer was founded in 2025 by professional and NCAA Division I player, and Panama Youth National Team member, Faqir Raza. Built from top-level competition and international experience, REX Soccer is designed for players who don't just need more practice—they need specialized training.",
-    "Every session at REX is laser-focused, built around game-specific demands and the exact weaknesses holding a player back. No wasted reps, no generic drills—everything we do directly elevates match performance.",
-    "We develop technical precision, faster decision-making, speed, and discipline—qualities that separate players over time. Most players train hard. Few train with purpose.",
+    "I’m Faqir Raza, founder of REX Soccer. Soccer has been my environment since the age of 4. The game has taken me through high-level competition, including NCAA Division I soccer and long-term experience training within the Panama Youth National Team system.",
+    "That experience shapes how I develop players.",
+    "REX Soccer is built for players who want to separate themselves. This is specialized, high-level training — not beginner sessions, not generic drills.",
+    "Every session is structured with a clear objective. No wasted reps. No random work. Everything we do shows up in real matches.",
+    "We develop:",
+    "- Technical precision under pressure",
+    "- Game intelligence and faster decision-making",
+    "- Speed, conditioning, and explosiveness",
+    "- Discipline and consistency that separates players over time",
+    "Most players train hard. Very few train with purpose.",
     "REX is where serious players train."
   ],
   stats = [
@@ -36,11 +43,11 @@ export const AboutSection = ({
         <SectionReveal>
               <div className="relative">
                 <span className="text-ice-blue font-black uppercase tracking-widest text-xs mb-6 block">{badgeText}</span>
-                <h2
-                  className="text-5xl md:text-7xl font-black mb-10 leading-[0.9] tracking-tighter text-white uppercase"
+                <h2 
+                  className="text-5xl md:text-8xl font-black mb-10 leading-[0.9] tracking-tighter text-white uppercase"
                   dangerouslySetInnerHTML={{ __html: title.replace('PURPOSE.', '<span class="text-ice-blue">PURPOSE.</span>') }}
                 />
-            <div className="space-y-8 text-white/60 text-xl font-medium leading-relaxed max-w-xl">
+            <div className="space-y-6 text-white/50 text-lg font-light leading-relaxed max-w-xl">
               {paragraphs.map((p, i) => {
                 const isBullet = p.startsWith('- ');
                 const prevIsBullet = i > 0 && paragraphs[i-1].startsWith('- ');
@@ -54,10 +61,13 @@ export const AboutSection = ({
                   );
                 }
                 return (
-                  <p
+                  <p 
                     key={i}
                     className={cn(
-                      p === "REX is where serious players train." ? "text-white text-4xl md:text-6xl font-black uppercase tracking-tighter mt-12 leading-[0.85]" : "text-white text-base font-light"
+                      i === 0 ? "text-white text-xl font-medium" : "",
+                      i === 1 ? "text-white/80 font-medium" : "",
+                      (i === 2 || i === 3 || i === 4 || i === 9) ? "text-white/90 font-medium" : "",
+                      p === "REX is where serious players train." ? "text-white text-4xl md:text-6xl font-black uppercase tracking-tighter mt-12 leading-[0.85]" : ""
                     )}
                   >
                     {p === "REX is where serious players train." ? (
@@ -106,12 +116,19 @@ Builder.registerComponent(AboutSection, {
   name: 'AboutSection',
   inputs: [
     { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
-    { name: 'badgeText', type: 'string', defaultValue: "THE FUTURE" },
+    { name: 'badgeText', type: 'string', defaultValue: "Coach Raza" },
     { name: 'title', type: 'string', defaultValue: "TRAIN WITH<br />PURPOSE." },
     { name: 'paragraphs', type: 'list', subFields: [{ name: 'p', type: 'string' }], defaultValue: [
-      { p: "REX Soccer was founded in 2025 by professional and NCAA Division I player, and Panama Youth National Team member, Faqir Raza. Built from top-level competition and international experience, REX Soccer is designed for players who don't just need more practice—they need specialized training." },
-      { p: "Every session at REX is laser-focused, built around game-specific demands and the exact weaknesses holding a player back. No wasted reps, no generic drills—everything we do directly elevates match performance." },
-      { p: "We develop technical precision, faster decision-making, speed, and discipline—qualities that separate players over time. Most players train hard. Few train with purpose." },
+      { p: "I’m Faqir Raza, founder of REX Soccer. Soccer has been my environment since the age of 4. The game has taken me through high-level competition, including NCAA Division I soccer and long-term experience training within the Panama Youth National Team system." },
+      { p: "That experience shapes how I develop players." },
+      { p: "REX Soccer is built for players who want to separate themselves. This is specialized, high-level training — not beginner sessions, not generic drills." },
+      { p: "Every session is structured with a clear objective. No wasted reps. No random work. Everything we do shows up in real matches." },
+      { p: "We develop:" },
+      { p: "- Technical precision under pressure" },
+      { p: "- Game intelligence and faster decision-making" },
+      { p: "- Speed, conditioning, and explosiveness" },
+      { p: "- Discipline and consistency that separates players over time" },
+      { p: "Most players train hard. Very few train with purpose." },
       { p: "REX is where serious players train." }
     ] },
     { name: 'stats', type: 'list', subFields: [{ name: 'value', type: 'string' }, { name: 'label', type: 'string' }], defaultValue: [

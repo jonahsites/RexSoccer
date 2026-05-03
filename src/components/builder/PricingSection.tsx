@@ -39,7 +39,7 @@ export const PricingSection = ({
   ],
   policies = [
     "All packages must be used within their time limit (no rollovers).",
-    "5-hour notice is required for any cancellations. If canceled less than 5 hours before, the session will still be charged.",
+    "24-hour notice is required for any cancellations. If canceled less than 24 hours before, the session will still be charged.",
     "If a duo session is canceled, it will proceed as a private session, and the price will adjust to $55.",
     "Group sessions are priced per player and will remain as booked.",
     "Sessions must be scheduled in advance, based on availability.",

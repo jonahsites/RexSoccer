@@ -47,11 +47,11 @@ export const Footer = ({
 
   return (
     <footer className={`relative py-32 px-6 border-t border-white/5 ${backgroundColor} overflow-hidden`}>
-      {/* Background Accent Image - Right Side, Full Height */}
-      <img
+      {/* Background Accent Image */}
+      <img 
         src={backgroundImage}
         alt=""
-        className="absolute right-0 top-0 h-full w-auto pointer-events-none"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-7xl pointer-events-none"
         referrerPolicy="no-referrer"
       />
       <div className="max-w-7xl mx-auto relative z-10">

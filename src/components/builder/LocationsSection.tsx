@@ -5,7 +5,7 @@ import { SectionReveal } from './common';
 
 export const LocationsSection = ({
   badgeText = "locations",
-  title = "Come train with us in person.",
+  title = "Come train with us in person",
   description = "Availability is open to the needs of the individual. Train at elite facilities designed for high performance.",
   locations = [
     {
@@ -13,7 +13,7 @@ export const LocationsSection = ({
       name: "Location 1",
       address: "Port St. Lucie FL",
       city: "1585 SW Cashmere Blvd, Port St. Lucie, FL 34986",
-      img: "https://lh3.googleusercontent.com/d/1NdipT27Mnet9X7WZB0o28-lVTMbNAp61",
+      img: "https://image2url.com/r2/default/images/1775342660072-e8a552b4-ed8e-4a03-82d7-1fc0b708d302.png",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=1585+SW+Cashmere+Blvd+Port+St.+Lucie+FL+34986",
       objectPosition: "center 20%",
       zoom: 0.85
@@ -44,8 +44,8 @@ export const LocationsSection = ({
   mobileDesc = "Can't make it to our locations? No problem. We bring the elite training experience to your local field or backyard.",
   travelFees = [
     { label: "Under 10 miles", price: "FREE" },
-    { label: "10 - 20 miles", price: "$25" },
-    { label: "20+ miles", price: "$35" }
+    { label: "10 - 20 miles", price: "+$15" },
+    { label: "20+ miles", price: "+$25" }
   ],
   backgroundColor = "bg-black",
 }: {
@@ -65,8 +65,11 @@ export const LocationsSection = ({
       <div className="max-w-7xl mx-auto">
         <SectionReveal className="flex flex-col lg:flex-row lg:items-start justify-between mb-24 gap-12">
           <div className="max-w-2xl">
-              <span className="text-ice-blue font-black uppercase tracking-widest text-xs mb-6 block">{badgeText}</span>
-              <h2 className="text-5xl md:text-7xl font-black mb-10 leading-[0.9] tracking-tighter text-white uppercase">
+              <div className="flex items-center gap-4 mb-8">
+                <span className="text-ice-blue font-black uppercase tracking-[0.2em] text-[10px]">08 / {badgeText}</span>
+                <div className="h-[1px] w-12 bg-white/20" />
+              </div>
+              <h2 className="text-5xl md:text-6xl font-black leading-[0.8] tracking-tighter text-white uppercase break-words">
                 {title}
               </h2>
           </div>
@@ -209,8 +212,8 @@ Builder.registerComponent(LocationsSection, {
       ],
       defaultValue: [
         { label: "Under 10 miles", price: "FREE" },
-        { label: "10 - 20 miles", price: "$25" },
-        { label: "20+ miles", price: "$35" }
+        { label: "10 - 20 miles", price: "+$15" },
+        { label: "20+ miles", price: "+$25" }
       ],
     },
   ],

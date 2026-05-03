@@ -34,7 +34,7 @@ export const MissionSection = ({
               >
                 FIXING THE <span className="text-ice-blue">U.S.</span><br />YOUTH SYSTEM.
               </h2>
-              <div className="space-y-8 text-white/60 text-xl font-medium leading-relaxed">
+              <div className="space-y-8 text-white/60 text-lg font-medium leading-relaxed">
                 {paragraphs.map((p, i) => (
                    <p key={i}>{p}</p>
                 ))}

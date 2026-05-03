@@ -14,6 +14,7 @@ import { MissionSection } from './components/builder/MissionSection';
 import { AboutSection } from './components/builder/AboutSection';
 import { PricingSection } from './components/builder/PricingSection';
 import { LocationsSection } from './components/builder/LocationsSection';
+import { ProcessSection } from './components/builder/ProcessSection';
 import { ContactSection } from './components/builder/ContactSection';
 import { Footer } from './components/builder/Footer';
 import { TeamPage } from './components/builder/TeamPage';
@@ -59,12 +60,13 @@ function App() {
             >
               <Hero />
               <MissionSection backgroundColor="bg-black" />
-              <QuoteSection
-                quote='1% BETTER EVERYDAY.'
-                backgroundColor="bg-black"
-              />
               <StepSection backgroundColor="bg-black" />
+              <QuoteSection 
+                quote='"1% BETTER EVERYDAY."' 
+                backgroundColor="bg-black" 
+              />
               <AboutSection backgroundColor="bg-black" />
+              <ProcessSection backgroundColor="bg-black" />
               <PricingSection backgroundColor="bg-black" />
               <LocationsSection backgroundColor="bg-black" />
               <ContactSection backgroundColor="bg-black" />
