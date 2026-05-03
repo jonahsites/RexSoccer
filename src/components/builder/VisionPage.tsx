@@ -14,7 +14,7 @@ export const VisionPage = ({
   ],
   visionImages = [
     { image: "https://lh3.googleusercontent.com/d/1OHkNQYSkM2Zrq_khwOxRL6WUm18gTVGR", chapter: "", title: "" },
-    { image: "https://lh3.googleusercontent.com/d/1jTKCeQH7aDszJml8V9uoUNeUrdqgbmBZ", chapter: "", title: "" },
+    { image: "https://lh3.googleusercontent.com/d/1MBbifo3jdiiC_r0S6PwjjBmYffXdjCvp", chapter: "", title: "" },
     { image: "https://lh3.googleusercontent.com/d/1IS35oPaRpGRR5qIca0PS4PDNd3YdBJ9b", chapter: "", title: "" }
   ],
   backgroundColor = "bg-black",
@@ -112,7 +112,7 @@ Builder.registerComponent(VisionPage, {
       ],
       defaultValue: [
         { image: "https://lh3.googleusercontent.com/d/1OHkNQYSkM2Zrq_khwOxRL6WUm18gTVGR", chapter: "", title: "" },
-        { image: "https://lh3.googleusercontent.com/d/1jTKCeQH7aDszJml8V9uoUNeUrdqgbmBZ", chapter: "", title: "" },
+        { image: "https://lh3.googleusercontent.com/d/1MBbifo3jdiiC_r0S6PwjjBmYffXdjCvp", chapter: "", title: "" },
         { image: "https://lh3.googleusercontent.com/d/1IS35oPaRpGRR5qIca0PS4PDNd3YdBJ9b", chapter: "", title: "" }
       ]
     },
