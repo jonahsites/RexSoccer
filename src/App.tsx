@@ -20,6 +20,7 @@ import { Footer } from './components/builder/Footer';
 import { TeamPage } from './components/builder/TeamPage';
 import { VisionPage } from './components/builder/VisionPage';
 import { MerchPage } from './components/builder/MerchPage';
+import { LoginPage } from './components/builder/LoginPage';
 
 // --- Error Boundary ---
 interface ErrorBoundaryProps {
@@ -48,7 +49,7 @@ function App() {
   return (
     <FirebaseProvider>
       <div className="bg-black selection:bg-ice-blue selection:text-black overflow-x-hidden text-white">
-        <Navbar />
+        {currentPage !== 'login' && <Navbar />}
         
         <AnimatePresence mode="wait">
           {currentPage === 'home' && (
@@ -60,11 +61,11 @@ function App() {
             >
               <Hero />
               <MissionSection backgroundColor="bg-black" />
-              <QuoteSection
-                quote='1% BETTER EVERYDAY.'
-                backgroundColor="bg-black"
-              />
               <StepSection backgroundColor="bg-black" />
+              <QuoteSection 
+                quote='"1% BETTER EVERYDAY."' 
+                backgroundColor="bg-black" 
+              />
               <AboutSection backgroundColor="bg-black" />
               <ProcessSection backgroundColor="bg-black" />
               <PricingSection backgroundColor="bg-black" />
@@ -104,6 +105,17 @@ function App() {
               exit={{ opacity: 0 }}
             >
               <MerchPage onBack={() => setCurrentPage('home')} backgroundColor="bg-black" />
+            </motion.div>
+          )}
+
+          {currentPage === 'login' && (
+            <motion.div 
+              key="login"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <LoginPage onBack={() => setCurrentPage('home')} backgroundColor="bg-black" />
             </motion.div>
           )}
         </AnimatePresence>

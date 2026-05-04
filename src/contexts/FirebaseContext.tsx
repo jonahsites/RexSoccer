@@ -1,13 +1,14 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { User, onAuthStateChanged } from 'firebase/auth';
 import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore';
-import { auth, db, loginWithGoogle, logout as firebaseLogout } from '../firebase';
+import { auth, db, loginWithGoogle, loginWithEmail as firebaseLoginWithEmail, logout as firebaseLogout } from '../firebase';
 
 interface FirebaseContextType {
   user: User | null;
   loading: boolean;
   isAdmin: boolean;
   login: () => Promise<void>;
+  loginWithEmail: (email: string, pass: string) => Promise<void>;
   logout: () => Promise<void>;
 }
 
@@ -16,6 +17,7 @@ const FirebaseContext = createContext<FirebaseContextType>({
   loading: true, 
   isAdmin: false,
   login: async () => {},
+  loginWithEmail: async () => {},
   logout: async () => {}
 });
 
@@ -76,6 +78,15 @@ export const FirebaseProvider = ({ children }: { children: React.ReactNode }) =>
     }
   };
 
+  const loginWithEmail = async (email: string, pass: string) => {
+    try {
+      await firebaseLoginWithEmail(email, pass);
+    } catch (error) {
+      console.error("Login error:", error);
+      throw error;
+    }
+  };
+
   const logout = async () => {
     try {
       await firebaseLogout();
@@ -85,7 +96,7 @@ export const FirebaseProvider = ({ children }: { children: React.ReactNode }) =>
   };
 
   return (
-    <FirebaseContext.Provider value={{ user, loading, isAdmin, login, logout }}>
+    <FirebaseContext.Provider value={{ user, loading, isAdmin, login, loginWithEmail, logout }}>
       {children}
     </FirebaseContext.Provider>
   );

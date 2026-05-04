@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged, User } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged, User, signInWithEmailAndPassword } from 'firebase/auth';
 import { getFirestore, doc, getDocFromServer, collection, addDoc, serverTimestamp, Timestamp } from 'firebase/firestore';
 
 // Import the Firebase configuration
@@ -88,6 +88,16 @@ export const loginWithGoogle = async () => {
     if (error.code !== 'auth/popup-closed-by-user') {
       console.error("Login error:", error);
     }
+    throw error;
+  }
+};
+
+export const loginWithEmail = async (email: string, pass: string) => {
+  try {
+    const result = await signInWithEmailAndPassword(auth, email, pass);
+    return result.user;
+  } catch (error: any) {
+    console.error("Email login error:", error);
     throw error;
   }
 };

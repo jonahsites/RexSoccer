@@ -110,7 +110,7 @@ export const Navbar = ({
               </div>
             ) : (
               <button 
-                onClick={() => login()}
+                onClick={() => window.dispatchEvent(new CustomEvent('changePage', { detail: 'login' }))}
                 className="text-[10px] font-black uppercase tracking-widest text-white/40 hover:text-ice-blue transition-all flex items-center gap-2"
               >
                 <UserIcon className="w-4 h-4" /> Login
@@ -191,7 +191,10 @@ export const Navbar = ({
                     <button onClick={() => logout()} className="text-xs font-black uppercase tracking-widest text-ice-blue">Logout</button>
                   </div>
                 ) : (
-                  <button onClick={() => login()} className="text-lg font-bold uppercase tracking-tighter text-white/80">Login</button>
+                  <button onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    window.dispatchEvent(new CustomEvent('changePage', { detail: 'login' }));
+                  }} className="text-lg font-bold uppercase tracking-tighter text-white/80">Login</button>
                 )}
               </div>
               <button 
