@@ -56,11 +56,11 @@ export const LoginPage = ({ onBack, backgroundColor = "bg-black" }: { onBack: ()
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="relative z-10 w-full max-w-[500px] mx-6 p-8 md:p-12 bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] shadow-[0_0_100px_rgba(0,0,0,0.5)]"
+        className="relative z-10 w-full max-w-[440px] mx-6 p-8 md:p-10 bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] shadow-[0_0_100px_rgba(0,0,0,0.5)]"
       >
         <div className="w-full">
-          <div className="mb-12">
-            <h1 className="text-5xl md:text-7xl font-black text-white leading-[0.85] tracking-tighter uppercase mb-6 drop-shadow-2xl">
+          <div className="mb-10">
+            <h1 className="text-4xl md:text-6xl font-black text-white leading-[0.85] tracking-tighter uppercase mb-5 drop-shadow-2xl">
               Welcome <br /> <span className="text-ice-blue">Back.</span>
             </h1>
             <p className="text-white/60 text-xs font-bold tracking-[0.1em] uppercase">
