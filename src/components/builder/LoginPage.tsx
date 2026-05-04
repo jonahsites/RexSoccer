@@ -28,7 +28,7 @@ export const LoginPage = ({ onBack, backgroundColor = "bg-black" }: { onBack: ()
   };
 
   return (
-    <div className={cn("min-h-screen relative flex flex-col md:flex-row overflow-hidden", backgroundColor)}>
+    <div className={cn("min-h-screen relative flex items-center justify-center overflow-hidden", backgroundColor)}>
       {/* Full Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -40,41 +40,31 @@ export const LoginPage = ({ onBack, backgroundColor = "bg-black" }: { onBack: ()
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      {/* Mobile Back Button */}
-      <button 
-        onClick={onBack}
-        className="md:hidden absolute top-6 left-6 z-50 p-2 bg-white/10 backdrop-blur-md rounded-full text-white"
-      >
-        <ArrowLeft className="w-5 h-5" />
-      </button>
-
-      {/* Left Column: Navigation Spacer */}
-      <div className="hidden md:block md:w-[50%] relative z-10">
-        <div className="absolute top-12 left-12">
-          <button 
-            onClick={onBack}
-            className="flex items-center gap-3 text-white/80 hover:text-white transition-colors group px-4 py-2 bg-black/20 backdrop-blur-md rounded-full border border-white/10"
-          >
-            <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-            <span className="text-xs font-black uppercase tracking-widest">Back to Hub</span>
-          </button>
-        </div>
+      {/* Back Button */}
+      <div className="absolute top-8 left-8 md:top-12 md:left-12 z-50">
+        <button 
+          onClick={onBack}
+          className="flex items-center gap-3 text-white/80 hover:text-white transition-colors group px-5 py-2.5 bg-black/30 backdrop-blur-xl rounded-full border border-white/10 shadow-2xl"
+        >
+          <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+          <span className="text-[10px] font-black uppercase tracking-[0.2em]">Back to Hub</span>
+        </button>
       </div>
 
-      {/* Right Column: Auth Form with Glassmorphism */}
+      {/* Centered Auth Form Box */}
       <motion.div 
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-        className="flex-1 flex flex-col justify-center px-8 md:px-20 py-20 relative z-10 bg-black/50 backdrop-blur-md border-l border-white/10"
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        className="relative z-10 w-full max-w-[500px] mx-6 p-8 md:p-12 bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] shadow-[0_0_100px_rgba(0,0,0,0.5)]"
       >
-        <div className="max-w-md w-full mx-auto">
+        <div className="w-full">
           <div className="mb-12">
-            <h1 className="text-5xl md:text-6xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-4">
+            <h1 className="text-5xl md:text-7xl font-black text-white leading-[0.85] tracking-tighter uppercase mb-6 drop-shadow-2xl">
               Welcome <br /> <span className="text-ice-blue">Back.</span>
             </h1>
-            <p className="text-white/40 font-medium tracking-tight">
-              CONTINUE YOUR JOURNEY TO ELITE PERFORMANCE.
+            <p className="text-white/60 text-xs font-bold tracking-[0.1em] uppercase">
+              Continue your journey to elite performance.
             </p>
           </div>
 
@@ -98,7 +88,7 @@ export const LoginPage = ({ onBack, backgroundColor = "bg-black" }: { onBack: ()
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your e-mail"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white placeholder:text-white/10 focus:outline-none focus:border-ice-blue/50 transition-all font-medium"
+                    className="w-full bg-white/10 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:border-ice-blue/50 transition-all font-medium text-sm"
                     required
                   />
                 </div>
@@ -121,7 +111,7 @@ export const LoginPage = ({ onBack, backgroundColor = "bg-black" }: { onBack: ()
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="********"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white placeholder:text-white/10 focus:outline-none focus:border-ice-blue/50 transition-all font-medium"
+                    className="w-full bg-white/10 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:border-ice-blue/50 transition-all font-medium text-sm"
                     required
                   />
                 </div>
@@ -142,28 +132,28 @@ export const LoginPage = ({ onBack, backgroundColor = "bg-black" }: { onBack: ()
               </div>
             </div>
 
-            <button 
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-white text-black py-4 rounded-xl font-black uppercase tracking-widest hover:bg-ice-blue transition-all duration-500 flex items-center justify-center gap-2 group shadow-2xl shadow-white/5"
-            >
-              {isSubmitting ? (
-                <Loader2 className="w-5 h-5 animate-spin" />
-              ) : (
-                <>
-                  LOGIN
-                  <div className="w-1.5 h-1.5 bg-black rotate-45 group-hover:translate-x-1 transition-transform" />
-                </>
-              )}
-            </button>
+            <div className="space-y-4">
+              <button 
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-white text-black py-4 rounded-xl font-black uppercase tracking-widest hover:bg-ice-blue transition-all duration-500 flex items-center justify-center gap-2 group shadow-2xl"
+              >
+                {isSubmitting ? (
+                  <Loader2 className="w-5 h-5 animate-spin" />
+                ) : (
+                  <>
+                    LOGIN
+                    <div className="w-1.5 h-1.5 bg-black rotate-45 group-hover:translate-x-1 transition-transform" />
+                  </>
+                )}
+              </button>
 
-            <div className="pt-8 border-t border-white/5">
-               <button 
+              <button 
                 type="button"
                 onClick={login}
-                className="w-full bg-white/5 text-white/60 py-4 rounded-xl font-black uppercase tracking-widest hover:bg-white/10 transition-all duration-500 flex items-center justify-center gap-3"
+                className="w-full bg-white/5 text-white/80 py-4 rounded-xl font-black uppercase tracking-widest hover:bg-white/10 transition-all duration-500 flex items-center justify-center gap-3 border border-white/5"
               >
-                <img src="https://www.google.com/favicon.ico" alt="Google" className="w-4 h-4 grayscale opacity-60" />
+                <img src="https://www.google.com/favicon.ico" alt="Google" className="w-4 h-4 grayscale invert opacity-60" />
                 Login with Google
               </button>
             </div>
