@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import { Builder } from '@builder.io/react';
 
 export const QuoteSection = ({
-  quote = '"1% BETTER EVERYDAY."',
+  quote = '1% BETTER EVERYDAY.',
   backgroundColor = "bg-black",
 }: {
   quote?: string;
@@ -35,7 +35,7 @@ export const QuoteSection = ({
 Builder.registerComponent(QuoteSection, {
   name: 'QuoteSection',
   inputs: [
-    { name: 'quote', type: 'string', defaultValue: '"1% BETTER EVERYDAY."' },
+    { name: 'quote', type: 'string', defaultValue: '1% BETTER EVERYDAY.' },
     { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
   ],
 });

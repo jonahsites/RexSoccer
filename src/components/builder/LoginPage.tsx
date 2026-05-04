@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { ArrowLeft, Loader2, Mail, Lock } from 'lucide-react';
 import { useFirebase } from '../../contexts/FirebaseContext';
 import { cn } from '../../lib/utils';
+import { Footer } from './Footer';
 
 export const LoginPage = ({ onBack, backgroundColor = "bg-black" }: { onBack: () => void, backgroundColor?: string }) => {
   const { login, loginWithEmail } = useFirebase();
@@ -28,142 +29,112 @@ export const LoginPage = ({ onBack, backgroundColor = "bg-black" }: { onBack: ()
   };
 
   return (
-    <div className={cn("min-h-screen relative flex items-center justify-center overflow-hidden", backgroundColor)}>
-      {/* Full Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="https://lh3.googleusercontent.com/d/1An213JU1Vq5Hatk8Rlg7xu9E9Vqb7KJY" 
-          alt="Soccer Training" 
-          className="w-full h-full object-cover grayscale-[0.1] contrast-[1.1]"
-          referrerPolicy="no-referrer"
-        />
-        <div className="absolute inset-0 bg-black/20" />
-      </div>
-
-      {/* Back Button */}
-      <div className="absolute top-8 left-8 md:top-12 md:left-12 z-50">
-        <button 
-          onClick={onBack}
-          className="flex items-center gap-3 text-white/80 hover:text-white transition-colors group px-5 py-2.5 bg-black/30 backdrop-blur-xl rounded-full border border-white/10 shadow-2xl"
-        >
-          <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-          <span className="text-[10px] font-black uppercase tracking-[0.2em]">Back to Hub</span>
-        </button>
-      </div>
-
-      {/* Centered Auth Form Box */}
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="relative z-10 w-full max-w-[440px] mx-6 p-8 md:p-10 bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] shadow-[0_0_100px_rgba(0,0,0,0.5)]"
-      >
-        <div className="w-full">
-          <div className="mb-10">
-            <h1 className="text-4xl md:text-6xl font-black text-white leading-[0.85] tracking-tighter uppercase mb-5 drop-shadow-2xl">
-              Welcome <br /> <span className="text-ice-blue">Back.</span>
-            </h1>
-            <p className="text-white/60 text-xs font-bold tracking-[0.1em] uppercase">
-              Continue your journey to elite performance.
-            </p>
+    <div className={cn("min-h-screen bg-black flex flex-col", backgroundColor)}>
+      {/* Content Area with more aggressive padding to create "black around" effect */}
+      <div className="flex-1 flex items-center justify-center p-12 md:p-24 lg:p-40 xl:p-56 overflow-hidden">
+        <div className="relative w-full max-w-4xl aspect-[1.5] bg-zinc-900 rounded-[3rem] overflow-hidden border border-white/5 shadow-[0_0_100px_rgba(0,0,0,1)] flex items-center justify-center">
+          {/* Contained Background Image */}
+          <div className="absolute inset-8 rounded-[2rem] overflow-hidden z-0">
+            <img 
+              src="https://lh3.googleusercontent.com/d/1An213JU1Vq5Hatk8Rlg7xu9E9Vqb7KJY" 
+              alt="Soccer Training" 
+              className="w-full h-full object-cover opacity-80"
+              referrerPolicy="no-referrer"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
           </div>
 
-          {error && (
-            <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-red-500 text-xs font-bold tracking-tight">
-              {error}
-            </div>
-          )}
+          {/* Back Button */}
+          <div className="absolute top-10 left-10 z-50">
+            <button 
+              onClick={onBack}
+              className="flex items-center gap-2 text-white/40 hover:text-white transition-colors group px-4 py-2 bg-black/40 backdrop-blur-xl rounded-full border border-white/5"
+            >
+              <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" />
+              <span className="text-[9px] font-black uppercase tracking-[0.3em]">Back</span>
+            </button>
+          </div>
 
-          <form onSubmit={handleSubmit} className="space-y-8">
-            <div className="space-y-6">
-              {/* Email Field */}
-              <div className="space-y-2">
-                <label className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40 block ml-1">
-                  E-mail
-                </label>
-                <div className="relative group">
-                  <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20 group-focus-within:text-ice-blue transition-colors" />
-                  <input 
-                    type="email" 
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your e-mail"
-                    className="w-full bg-white/10 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:border-ice-blue/50 transition-all font-medium text-sm"
-                    required
-                  />
-                </div>
+          {/* Centered Auth Form Box */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="relative z-10 w-full max-w-[300px] mx-6 p-8 bg-black/60 backdrop-blur-3xl border border-white/5 rounded-[2.5rem] shadow-2xl"
+          >
+            <div className="w-full">
+              <div className="mb-6 text-center">
+                <h1 className="text-2xl font-black text-white leading-none tracking-tighter uppercase mb-2">
+                  Welcome.
+                </h1>
+                <p className="text-white/20 text-[7px] font-black tracking-[0.5em] uppercase">
+                  REX Hub Access
+                </p>
               </div>
 
-              {/* Password Field */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center px-1">
-                  <label className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40 block">
-                    Password
-                  </label>
-                  <button type="button" className="text-[10px] font-black uppercase tracking-[0.2em] text-white/20 hover:text-ice-blue transition-colors">
-                    Forgot?
+              {error && (
+                <div className="mb-4 p-2 bg-red-500/10 border border-red-500/20 rounded-lg text-red-500 text-[8px] font-black uppercase tracking-widest text-center">
+                  {error}
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="space-y-2">
+                  <div className="relative group">
+                    <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-3 h-3 text-white/20 group-focus-within:text-ice-blue transition-colors" />
+                    <input 
+                      type="email" 
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="E-MAIL"
+                      className="w-full bg-white/[0.03] border border-white/5 rounded-lg py-3 pl-10 pr-4 text-white placeholder:text-white/10 focus:outline-none focus:border-ice-blue/20 transition-all font-black text-[8px] tracking-widest uppercase"
+                      required
+                    />
+                  </div>
+                  <div className="relative group">
+                    <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 w-3 h-3 text-white/20 group-focus-within:text-ice-blue transition-colors" />
+                    <input 
+                      type="password" 
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      placeholder="PASSWORD"
+                      className="w-full bg-white/[0.03] border border-white/5 rounded-lg py-3 pl-10 pr-4 text-white placeholder:text-white/10 focus:outline-none focus:border-ice-blue/20 transition-all font-black text-[8px] tracking-widest uppercase"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2 pt-2">
+                  <button 
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-white text-black py-3.5 rounded-lg font-black uppercase tracking-[0.2em] hover:bg-ice-blue transition-all duration-500 flex items-center justify-center gap-2 group text-[9px]"
+                  >
+                    {isSubmitting ? (
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                    ) : (
+                      <>
+                        ACCESS
+                        <div className="w-1 h-1 bg-black rotate-45 group-hover:translate-x-1 transition-transform" />
+                      </>
+                    )}
+                  </button>
+
+                  <button 
+                    type="button"
+                    onClick={login}
+                    className="w-full bg-zinc-900 text-white/50 py-3.5 rounded-lg font-black uppercase tracking-[0.2em] hover:bg-zinc-800 transition-all duration-500 flex items-center justify-center gap-2 border border-white/5 text-[8px]"
+                  >
+                    <img src="https://www.google.com/favicon.ico" alt="Google" className="w-3 h-3" />
+                    Google Login
                   </button>
                 </div>
-                <div className="relative group">
-                  <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20 group-focus-within:text-ice-blue transition-colors" />
-                  <input 
-                    type="password" 
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="********"
-                    className="w-full bg-white/10 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:border-ice-blue/50 transition-all font-medium text-sm"
-                    required
-                  />
-                </div>
-              </div>
-
-              {/* Remember Me */}
-              <div className="flex items-center gap-3 px-1">
-                <div 
-                  onClick={() => setRememberMe(!rememberMe)}
-                  className={cn(
-                    "w-5 h-5 rounded border transition-all cursor-pointer flex items-center justify-center",
-                    rememberMe ? "bg-ice-blue border-ice-blue" : "border-white/10 bg-white/5"
-                  )}
-                >
-                  {rememberMe && <div className="w-2 h-2 bg-black rounded-sm" />}
-                </div>
-                <span className="text-[10px] font-black uppercase tracking-widest text-white/40 select-none">Remember me</span>
-              </div>
+              </form>
             </div>
-
-            <div className="space-y-4">
-              <button 
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-white text-black py-4 rounded-xl font-black uppercase tracking-widest hover:bg-ice-blue transition-all duration-500 flex items-center justify-center gap-2 group shadow-2xl"
-              >
-                {isSubmitting ? (
-                  <Loader2 className="w-5 h-5 animate-spin" />
-                ) : (
-                  <>
-                    LOGIN
-                    <div className="w-1.5 h-1.5 bg-black rotate-45 group-hover:translate-x-1 transition-transform" />
-                  </>
-                )}
-              </button>
-
-              <button 
-                type="button"
-                onClick={login}
-                className="w-full bg-white/5 text-white/80 py-4 rounded-xl font-black uppercase tracking-widest hover:bg-white/10 transition-all duration-500 flex items-center justify-center gap-3 border border-white/5"
-              >
-                <img src="https://www.google.com/favicon.ico" alt="Google" className="w-4 h-4 grayscale invert opacity-60" />
-                Login with Google
-              </button>
-            </div>
-
-            <p className="text-center text-[10px] font-black uppercase tracking-widest text-white/20">
-              Don't have an account? <button type="button" className="text-white/40 hover:text-ice-blue transition-colors">Join the HUB</button>
-            </p>
-          </form>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
+      <Footer />
     </div>
   );
 };

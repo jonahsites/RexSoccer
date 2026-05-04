@@ -48,7 +48,7 @@ function App() {
 
   return (
     <FirebaseProvider>
-      <div className="bg-black selection:bg-ice-blue selection:text-black overflow-x-hidden text-white">
+      <div className="bg-black selection:bg-ice-blue selection:text-black text-white min-h-screen">
         {currentPage !== 'login' && <Navbar />}
         
         <AnimatePresence mode="wait">
