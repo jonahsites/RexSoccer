@@ -83,9 +83,10 @@ export const PricingSection = ({
                   <span className="text-white/40 font-black uppercase tracking-[0.2em] text-[10px] mb-2 block">
                     {plan.name} {plan.perPlayer && "(Per Player)"}
                   </span>
-                  <div className="flex items-baseline gap-1">
+                  <div className="flex items-start gap-1">
+                    <span className="text-2xl font-black tracking-tighter text-white mt-1">$</span>
                     <span className="text-8xl font-black tracking-tighter text-white font-display leading-[0.8]">
-                      <span className="text-4xl">$</span>{plan.price}
+                      {plan.price}
                     </span>
                   </div>
                   <p className="mt-6 text-white/30 text-[10px] font-black uppercase tracking-widest leading-relaxed">

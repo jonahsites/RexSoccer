@@ -93,7 +93,7 @@ export const ProcessSection = ({
           <div className="lg:col-span-5 lg:sticky lg:top-40 h-fit">
             <div className="mb-16">
               <span className="text-ice-blue font-black uppercase tracking-[0.6em] text-[11px] mb-8 block">Development Architecture</span>
-              <h2 className="text-6xl md:text-[7.5rem] font-black leading-[0.8] tracking-tighter text-white uppercase mb-12">
+              <h2 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter text-white uppercase mb-12">
                 {title}
               </h2>
               <div className="h-[2px] w-24 bg-ice-blue/40 mb-12" />
