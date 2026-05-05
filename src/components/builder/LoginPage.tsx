@@ -145,7 +145,6 @@ export const LoginPage = ({ onBack, backgroundColor = "bg-black" }: { onBack: ()
                     ) : (
                       <>
                         LOG IN
-                        <div className="w-2 h-2 bg-black rotate-45 group-hover:translate-x-2 transition-transform" />
                       </>
                     )}
                   </button>

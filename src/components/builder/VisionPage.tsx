@@ -48,22 +48,49 @@ export const VisionPage = ({
       </div>
       
       {/* Seamless Edge-to-Edge Image Grid */}
-      <div className="relative w-full mb-32 border-t border-white/5">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-start">
+      <div className="relative w-full border-t border-white/5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
           {visionImages.map((item, i) => (
-            <SectionReveal key={i} className={i === 3 ? "-translate-y-6 md:-translate-y-12" : ""}>
-              <div className="group relative overflow-hidden bg-zinc-900 border-none">
+            <SectionReveal key={i}>
+              <div className="group relative overflow-hidden bg-zinc-900 border-none aspect-square">
                 <img 
                   src={item.image} 
                   alt={item.title || `Vision ${i}`} 
-                  className="w-full h-auto block transition-transform duration-[3000ms] group-hover:scale-110"
+                  className="w-full h-full object-cover block transition-transform duration-[3000ms] group-hover:scale-110"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700" />
+                
+                {/* Overlay Info */}
+                <div className="absolute bottom-10 left-10 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="text-ice-blue font-black text-xs tracking-[0.3em] uppercase mb-2">
+                     Chapter {item.chapter}
+                  </div>
+                  <div className="text-white font-black text-3xl md:text-4xl tracking-tighter uppercase">
+                    {item.title}
+                  </div>
+                </div>
               </div>
             </SectionReveal>
           ))}
         </div>
+      </div>
+
+      {/* Modern Text Carousel */}
+      <div className="relative w-full py-12 overflow-hidden bg-white mb-24">
+        <motion.div 
+          className="flex whitespace-nowrap will-change-transform"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+        >
+          {[...Array(8)].map((_, i) => (
+            <div key={i} className="flex items-center">
+              <span className="text-4xl md:text-6xl font-black text-black uppercase tracking-tighter mx-4">
+                THE FUTURE OF REX
+              </span>
+            </div>
+          ))}
+        </motion.div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6">

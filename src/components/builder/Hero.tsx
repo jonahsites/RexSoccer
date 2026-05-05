@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { Builder } from '@builder.io/react';
 
 export const Hero = ({
-  backgroundImage = "https://lh3.googleusercontent.com/d/1CRzZMW7F_n3qJwgMfKOBA-b0mjl8Hb5v",
+  backgroundImage = "https://lh3.googleusercontent.com/d/1X31ihuhbRUyjF2fqmx93j0JUBD52oLGg",
   badgeText = "RAZA ELITE XPERIENCE",
   rLogo = "https://image2url.com/r2/default/images/1774365332136-abfdbeec-2f4c-4764-b03d-28d5f258f9d0.png",
   soccerBall = "https://lh3.googleusercontent.com/d/1_0Zz9I3EBG0HB1jdFZ8nJuuFg-QFaiDM",
