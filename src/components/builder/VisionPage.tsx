@@ -13,9 +13,10 @@ export const VisionPage = ({
     { title: "Pro Pathway.", content: "We are committed to creating direct pathways for our players to reach professional levels, attracting scouts and professional partners who recognize the REX standard of excellence." }
   ],
   visionImages = [
-    { image: "https://lh3.googleusercontent.com/d/1OHkNQYSkM2Zrq_khwOxRL6WUm18gTVGR", chapter: "", title: "" },
-    { image: "https://lh3.googleusercontent.com/d/1MBbifo3jdiiC_r0S6PwjjBmYffXdjCvp", chapter: "", title: "" },
-    { image: "https://lh3.googleusercontent.com/d/1IS35oPaRpGRR5qIca0PS4PDNd3YdBJ9b", chapter: "", title: "" }
+    { image: "https://lh3.googleusercontent.com/d/1OHkNQYSkM2Zrq_khwOxRL6WUm18gTVGR", chapter: "01", title: "Technical Excellence" },
+    { image: "https://lh3.googleusercontent.com/d/1MBbifo3jdiiC_r0S6PwjjBmYffXdjCvp", chapter: "02", title: "Mental Resilience" },
+    { image: "https://lh3.googleusercontent.com/d/1XRr63i98-GVWMZ6XLeVHnHK4cr40fJnM", chapter: "03", title: "Tactical Intelligence" },
+    { image: "https://lh3.googleusercontent.com/d/1IS35oPaRpGRR5qIca0PS4PDNd3YdBJ9b", chapter: "04", title: "Elite Community" }
   ],
   backgroundColor = "bg-black",
 }: {
@@ -28,30 +29,29 @@ export const VisionPage = ({
 }) => {
   return (
     <div 
-      className={`min-h-screen ${backgroundColor} pb-20 overflow-hidden`}
+      className={`min-h-screen ${backgroundColor} pb-20 overflow-hidden font-sans`}
     >
       <div className="max-w-7xl mx-auto px-6 relative z-10 pt-40 mb-20">
-        <button onClick={onBack} className="mb-12 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white/40 hover:text-ice-blue transition-all">
-          <ArrowRight className="w-4 h-4 rotate-180" /> Back to Home
+        <button onClick={onBack} className="mb-12 flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.3em] text-white/40 hover:text-white transition-all group">
+          <ArrowRight className="w-4 h-4 rotate-180 group-hover:-translate-x-1 transition-transform" /> Back to Home
         </button>
         <SectionReveal>
           <div className="relative">
-            <h2 className="text-[12rem] md:text-[24rem] font-black leading-none tracking-tighter text-white uppercase opacity-10 absolute -top-40 left-0 w-full text-center pointer-events-none select-none">
+            <h2 className="text-[12rem] md:text-[24rem] font-black leading-none tracking-tighter text-white uppercase opacity-10 absolute -top-40 left-0 w-full text-center pointer-events-none select-none overflow-hidden whitespace-nowrap">
               {title}
             </h2>
-            <h2 className="text-6xl md:text-9xl font-black mb-20 tracking-tighter text-white uppercase text-center relative z-20">
+            <h2 className="text-7xl md:text-[10rem] font-black mb-20 tracking-tighter text-white uppercase text-center relative z-20 leading-none">
               {title}
             </h2>
           </div>
         </SectionReveal>
       </div>
       
-      {/* Layout Inspired by Annotation (Seamless Edge-to-Edge) */}
+      {/* Seamless Edge-to-Edge Image Grid */}
       <div className="relative w-full mb-32 border-t border-white/5">
-        {/* Image Grid (Seamless Edge-to-Edge) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-start">
           {visionImages.map((item, i) => (
-            <SectionReveal key={i} className={i === 2 && visionImages.length === 3 ? "md:col-span-2" : ""}>
+            <SectionReveal key={i} className={i === 3 ? "-translate-y-6 md:-translate-y-12" : ""}>
               <div className="group relative overflow-hidden bg-zinc-900 border-none">
                 <img 
                   src={item.image} 
@@ -59,6 +59,7 @@ export const VisionPage = ({
                   className="w-full h-auto block transition-transform duration-[3000ms] group-hover:scale-110"
                   referrerPolicy="no-referrer"
                 />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700" />
               </div>
             </SectionReveal>
           ))}
