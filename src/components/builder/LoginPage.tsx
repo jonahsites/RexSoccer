@@ -71,7 +71,7 @@ export const LoginPage = ({ onBack, backgroundColor = "bg-black" }: { onBack: ()
                 <div className="flex items-center justify-center gap-3">
                   <div className="h-[1px] w-8 bg-ice-blue/30" />
                   <p className="text-white/30 text-[11px] md:text-[12px] font-black tracking-[0.6em] uppercase">
-                     REX Soccer Hub Access
+                     REX Soccer Training 
                   </p>
                   <div className="h-[1px] w-8 bg-ice-blue/30" />
                 </div>

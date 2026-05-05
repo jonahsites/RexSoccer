@@ -19,6 +19,7 @@ const logos = [
   "https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Utah_Valley_Wolverines_logo.svg/250px-Utah_Valley_Wolverines_logo.svg.png",
   "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Fort_Lauderdale_United_FC_logo_2024.png/1280px-Fort_Lauderdale_United_FC_logo_2024.png",
   "https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Miami_FC_logo.svg/960px-Miami_FC_logo.svg.png",
+  "https://upload.wikimedia.org/wikipedia/en/thumb/6/61/Stetson_Hatters_current_logo.svg/1280px-Stetson_Hatters_current_logo.svg.png",
   "https://upload.wikimedia.org/wikipedia/commons/6/68/FC_Zurich_Logo_2022.svg",
   "https://images.fotmob.com/image_resources/logo/teamlogo/1929862.png",
   "https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/Olympique_Lyonnais_logo.svg/1280px-Olympique_Lyonnais_logo.svg.png",
@@ -26,6 +27,11 @@ const logos = [
   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Hertha_BSC_Logo_2012.svg/250px-Hertha_BSC_Logo_2012.svg.png",
   "https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Longwood_Lancers_logo.svg/1280px-Longwood_Lancers_logo.svg.png",
   "https://upload.wikimedia.org/wikipedia/en/c/c0/Sporting_San_Miguelito.svg",
+  "https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Palm_Beach_Atlantic_Sailfish_primary_logo.svg/1280px-Palm_Beach_Atlantic_Sailfish_primary_logo.svg.png",
+  "https://upload.wikimedia.org/wikipedia/en/9/96/Boston_College_Eagles_logo.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/1/1a/Fgcu_athletics_wmark.png",
+  "https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Florida_State_Seminoles_logo.svg/1280px-Florida_State_Seminoles_logo.svg.png",
+  "https://sportsperformancetracking.com/cdn/shop/articles/flaglercollege.jpg?v=1575245124",
   "https://pbs.twimg.com/profile_images/1688586858819731463/a208C11C_400x400.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Portland_Timbers_logo.svg/1280px-Portland_Timbers_logo.svg.png",
   "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/Crystal_Palace_FC_logo_%282022%29.svg/250px-Crystal_Palace_FC_logo_%282022%29.svg.png",
@@ -49,19 +55,19 @@ export const LogoCarousel: React.FC = () => {
     <section id="partners" className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
         <h2 className="text-zinc-900 text-2xl md:text-5xl font-black tracking-tighter uppercase leading-tight max-w-4xl mx-auto">
-          Rex Soccer has developed players from more than <span className="text-zinc-400">15+ universities</span> and <span className="text-zinc-400">professional teams</span>
+          Rex Soccer has developed players from more than <span className="text-zinc-400">30+ universities</span> and <span className="text-zinc-400">professional teams</span>
         </h2>
       </div>
 
       <div className="relative flex">
         {/* Continuous scrolling container */}
         <motion.div 
-          className="flex gap-20 md:gap-32 items-center whitespace-nowrap"
+          className="flex items-center whitespace-nowrap will-change-transform"
           animate={{
             x: ["0%", "-50%"]
           }}
           transition={{
-            duration: 40,
+            duration: 80,
             ease: "linear",
             repeat: Infinity
           }}
@@ -69,13 +75,13 @@ export const LogoCarousel: React.FC = () => {
           {scrollingLogos.map((logo, index) => (
             <div 
               key={index} 
-              className="flex-shrink-0 flex items-center justify-center transition-all duration-500 opacity-90 hover:opacity-100"
+              className="flex-shrink-0 flex items-center justify-center transition-all duration-500 opacity-90 hover:opacity-100 px-6 md:px-10"
             >
               <img 
                 src={logo} 
                 alt={`Partner Logo ${index}`} 
-                className="h-16 md:h-24 w-auto object-contain max-w-[160px] md:max-w-[220px]"
-                loading="lazy"
+                className="h-10 md:h-14 w-auto object-contain max-w-[100px] md:max-w-[140px] select-none"
+                draggable={false}
                 referrerPolicy="no-referrer"
               />
             </div>
