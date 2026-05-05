@@ -127,9 +127,9 @@ export const LoginPage = ({ onBack, backgroundColor = "bg-black" }: { onBack: ()
                         />
                       )}
                     </div>
-                    <span className="text-[9px] font-black uppercase tracking-[0.1em] text-white/30 group-hover:text-white transition-colors">Remember Me</span>
+                    <span className="text-[9px] font-black uppercase tracking-[0.1em] text-white/30 group-hover:text-ice-blue transition-colors">Remember Me</span>
                   </label>
-                  <button type="button" className="text-[9px] font-black uppercase tracking-[0.1em] text-white/30 hover:text-white transition-colors cursor-pointer">
+                  <button type="button" className="text-[9px] font-black uppercase tracking-[0.1em] text-white/30 hover:text-ice-blue transition-colors cursor-pointer">
                     Forgot Password?
                   </button>
                 </div>
@@ -144,7 +144,7 @@ export const LoginPage = ({ onBack, backgroundColor = "bg-black" }: { onBack: ()
                       <Loader2 className="w-6 h-6 animate-spin" />
                     ) : (
                       <>
-                        ACCESS SYSTEM
+                        LOG IN
                         <div className="w-2 h-2 bg-black rotate-45 group-hover:translate-x-2 transition-transform" />
                       </>
                     )}

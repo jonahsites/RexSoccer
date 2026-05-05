@@ -15,7 +15,7 @@ export const VisionPage = ({
   visionImages = [
     { image: "https://lh3.googleusercontent.com/d/1OHkNQYSkM2Zrq_khwOxRL6WUm18gTVGR", chapter: "01", title: "Technical Excellence" },
     { image: "https://lh3.googleusercontent.com/d/1MBbifo3jdiiC_r0S6PwjjBmYffXdjCvp", chapter: "02", title: "Mental Resilience" },
-    { image: "https://lh3.googleusercontent.com/d/1XRr63i98-GVWMZ6XLeVHnHK4cr40fJnM", chapter: "03", title: "Tactical Intelligence" },
+    { image: "https://lh3.googleusercontent.com/d/1fVysLf7KxXB_HV7xHaCjNAgCW0z0v0v6", chapter: "03", title: "Tactical Intelligence" },
     { image: "https://lh3.googleusercontent.com/d/1IS35oPaRpGRR5qIca0PS4PDNd3YdBJ9b", chapter: "04", title: "Elite Community" }
   ],
   backgroundColor = "bg-black",

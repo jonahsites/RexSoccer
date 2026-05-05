@@ -21,6 +21,7 @@ const logos = [
   "https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Miami_FC_logo.svg/960px-Miami_FC_logo.svg.png",
   "https://upload.wikimedia.org/wikipedia/en/thumb/6/61/Stetson_Hatters_current_logo.svg/1280px-Stetson_Hatters_current_logo.svg.png",
   "https://upload.wikimedia.org/wikipedia/commons/6/68/FC_Zurich_Logo_2022.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/c/cc/UNC_Asheville_A_Wordmark.jpg",
   "https://images.fotmob.com/image_resources/logo/teamlogo/1929862.png",
   "https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/Olympique_Lyonnais_logo.svg/1280px-Olympique_Lyonnais_logo.svg.png",
   "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/VfB_Stuttgart_1893_Logo.svg/1280px-VfB_Stuttgart_1893_Logo.svg.png",
@@ -55,7 +56,7 @@ export const LogoCarousel: React.FC = () => {
     <section id="partners" className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
         <h2 className="text-zinc-900 text-2xl md:text-5xl font-black tracking-tighter uppercase leading-tight max-w-4xl mx-auto">
-          Rex Soccer has developed players from more than <span className="text-zinc-400">30+ universities</span> and <span className="text-zinc-400">professional teams</span>
+          Rex Soccer has developed players from more than <span className="text-zinc-400">40+ universities</span> and <span className="text-zinc-400">professional teams</span>
         </h2>
       </div>
 
