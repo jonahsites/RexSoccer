@@ -67,7 +67,7 @@ export const LogoCarousel: React.FC = () => {
             x: ["0%", "-50%"]
           }}
           transition={{
-            duration: 80,
+            duration: 60,
             ease: "linear",
             repeat: Infinity
           }}
