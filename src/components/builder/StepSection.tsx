@@ -15,7 +15,7 @@ export const StepSection = ({
       id: "02",
       title: "Tactical Intelligence",
       desc: "Game awareness, positioning, and strategic decision making.",
-      img: "https://lh3.googleusercontent.com/d/1_JP4BQ8__LohbkshWVxePcg4gaQNx0KR"
+      img: "https://lh3.googleusercontent.com/d/1vrM68KNn0OB45hbWdxzjJEP21YNPXtoO"
     },
     {
       id: "03",
