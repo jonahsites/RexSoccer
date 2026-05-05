@@ -61,66 +61,91 @@ export const LoginPage = ({ onBack, backgroundColor = "bg-black" }: { onBack: ()
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="relative z-10 w-full max-w-[550px] mx-6 p-12 md:p-16 bg-black/70 backdrop-blur-3xl border border-white/10 rounded-[4rem] shadow-2xl"
+            className="relative z-10 w-full max-w-[420px] mx-6 p-10 md:p-12 bg-black/70 backdrop-blur-3xl border border-white/10 rounded-[3.5rem] shadow-2xl"
           >
             <div className="w-full">
-              <div className="mb-12 text-center">
-                <h1 className="text-5xl md:text-6xl font-black text-white leading-none tracking-tighter uppercase mb-6">
+              <div className="mb-10 text-center">
+                <h1 className="text-4xl md:text-5xl font-black text-white leading-none tracking-tighter uppercase mb-5">
                   Welcome.
                 </h1>
-                <div className="flex items-center justify-center gap-4">
-                  <div className="h-[1px] w-12 bg-ice-blue/30" />
-                  <p className="text-white/30 text-[12px] md:text-[14px] font-black tracking-[0.8em] uppercase">
-                    Elite REX Hub Access
+                <div className="flex items-center justify-center gap-3">
+                  <div className="h-[1px] w-8 bg-ice-blue/30" />
+                  <p className="text-white/30 text-[11px] md:text-[12px] font-black tracking-[0.6em] uppercase">
+                     REX Soccer Hub Access
                   </p>
-                  <div className="h-[1px] w-12 bg-ice-blue/30" />
+                  <div className="h-[1px] w-8 bg-ice-blue/30" />
                 </div>
               </div>
 
               {error && (
-                <div className="mb-8 p-5 bg-red-500/10 border border-red-500/20 rounded-2xl text-red-500 text-[12px] font-black uppercase tracking-widest text-center">
+                <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-red-500 text-[11px] font-black uppercase tracking-widest text-center">
                   {error}
                 </div>
               )}
 
               <form onSubmit={handleSubmit} className="space-y-8">
-                <div className="space-y-5">
-                  <div className="relative group">
-                    <Mail className="absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 text-white/20 group-focus-within:text-ice-blue transition-colors" />
+                <div className="space-y-6">
+                  <div className="relative group border-b border-white/10 focus-within:border-white/40 transition-colors py-3">
                     <input 
                       type="email" 
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="E-MAIL"
-                      className="w-full bg-white/[0.04] border border-white/15 rounded-2xl py-6 pl-16 pr-10 text-white placeholder:text-white/10 focus:outline-none focus:border-ice-blue/40 transition-all font-black text-[13px] tracking-widest uppercase shadow-inner"
+                      placeholder="ENTER YOUR E-MAIL"
+                      className="w-full bg-transparent text-white placeholder:text-white/20 focus:outline-none font-black text-[13px] md:text-[14px] tracking-[0.1em] uppercase cursor-pointer"
                       required
                     />
                   </div>
-                  <div className="relative group">
-                    <Lock className="absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 text-white/20 group-focus-within:text-ice-blue transition-colors" />
+                  <div className="relative group border-b border-white/10 focus-within:border-white/40 transition-colors py-3">
                     <input 
                       type="password" 
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      placeholder="PASSWORD"
-                      className="w-full bg-white/[0.04] border border-white/15 rounded-2xl py-6 pl-16 pr-10 text-white placeholder:text-white/10 focus:outline-none focus:border-ice-blue/40 transition-all font-black text-[13px] tracking-widest uppercase shadow-inner"
+                      placeholder="ENTER YOUR PASSWORD"
+                      className="w-full bg-transparent text-white placeholder:text-white/20 focus:outline-none font-black text-[13px] md:text-[14px] tracking-[0.1em] uppercase cursor-pointer"
                       required
                     />
                   </div>
                 </div>
 
-                <div className="space-y-6 pt-6">
+                <div className="flex items-center justify-between px-1">
+                  <label className="flex items-center gap-2 cursor-pointer group">
+                    <input 
+                      type="checkbox" 
+                      checked={rememberMe}
+                      onChange={(e) => setRememberMe(e.target.checked)}
+                      className="hidden"
+                    />
+                    <div className={cn(
+                      "w-4 h-4 border border-white/10 rounded-md transition-all flex items-center justify-center bg-white/[0.03]",
+                      rememberMe ? "bg-white border-white" : "group-hover:border-white/30"
+                    )}>
+                      {rememberMe && (
+                        <motion.div 
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          className="w-2 h-2 bg-black rotate-45" 
+                        />
+                      )}
+                    </div>
+                    <span className="text-[9px] font-black uppercase tracking-[0.1em] text-white/30 group-hover:text-white transition-colors">Remember Me</span>
+                  </label>
+                  <button type="button" className="text-[9px] font-black uppercase tracking-[0.1em] text-white/30 hover:text-white transition-colors cursor-pointer">
+                    Forgot Password?
+                  </button>
+                </div>
+
+                <div className="space-y-4 pt-1">
                   <button 
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-white text-black py-6 rounded-2xl font-black uppercase tracking-[0.3em] hover:bg-ice-blue transition-all duration-500 flex items-center justify-center gap-4 group text-[13px] shadow-xl hover:shadow-ice-blue/20"
+                    className="w-full bg-white text-black py-5 rounded-xl font-black uppercase tracking-[0.2em] hover:bg-ice-blue transition-all duration-500 flex items-center justify-center gap-3 group text-[12px] shadow-xl hover:shadow-ice-blue/20"
                   >
                     {isSubmitting ? (
-                      <Loader2 className="w-8 h-8 animate-spin" />
+                      <Loader2 className="w-6 h-6 animate-spin" />
                     ) : (
                       <>
                         ACCESS SYSTEM
-                        <div className="w-2.5 h-2.5 bg-black rotate-45 group-hover:translate-x-3 transition-transform" />
+                        <div className="w-2 h-2 bg-black rotate-45 group-hover:translate-x-2 transition-transform" />
                       </>
                     )}
                   </button>
@@ -128,9 +153,9 @@ export const LoginPage = ({ onBack, backgroundColor = "bg-black" }: { onBack: ()
                   <button 
                     type="button"
                     onClick={login}
-                    className="w-full bg-zinc-900 text-white/40 py-6 rounded-2xl font-black uppercase tracking-[0.3em] hover:bg-zinc-800 transition-all duration-500 flex items-center justify-center gap-5 border border-white/10 text-[12px]"
+                    className="w-full bg-zinc-900/50 text-white/40 py-5 rounded-xl font-black uppercase tracking-[0.2em] hover:bg-zinc-800 transition-all duration-500 flex items-center justify-center gap-4 border border-white/5 text-[11px]"
                   >
-                    <img src="https://www.google.com/favicon.ico" alt="Google" className="w-5 h-5" />
+                    <img src="https://www.google.com/favicon.ico" alt="Google" className="w-4 h-4" />
                     Sign in with Google
                   </button>
                 </div>

@@ -20,7 +20,21 @@ const logos = [
   "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Fort_Lauderdale_United_FC_logo_2024.png/1280px-Fort_Lauderdale_United_FC_logo_2024.png",
   "https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Miami_FC_logo.svg/960px-Miami_FC_logo.svg.png",
   "https://ballerleague.uk/uploads/teams/logo_4.svg",
-  "https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Longwood_Lancers_logo.svg/1280px-Longwood_Lancers_logo.svg.png"
+  "https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Longwood_Lancers_logo.svg/1280px-Longwood_Lancers_logo.svg.png",
+  "https://upload.wikimedia.org/wikipedia/en/c/c0/Sporting_San_Miguelito.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/1/15/Florida_Southern_College_Seal_2022.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Portland_Timbers_logo.svg/1280px-Portland_Timbers_logo.svg.png",
+  "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/Crystal_Palace_FC_logo_%282022%29.svg/250px-Crystal_Palace_FC_logo_%282022%29.svg.png",
+  "https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/Club_Deportivo_Legan%C3%A9s_logo.svg/250px-Club_Deportivo_Legan%C3%A9s_logo.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Georgetown_Hoyas_logo.svg/330px-Georgetown_Hoyas_logo.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/1/12/Mount_Saint_Mary%27s_M.png",
+  "https://upload.wikimedia.org/wikipedia/en/b/bf/Manhattan_College_seal.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Costa_Rica_national_football_team_logo.svg/1280px-Costa_Rica_national_football_team_logo.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Honduras_football_crest.svg/250px-Honduras_football_crest.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/St._John%27s_Red_Storm_logo.svg/960px-St._John%27s_Red_Storm_logo.svg.png",
+  "https://upload.wikimedia.org/wikipedia/en/thumb/e/ee/Panamanian_Football_Federation_logo_2024.svg/250px-Panamanian_Football_Federation_logo_2024.svg.png",
+  "https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Austin_FC_II_logo.svg/960px-Austin_FC_II_logo.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Nashville_SC_logo%2C_2020.svg/960px-Nashville_SC_logo%2C_2020.svg.png"
 ];
 
 // Double the logos for seamless infinite scroll
@@ -30,7 +44,7 @@ export const LogoCarousel: React.FC = () => {
   return (
     <section id="partners" className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
-        <h2 className="text-zinc-900 text-2xl md:text-4xl font-black tracking-tighter uppercase leading-tight max-w-4xl mx-auto">
+        <h2 className="text-zinc-900 text-2xl md:text-5xl font-black tracking-tighter uppercase leading-tight max-w-4xl mx-auto">
           Rex Soccer has developed players from more than <span className="text-zinc-400">15+ universities</span> and <span className="text-zinc-400">professional teams</span>
         </h2>
       </div>
@@ -38,12 +52,12 @@ export const LogoCarousel: React.FC = () => {
       <div className="relative flex">
         {/* Continuous scrolling container */}
         <motion.div 
-          className="flex gap-16 md:gap-24 items-center whitespace-nowrap"
+          className="flex gap-20 md:gap-32 items-center whitespace-nowrap"
           animate={{
             x: ["0%", "-50%"]
           }}
           transition={{
-            duration: 30,
+            duration: 40,
             ease: "linear",
             repeat: Infinity
           }}
@@ -56,7 +70,7 @@ export const LogoCarousel: React.FC = () => {
               <img 
                 src={logo} 
                 alt={`Partner Logo ${index}`} 
-                className="h-12 md:h-16 w-auto object-contain max-w-[120px] md:max-w-[160px]"
+                className="h-16 md:h-24 w-auto object-contain max-w-[160px] md:max-w-[220px]"
                 loading="lazy"
                 referrerPolicy="no-referrer"
               />

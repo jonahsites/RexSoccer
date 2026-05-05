@@ -15,7 +15,7 @@ export const AboutSection = ({
     { value: "20+", label: "Years Experience" },
     { value: "Elite", label: "Standards" }
   ],
-  image = "https://image2url.com/r2/default/images/1775340151620-ba0c3990-4c1f-4679-a792-4d264c26de05.jpg",
+  image = "https://lh3.googleusercontent.com/d/1pca7_RlrXdAvObaMtcepkVqDEuB5NjCC",
   missionBadge = "The Mission",
   missionText = "Unlock your true potential through elite, intentional experience.",
   backgroundColor = "bg-black",

@@ -9,7 +9,7 @@ export const StepSection = ({
       id: "01",
       title: "Technical Mastery",
       desc: "Precision ball control and elite technique development.",
-      img: "https://lh3.googleusercontent.com/d/1fwb7_Nt2bdLfJk9KF5fC-LudUNgnC5sV"
+      img: "https://lh3.googleusercontent.com/d/1cbYssooibhoxkb_8BahEkJdMU5chuA54"
     },
     {
       id: "02",
