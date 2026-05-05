@@ -24,7 +24,7 @@ export const QuoteSection = ({
         style={{ scale, opacity }}
         className="max-w-5xl text-center"
       >
-        <h2 className="text-4xl md:text-7xl font-black leading-tight mb-8 italic text-ice-blue">
+        <h2 className="text-4xl md:text-7xl font-black leading-tight mb-8 text-ice-blue">
           {quote}
         </h2>
       </motion.div>
