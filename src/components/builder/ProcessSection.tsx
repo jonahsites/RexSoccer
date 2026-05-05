@@ -23,26 +23,26 @@ const StackingCard = ({
   const scale = useTransform(scrollYProgress, [start, 1], [1, 1 - (total - index) * 0.04]);
   
   // Stack with a slight vertical offset so edges peek out nicely
-  const topOffset = 100 + index * 32;
+  const topOffset = 40 + index * 12;
 
   return (
     <div 
-      className="sticky w-full mb-[20vh] last:mb-0" 
+      className="sticky w-full mb-[3vh] last:mb-0" 
       style={{ top: `${topOffset}px` }}
     >
       <motion.div
         style={{ scale }}
-        className="bg-[#080808] border border-white/10 rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 h-[380px] md:h-[480px] flex flex-col justify-between shadow-[0_50px_100px_rgba(0,0,0,0.9)] backdrop-blur-3xl origin-top"
+        className="bg-zinc-900/90 border border-white/10 rounded-[1.2rem] md:rounded-[1.8rem] p-5 md:p-7 h-[260px] md:h-[340px] flex flex-col justify-between shadow-[0_40px_80px_rgba(0,0,0,0.8)] backdrop-blur-3xl origin-top"
       >
-        <div className="flex flex-col gap-6 md:gap-8">
-          <div className="text-ice-blue font-black text-5xl md:text-8xl tracking-tighter opacity-10 leading-none">
+        <div className="flex flex-col gap-3 md:gap-4">
+          <div className="flex items-center justify-center w-10 h-10 md:w-16 md:h-16 bg-zinc-700 border border-white/10 rounded-xl text-ice-blue font-black text-xl md:text-4xl tracking-tighter shadow-inner">
             {item.number}
           </div>
           <div>
-            <h3 className="text-white font-black text-2xl md:text-5xl tracking-tighter uppercase mb-4 leading-none">
+            <h3 className="text-white font-black text-lg md:text-2xl tracking-tighter uppercase mb-1 leading-none">
               {item.title}
             </h3>
-            <p className="text-white/40 text-base md:text-xl font-light leading-relaxed max-w-2xl italic">
+            <p className="text-white/40 text-[10px] md:text-sm font-light leading-relaxed max-w-2xl italic">
               {item.description}
             </p>
           </div>

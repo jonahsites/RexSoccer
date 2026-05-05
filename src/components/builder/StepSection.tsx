@@ -42,9 +42,9 @@ export const StepSection = ({
               transition={{ delay: i * 0.15, duration: 0.8 }}
               className="relative group"
             >
-              <div className="relative z-10 bg-white/5 border border-white/5 shadow-sm rounded-[2rem] overflow-hidden p-10 hover:bg-black hover:shadow-xl hover:border-ice-blue/20 transition-all duration-500">
-                <h3 className="text-3xl font-black mb-6 tracking-tight text-white uppercase">{step.title}</h3>
-                <p className="text-white/50 text-lg leading-relaxed mb-10">{step.desc}</p>
+              <div className="relative z-10 bg-white/5 border border-white/5 shadow-sm rounded-[1.5rem] overflow-hidden p-8 hover:bg-black hover:shadow-xl hover:border-ice-blue/20 transition-all duration-500">
+                <h3 className="text-2xl font-black mb-4 tracking-tight text-white uppercase">{step.title}</h3>
+                <p className="text-white/50 text-base leading-relaxed mb-8">{step.desc}</p>
                 <div className="aspect-video rounded-2xl overflow-hidden transition-all duration-700">
                   <img src={step.img} alt={step.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>

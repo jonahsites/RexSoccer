@@ -30,7 +30,7 @@ export const MissionSection = ({
             <SectionReveal>
               <span className="text-ice-blue font-black uppercase tracking-widest text-xs mb-6 block">{badgeText}</span>
               <h2 
-                className="text-5xl md:text-7xl font-black mb-10 leading-[0.9] tracking-tighter text-white uppercase"
+                className="text-4xl md:text-6xl font-black mb-10 leading-[0.9] tracking-tighter text-white uppercase"
               >
                 FIXING THE <span className="text-ice-blue">U.S.</span><br />YOUTH SYSTEM.
               </h2>
