@@ -19,6 +19,7 @@ const logos = [
   "https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Utah_Valley_Wolverines_logo.svg/250px-Utah_Valley_Wolverines_logo.svg.png",
   "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Fort_Lauderdale_United_FC_logo_2024.png/1280px-Fort_Lauderdale_United_FC_logo_2024.png",
   "https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Miami_FC_logo.svg/960px-Miami_FC_logo.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/6/68/FC_Zurich_Logo_2022.svg",
   "https://images.fotmob.com/image_resources/logo/teamlogo/1929862.png",
   "https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/Olympique_Lyonnais_logo.svg/1280px-Olympique_Lyonnais_logo.svg.png",
   "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/VfB_Stuttgart_1893_Logo.svg/1280px-VfB_Stuttgart_1893_Logo.svg.png",
