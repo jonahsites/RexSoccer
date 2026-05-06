@@ -34,26 +34,17 @@ const StackingCard = ({
         style={{ scale }}
         className="bg-zinc-900/90 border border-white/10 rounded-[1.2rem] md:rounded-[1.8rem] p-5 md:p-7 h-[260px] md:h-[340px] flex flex-col justify-between shadow-[0_40px_80px_rgba(0,0,0,0.8)] backdrop-blur-3xl origin-top"
       >
-        <div className="flex flex-col gap-3 md:gap-4">
+        <div className="flex flex-col gap-4 md:gap-6">
           <div className="flex items-center justify-center w-10 h-10 md:w-16 md:h-16 bg-zinc-700 border border-white/10 rounded-xl text-ice-blue font-black text-xl md:text-4xl tracking-tighter shadow-inner">
             {item.number}
           </div>
           <div>
-            <h3 className="text-white font-black text-lg md:text-2xl tracking-tighter uppercase mb-1 leading-none">
+            <h3 className="text-white font-black text-2xl md:text-3xl tracking-tighter uppercase mb-2 leading-none">
               {item.title}
             </h3>
-            <p className="text-white/40 text-[10px] md:text-sm font-light leading-relaxed max-w-2xl italic">
+            <p className="text-white/40 text-xs md:text-lg font-light leading-relaxed max-w-2xl italic">
               {item.description}
             </p>
-          </div>
-        </div>
-        
-        <div className="flex justify-end items-center gap-4 group cursor-pointer">
-          <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/20 group-hover:text-ice-blue transition-colors">
-            Evolution Stage {item.number}
-          </span>
-          <div className="w-12 h-12 rounded-full border border-white/5 flex items-center justify-center group-hover:border-ice-blue/30 transition-all">
-            <ArrowRight className="w-6 h-6 text-white/20 group-hover:text-ice-blue group-hover:translate-x-1 transition-all" />
           </div>
         </div>
       </motion.div>

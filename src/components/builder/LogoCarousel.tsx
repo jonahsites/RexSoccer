@@ -21,6 +21,7 @@ const logos = [
   "https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Miami_FC_logo.svg/960px-Miami_FC_logo.svg.png",
   "https://upload.wikimedia.org/wikipedia/en/thumb/6/61/Stetson_Hatters_current_logo.svg/1280px-Stetson_Hatters_current_logo.svg.png",
   "https://upload.wikimedia.org/wikipedia/commons/6/68/FC_Zurich_Logo_2022.svg",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHtQMe1EfZTacp1kh-ksoVk_4mEqxJHiFPlg&s",
   "https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/6812.png",
   "https://images.fotmob.com/image_resources/logo/teamlogo/1929862.png",
   "https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/Olympique_Lyonnais_logo.svg/1280px-Olympique_Lyonnais_logo.svg.png",

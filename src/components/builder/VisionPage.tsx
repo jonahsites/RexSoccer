@@ -37,10 +37,10 @@ export const VisionPage = ({
         </button>
         <SectionReveal>
           <div className="relative">
-            <h2 className="text-[10rem] md:text-[18rem] font-black leading-none tracking-tighter text-white uppercase opacity-10 absolute -top-40 left-0 w-full text-center pointer-events-none select-none overflow-hidden whitespace-nowrap">
+            <h2 className="text-[10rem] md:text-[18rem] font-black leading-none tracking-tighter text-ice-blue uppercase opacity-10 absolute -top-40 left-0 w-full text-center pointer-events-none select-none overflow-hidden whitespace-nowrap">
               {title}
             </h2>
-            <h2 className="text-6xl md:text-[8rem] font-black mb-20 tracking-tighter text-white uppercase text-center relative z-20 leading-none">
+            <h2 className="text-6xl md:text-[8rem] font-black mb-20 tracking-tighter text-ice-blue uppercase text-center relative z-20 leading-none">
               {title}
             </h2>
           </div>
@@ -48,11 +48,11 @@ export const VisionPage = ({
       </div>
       
       {/* Vision Image Grid */}
-      <div className="max-w-[1400px] mx-auto px-6 mb-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+      <div className="w-full mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
           {visionImages.map((item, i) => (
             <SectionReveal key={i}>
-              <div className="group relative overflow-hidden bg-zinc-900 border border-white/5 rounded-2xl aspect-[16/10]">
+              <div className="group relative overflow-hidden bg-zinc-900 aspect-[16/10]">
                 <img 
                   src={item.image} 
                   alt={item.title || `Vision ${i}`} 
