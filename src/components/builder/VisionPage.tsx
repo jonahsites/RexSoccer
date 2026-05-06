@@ -75,7 +75,7 @@ export const VisionPage = ({
         >
           {[...Array(8)].map((_, i) => (
             <div key={i} className="flex items-center">
-              <span className="text-4xl md:text-7xl font-black text-black uppercase tracking-tighter mx-8 italic">
+              <span className="text-3xl md:text-5xl font-black text-black uppercase tracking-tighter mx-8">
                 THE FUTURE OF REX
               </span>
             </div>

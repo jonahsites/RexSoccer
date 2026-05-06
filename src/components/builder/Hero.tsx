@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { Builder } from '@builder.io/react';
 
 export const Hero = ({
-  backgroundImage = "https://lh3.googleusercontent.com/d/1X31ihuhbRUyjF2fqmx93j0JUBD52oLGg",
+  backgroundImage = "https://lh3.googleusercontent.com/d/1diZlEpiObJPvznAetfS9Mstaoz_i4nC3",
   badgeText = "RAZA ELITE XPERIENCE",
   rLogo = "https://image2url.com/r2/default/images/1774365332136-abfdbeec-2f4c-4764-b03d-28d5f258f9d0.png",
   soccerBall = "https://lh3.googleusercontent.com/d/1_0Zz9I3EBG0HB1jdFZ8nJuuFg-QFaiDM",
@@ -161,7 +161,7 @@ export const Hero = ({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.8 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-6"
+              className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12 md:mt-24"
             >
               <motion.button 
                 whileHover={{ scale: 1.05 }}

@@ -46,6 +46,7 @@ export const AboutSection = ({
                     dangerouslySetInnerHTML={{ 
                       __html: p
                         .replace(/Faqir/g, '<span class="text-ice-blue">Faqir</span>')
+                        .replace(/Raza/g, '<span class="text-ice-blue">Raza</span>')
                         .replace(/specialized/g, '<span class="text-ice-blue">specialized</span>')
                         .replace(/purpose/g, '<span class="text-ice-blue">purpose</span>') 
                     }} 
