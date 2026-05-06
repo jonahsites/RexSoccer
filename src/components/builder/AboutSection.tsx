@@ -74,7 +74,7 @@ export const AboutSection = ({
               referrerPolicy="no-referrer"
             />
             <div className="absolute bottom-12 left-12 right-12 z-20">
-              <div className="bg-black/80 px-8 py-6 rounded-[2rem] backdrop-blur-3xl border border-white/5 shadow-xl">
+              <div className="bg-black/80 px-8 py-6 rounded-[2rem] backdrop-blur-md border border-white/5 shadow-xl">
                 <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/50 mb-2">{missionBadge}</p>
                 <p className="text-lg font-medium leading-snug text-white">{missionText}</p>
               </div>

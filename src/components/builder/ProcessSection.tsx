@@ -32,7 +32,7 @@ const StackingCard = ({
     >
       <motion.div
         style={{ scale }}
-        className="bg-zinc-900/90 border border-white/10 rounded-[1.2rem] md:rounded-[1.8rem] p-5 md:p-7 h-[260px] md:h-[340px] flex flex-col justify-between shadow-[0_40px_80px_rgba(0,0,0,0.8)] backdrop-blur-3xl origin-top"
+        className="bg-zinc-900/90 border border-white/10 rounded-[1.2rem] md:rounded-[1.8rem] p-5 md:p-7 h-[260px] md:h-[340px] flex flex-col justify-between shadow-[0_40px_80px_rgba(0,0,0,0.8)] backdrop-blur-md origin-top"
       >
         <div className="flex flex-col gap-4 md:gap-6">
           <div className="flex items-center justify-center w-10 h-10 md:w-16 md:h-16 bg-zinc-700 border border-white/10 rounded-xl text-ice-blue font-black text-xl md:text-4xl tracking-tighter shadow-inner">

@@ -35,7 +35,7 @@ export const Navbar = ({
   return (
     <nav className={cn(
       "fixed top-0 left-0 w-full z-50 transition-all duration-700 px-6 py-8",
-      isScrolled ? "bg-black/80 backdrop-blur-2xl py-5 border-b border-white/5" : "bg-transparent"
+      isScrolled ? "bg-black/80 backdrop-blur-sm py-5 border-b border-white/5" : "bg-transparent"
     )}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <motion.div 

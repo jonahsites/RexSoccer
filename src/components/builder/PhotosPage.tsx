@@ -102,8 +102,8 @@ export const PhotosPage = ({
                   className="w-full h-auto block transition-transform duration-700 group-hover:scale-105" 
                   referrerPolicy="no-referrer" 
                 />
-                <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-[1px] flex items-center justify-center">
-                  <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center scale-90 group-hover:scale-100 transition-transform">
+                <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-none flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center scale-90 group-hover:scale-100 transition-transform">
                     <Expand className="w-4 h-4 text-white" />
                   </div>
                 </div>
@@ -120,7 +120,7 @@ export const PhotosPage = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-20"
+            className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-md flex items-center justify-center p-4 md:p-20"
             onClick={() => setSelectedPhoto(null)}
           >
             <button 
@@ -168,7 +168,7 @@ export const PhotosPage = ({
                 referrerPolicy="no-referrer"
               />
               <div className="absolute bottom-0 left-0 right-0 py-8 flex justify-center">
-                <span className="text-white/40 font-black tracking-widest text-[10px] uppercase bg-black/20 px-4 py-2 rounded-full backdrop-blur-md">
+                <span className="text-white/40 font-black tracking-widest text-[10px] uppercase bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm">
                   {selectedPhoto + 1} / {photos.length}
                 </span>
               </div>

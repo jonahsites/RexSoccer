@@ -31,10 +31,10 @@ export const LoginPage = ({ onBack, backgroundColor = "bg-black" }: { onBack: ()
   return (
     <div className={cn("min-h-screen bg-black flex flex-col", backgroundColor)}>
       {/* Content Area with more aggressive padding to create "black around" effect */}
-      <div className="flex-1 flex items-center justify-center p-6 md:p-12 overflow-hidden">
-        <div className="relative w-full max-w-[1400px] aspect-[1.4] md:aspect-[1.8] bg-zinc-900 rounded-[4rem] overflow-hidden border border-white/10 shadow-[0_0_200px_rgba(0,0,0,1)] flex items-center justify-center">
+      <div className="flex-1 flex items-center justify-center p-4 md:p-12 overflow-hidden">
+        <div className="relative w-full max-w-[1400px] md:aspect-[1.8] min-h-[650px] md:min-h-0 bg-zinc-900 rounded-[2.5rem] md:rounded-[4rem] overflow-hidden border border-white/10 shadow-[0_0_200px_rgba(0,0,0,1)] flex items-center justify-center py-12 md:py-0">
           {/* Contained Background Image */}
-          <div className="absolute inset-4 rounded-[3.2rem] overflow-hidden z-0">
+          <div className="absolute inset-2 md:inset-4 rounded-[2rem] md:rounded-[3.2rem] overflow-hidden z-0">
             <img 
               src="https://lh3.googleusercontent.com/d/1An213JU1Vq5Hatk8Rlg7xu9E9Vqb7KJY" 
               alt="Soccer Training" 
@@ -46,10 +46,10 @@ export const LoginPage = ({ onBack, backgroundColor = "bg-black" }: { onBack: ()
           </div>
 
           {/* Back Button */}
-          <div className="absolute top-12 left-12 z-50">
+          <div className="absolute top-6 left-6 md:top-12 md:left-12 z-50">
             <button 
               onClick={onBack}
-              className="flex items-center gap-3 text-white/50 hover:text-white transition-colors group px-6 py-3 bg-black/60 backdrop-blur-2xl rounded-full border border-white/10"
+              className="flex items-center gap-3 text-white/50 hover:text-white transition-colors group px-4 py-2 md:px-6 md:py-3 bg-black/60 backdrop-blur-sm rounded-full border border-white/10"
             >
               <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
               <span className="text-[11px] font-black uppercase tracking-[0.3em]">Back</span>
@@ -61,7 +61,7 @@ export const LoginPage = ({ onBack, backgroundColor = "bg-black" }: { onBack: ()
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="relative z-10 w-full max-w-[420px] mx-6 p-10 md:p-12 bg-black/40 backdrop-blur-md border border-white/10 rounded-[3.5rem] shadow-2xl"
+            className="relative z-10 w-full max-w-[420px] mx-6 p-8 md:p-12 bg-black/40 backdrop-blur-sm border border-white/10 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl"
           >
             <div className="w-full">
               <div className="mb-10 text-center">

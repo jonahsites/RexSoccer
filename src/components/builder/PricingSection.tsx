@@ -133,7 +133,7 @@ export const PricingSection = ({
         </div>
 
         <SectionReveal>
-          <div className="max-w-5xl mx-auto bg-zinc-900/50 backdrop-blur-sm border border-white/5 rounded-[3rem] p-12 md:p-20 flex flex-col gap-16">
+          <div className="max-w-5xl mx-auto bg-zinc-900/50 backdrop-blur-[2px] border border-white/5 rounded-[3rem] p-12 md:p-20 flex flex-col gap-16">
             <div className="grid md:grid-cols-2 gap-16">
               <div>
                 <h3 className="text-3xl font-black tracking-tighter text-white mb-8 uppercase">DUO POLICY.</h3>
@@ -174,7 +174,7 @@ export const PricingSection = ({
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setShowCalendar(false)}
-              className="absolute inset-0 bg-black/90 backdrop-blur-xl cursor-pointer"
+              className="absolute inset-0 bg-black/90 backdrop-blur-md cursor-pointer"
             />
             <motion.div 
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
