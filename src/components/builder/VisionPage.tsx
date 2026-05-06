@@ -31,13 +31,13 @@ export const VisionPage = ({
     <div 
       className={`min-h-screen ${backgroundColor} pb-20 overflow-hidden font-sans`}
     >
-      <div className="max-w-7xl mx-auto px-6 relative z-10 pt-60 mb-32">
+      <div className="max-w-7xl mx-auto px-6 relative z-10 pt-40 mb-12">
         <button onClick={onBack} className="mb-12 flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.3em] text-white/40 hover:text-white transition-all group">
           <ArrowRight className="w-4 h-4 rotate-180 group-hover:-translate-x-1 transition-transform" /> Back to Home
         </button>
         <SectionReveal>
           <div className="relative">
-            <h2 className="text-[10rem] md:text-[18rem] font-black leading-none tracking-tighter text-ice-blue uppercase opacity-10 absolute -top-40 left-0 w-full text-center pointer-events-none select-none overflow-hidden whitespace-nowrap">
+            <h2 className="text-[10rem] md:text-[18rem] font-black leading-none tracking-tighter text-white uppercase opacity-10 absolute -top-40 left-0 w-full text-center pointer-events-none select-none overflow-hidden whitespace-nowrap">
               {title}
             </h2>
             <h2 className="text-6xl md:text-[8rem] font-black mb-20 tracking-tighter text-ice-blue uppercase text-center relative z-20 leading-none">
@@ -48,7 +48,7 @@ export const VisionPage = ({
       </div>
       
       {/* Vision Image Grid */}
-      <div className="w-full mb-32">
+      <div className="w-full mb-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
           {visionImages.map((item, i) => (
             <SectionReveal key={i}>
@@ -67,7 +67,7 @@ export const VisionPage = ({
       </div>
 
       {/* Modern Text Carousel */}
-      <div className="relative w-full py-8 overflow-hidden bg-white mb-24">
+      <div className="relative w-full py-4 overflow-hidden bg-white mb-16">
         <motion.div 
           className="flex whitespace-nowrap will-change-transform"
           animate={{ x: ["0%", "-50%"] }}
@@ -75,7 +75,7 @@ export const VisionPage = ({
         >
           {[...Array(8)].map((_, i) => (
             <div key={i} className="flex items-center">
-              <span className="text-2xl md:text-4xl font-black text-black uppercase tracking-widest mx-6">
+              <span className="text-4xl md:text-7xl font-black text-black uppercase tracking-tighter mx-8 italic">
                 THE FUTURE OF REX
               </span>
             </div>

@@ -41,7 +41,15 @@ export const AboutSection = ({
                 />
             <div className="space-y-8 text-white/60 text-lg font-medium leading-relaxed max-w-xl">
               {paragraphs.map((p, i) => (
-                  <p key={i}>{p}</p>
+                  <p 
+                    key={i} 
+                    dangerouslySetInnerHTML={{ 
+                      __html: p
+                        .replace(/Faqir/g, '<span class="text-ice-blue">Faqir</span>')
+                        .replace(/specialized/g, '<span class="text-ice-blue">specialized</span>')
+                        .replace(/purpose/g, '<span class="text-ice-blue">purpose</span>') 
+                    }} 
+                  />
               ))}
             </div>
             
