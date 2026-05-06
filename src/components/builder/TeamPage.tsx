@@ -24,31 +24,46 @@ export const TeamPage = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className={`min-h-screen ${backgroundColor} pt-40 pb-20 px-6`}
+      className={`min-h-screen ${backgroundColor} pt-40 pb-32`}
     >
-      <div className="max-w-7xl mx-auto">
-        <button onClick={onBack} className="mb-12 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white/40 hover:text-ice-blue transition-all">
-          <ArrowRight className="w-4 h-4 rotate-180" /> Back to Home
+      <div className="max-w-[1600px] mx-auto px-6">
+        <button onClick={onBack} className="mb-12 flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.3em] text-white/40 hover:text-white transition-all group">
+          <ArrowRight className="w-4 h-4 rotate-180 group-hover:-translate-x-1 transition-transform" /> Back to Home
         </button>
+        
         <h2 
-          className="text-6xl md:text-9xl font-black mb-16 tracking-tighter text-white uppercase"
+          className="text-4xl md:text-8xl font-black mb-16 tracking-tighter text-white uppercase"
           dangerouslySetInnerHTML={{ __html: title }}
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
           {team.map((member, i) => (
             <motion.div 
               key={i}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
-              className="bg-zinc-900 rounded-[3rem] p-8 border border-white/5 group hover:bg-zinc-800 transition-all duration-500"
+              className="relative aspect-[4/5] overflow-hidden group"
             >
-              <div className="aspect-square rounded-2xl overflow-hidden mb-8 transition-all duration-700">
-                <img src={member.img} alt={member.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              <img 
+                src={member.img} 
+                alt={member.name} 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-8 opacity-90 group-hover:opacity-100 transition-opacity">
+                <div className="flex justify-between items-baseline gap-2 mb-2">
+                  <h3 className="text-xl md:text-2xl font-black text-white leading-none">
+                    {member.name}
+                  </h3>
+                  <span className="text-[10px] font-bold text-white/70 uppercase tracking-tighter whitespace-nowrap">
+                    {member.role}
+                  </span>
+                </div>
+                <p className="text-xs md:text-sm text-white/50 font-medium leading-relaxed line-clamp-3">
+                  {member.bio}
+                </p>
               </div>
-              <h3 className="text-2xl font-black text-white mb-2">{member.name}</h3>
-              <p className="text-ice-blue text-[10px] font-black uppercase tracking-widest mb-4">{member.role}</p>
-              <p className="text-white/40 text-sm font-medium leading-relaxed">{member.bio}</p>
             </motion.div>
           ))}
         </div>
@@ -61,7 +76,7 @@ Builder.registerComponent(TeamPage, {
   name: 'TeamPage',
   inputs: [
     { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
-    { name: 'title', type: 'string', defaultValue: "The <span class=\"text-oxford-blue\">Team</span>." },
+    { name: 'title', type: 'string', defaultValue: "The <span class=\"text-ice-blue\">Team.</span>" },
     {
       name: 'team',
       type: 'list',
@@ -72,7 +87,7 @@ Builder.registerComponent(TeamPage, {
         { name: 'img', type: 'file' },
       ],
       defaultValue: [
-        { name: "Faqir Raza", role: "CEO/Trainer", bio: "Former NCAA D1 player with international experience.", img: "https://lh3.googleusercontent.com/d/1rToMtbq6zUqA-3ojUoM974XEX5Cro1Er" },
+        { name: "Faiqr Raza", role: "CEO/Trainer", bio: "Former NCAA D1 player with international experience.", img: "https://lh3.googleusercontent.com/d/1rToMtbq6zUqA-3ojUoM974XEX5Cro1Er" },
         { name: "Santiago Pedraza", role: "Creative Strategist / Operations Manager", bio: "Driving REX's creative vision and operational excellence.", img: "https://lh3.googleusercontent.com/d/1etZ43OxAu9o0txlet_IVg5o2SBpjEl1I" },
         { name: "Robin Amritt Jr", role: "Media Specialist", bio: "Capturing the intensity and passion of every REX session.", img: "https://lh3.googleusercontent.com/d/1IIry7hEJtJuvOzPFOXIRZWcI4AkBLUpE" },
         { name: "Elena Rodriguez", role: "Goalkeeper Coach", bio: "Expert in shot-stopping and distribution techniques.", img: "https://lh3.googleusercontent.com/d/1Q-Wdxqnsb0L1ZVPvi7GXYIbdZQCf--GU" },
