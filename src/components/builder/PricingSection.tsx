@@ -15,8 +15,8 @@ export const PricingSection = ({
       price: "55",
       description: "Elite 1-on-1 development tailored to your specific technical and tactical needs.",
       packages: [
-        { name: "4 Sessions Package", price: "$210", note: "Expires in 1 month" },
-        { name: "8 Sessions Package", price: "$410", note: "Expires in 2 months" }
+        { name: "4 Sessions Package", price: "$210", note: "Expires in 2 weeks" },
+        { name: "8 Sessions Package", price: "$410", note: "Expires in 4 weeks" }
       ]
     },
     {
@@ -25,8 +25,8 @@ export const PricingSection = ({
       description: "Semi-private training for 2 players. Competition-driven and highly effective.",
       perPlayer: true,
       packages: [
-        { name: "4 Sessions Package", price: "$150", note: "Expires in 1 month" },
-        { name: "8 Sessions Package", price: "$300", note: "Expires in 2 months" }
+        { name: "4 Sessions Package", price: "$150", note: "Expires in 2 weeks" },
+        { name: "8 Sessions Package", price: "$300", note: "Expires in 4 weeks" }
       ]
     },
     {
@@ -232,8 +232,8 @@ Builder.registerComponent(PricingSection, {
           price: "55",
           features: [
             { f: "Single Session: $55" },
-            { f: "4 Sessions Package: $210 (Expires in 1 month)" },
-            { f: "8 Sessions Package: $410 (Expires in 2 months)" }
+            { f: "4 Sessions Package: $210 (Expires in 2 weeks)" },
+            { f: "8 Sessions Package: $410 (Expires in 4 weeks)" }
           ],
         },
         {
@@ -242,8 +242,8 @@ Builder.registerComponent(PricingSection, {
           features: [
             { f: "Price per player" },
             { f: "Single Session: $40" },
-            { f: "4 Sessions Package: $150 (Expires in 1 month)" },
-            { f: "8 Sessions Package: $300 (Expires in 2 months)" }
+            { f: "4 Sessions Package: $150 (Expires in 2 weeks)" },
+            { f: "8 Sessions Package: $300 (Expires in 4 weeks)" }
           ],
         },
         {

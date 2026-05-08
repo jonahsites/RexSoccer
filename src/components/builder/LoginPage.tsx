@@ -61,7 +61,7 @@ export const LoginPage = ({ onBack, backgroundColor = "bg-black" }: { onBack: ()
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="relative z-10 w-full max-w-[420px] mx-6 p-8 md:p-12 bg-black/40 backdrop-blur-sm border border-white/10 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl"
+            className="relative z-10 w-full max-w-[420px] mx-6 p-8 md:p-12 bg-black/25 backdrop-blur-[2px] border border-white/10 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl"
           >
             <div className="w-full">
               <div className="mb-10 text-center">
