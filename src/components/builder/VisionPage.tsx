@@ -15,8 +15,10 @@ export const VisionPage = ({
   visionImages = [
     { image: "https://lh3.googleusercontent.com/d/1wq393XSpzGDJwD_wDCCfRVcvrIR-l8Ok", chapter: "01", title: "Technical Excellence" },
     { image: "https://lh3.googleusercontent.com/d/1MBbifo3jdiiC_r0S6PwjjBmYffXdjCvp", chapter: "02", title: "Mental Resilience" },
-    { image: "https://lh3.googleusercontent.com/d/1B2-IwiIHrb3C9W2hjbttyePISkoJUtLq", chapter: "03", title: "Tactical Intelligence" },
-    { image: "https://lh3.googleusercontent.com/d/1JHS4HY7DdJHxFbh2c6AegSyKz1qaNcZL", chapter: "04", title: "Elite Community" }
+    { image: "https://lh3.googleusercontent.com/d/1w1HQPsKHTUyIpw-64IaLcfobBhZXEFVw", chapter: "03", title: "Tactical Intelligence" },
+    { image: "https://lh3.googleusercontent.com/d/1pcaVYD6kx-Vtv0-YX_BiZFkylNTTDMPo", chapter: "04", title: "Elite Community" },
+    { image: "https://lh3.googleusercontent.com/d/1UaLpG07ug_amLGvpDOFzGbSuoZIIQQ3M", chapter: "05", title: "Performance Analysis" },
+    { image: "https://lh3.googleusercontent.com/d/1wa-PSlepm-6-MdVl0NrfiINPCOZpQ83J", chapter: "06", title: "Global Expansion" }
   ],
   backgroundColor = "bg-black",
 }: {
@@ -49,7 +51,7 @@ export const VisionPage = ({
       
       {/* Vision Image Grid */}
       <div className="w-full mb-0">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
           {visionImages.map((item, i) => (
             <SectionReveal key={i}>
               <div className="group relative overflow-hidden bg-zinc-900 aspect-[16/10]">
@@ -129,9 +131,12 @@ Builder.registerComponent(VisionPage, {
         { name: 'title', type: 'string' }
       ],
       defaultValue: [
-        { image: "https://lh3.googleusercontent.com/d/1OHkNQYSkM2Zrq_khwOxRL6WUm18gTVGR", chapter: "", title: "" },
-        { image: "https://lh3.googleusercontent.com/d/1MBbifo3jdiiC_r0S6PwjjBmYffXdjCvp", chapter: "", title: "" },
-        { image: "https://lh3.googleusercontent.com/d/1IS35oPaRpGRR5qIca0PS4PDNd3YdBJ9b", chapter: "", title: "" }
+        { image: "https://lh3.googleusercontent.com/d/1wq393XSpzGDJwD_wDCCfRVcvrIR-l8Ok", chapter: "01", title: "Technical Excellence" },
+        { image: "https://lh3.googleusercontent.com/d/1MBbifo3jdiiC_r0S6PwjjBmYffXdjCvp", chapter: "02", title: "Mental Resilience" },
+        { image: "https://lh3.googleusercontent.com/d/1w1HQPsKHTUyIpw-64IaLcfobBhZXEFVw", chapter: "03", title: "Tactical Intelligence" },
+        { image: "https://lh3.googleusercontent.com/d/1pcaVYD6kx-Vtv0-YX_BiZFkylNTTDMPo", chapter: "04", title: "Elite Community" },
+        { image: "https://lh3.googleusercontent.com/d/1UaLpG07ug_amLGvpDOFzGbSuoZIIQQ3M", chapter: "05", title: "Performance Analysis" },
+        { image: "https://lh3.googleusercontent.com/d/1wa-PSlepm-6-MdVl0NrfiINPCOZpQ83J", chapter: "06", title: "Global Expansion" }
       ]
     },
   ],
