@@ -16,7 +16,7 @@ export const VisionPage = ({
     { image: "https://lh3.googleusercontent.com/d/1wq393XSpzGDJwD_wDCCfRVcvrIR-l8Ok", chapter: "01", title: "Technical Excellence" },
     { image: "https://lh3.googleusercontent.com/d/1MBbifo3jdiiC_r0S6PwjjBmYffXdjCvp", chapter: "02", title: "Mental Resilience" },
     { image: "https://lh3.googleusercontent.com/d/1w1HQPsKHTUyIpw-64IaLcfobBhZXEFVw", chapter: "03", title: "Tactical Intelligence" },
-    { image: "https://lh3.googleusercontent.com/d/1gJTBXp6VUv2NWS7SHS4_ZP5vpDxwv82o", chapter: "04", title: "Elite Community" },
+    { image: "https://lh3.googleusercontent.com/d/1B5QJLikuDbjQ5DhL_cnwENcZHfeNQzdw", chapter: "04", title: "Elite Community" },
     { image: "https://lh3.googleusercontent.com/d/1pyCG8F5nSUBvwv0DQfMHDXgjwfpjOPmm", chapter: "05", title: "Performance Analysis" },
     { image: "https://lh3.googleusercontent.com/d/1rEaE_LgvE7kh2QdJG9vNiLihQ8b-jjyH", chapter: "06", title: "Global Expansion" }
   ],
