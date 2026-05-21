@@ -26,7 +26,7 @@ export const TeamPage = ({
       exit={{ opacity: 0 }}
       className={`min-h-screen ${backgroundColor} pt-40 pb-32`}
     >
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="w-full px-6 md:px-12 lg:px-20">
         <button onClick={onBack} className="mb-12 flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.3em] text-white/40 hover:text-white transition-all group">
           <ArrowRight className="w-4 h-4 rotate-180 group-hover:-translate-x-1 transition-transform" /> Back to Home
         </button>
@@ -36,7 +36,7 @@ export const TeamPage = ({
           dangerouslySetInnerHTML={{ __html: title }}
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 xl:gap-24">
           {team.map((member, i) => (
             <motion.div 
               key={i}
@@ -51,16 +51,16 @@ export const TeamPage = ({
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-8 opacity-90 group-hover:opacity-100 transition-opacity">
-                <div className="flex justify-between items-baseline gap-2 mb-2">
-                  <h3 className="text-xl md:text-2xl font-black text-white leading-none">
-                    {member.name}
-                  </h3>
-                  <span className="text-[10px] font-bold text-white/70 uppercase tracking-tighter whitespace-nowrap">
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent flex flex-col justify-end p-6 md:p-8 opacity-90 group-hover:opacity-100 transition-opacity">
+                <div className="mb-3">
+                  <span className="block text-[10px] font-bold text-white/60 uppercase tracking-widest mb-1">
                     {member.role}
                   </span>
+                  <h3 className="text-xl md:text-2xl font-black text-white leading-tight uppercase tracking-tight">
+                    {member.name}
+                  </h3>
                 </div>
-                <p className="text-xs md:text-sm text-white/50 font-medium leading-relaxed line-clamp-3">
+                <p className="text-xs text-white/50 font-medium leading-relaxed line-clamp-3">
                   {member.bio}
                 </p>
               </div>
