@@ -1,3 +1,4 @@
+// Trigger Vercel build redeployment
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
