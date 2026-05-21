@@ -7,10 +7,9 @@ export const TeamPage = ({
   onBack = () => window.dispatchEvent(new CustomEvent('changePage', { detail: 'home' })),
   title = "The <span class=\"text-ice-blue\">Team.</span>",
   team = [
-    { name: "Faiqr Raza", role: "CEO/Trainer", bio: "Former NCAA D1 player with international experience.", img: "https://lh3.googleusercontent.com/d/1rToMtbq6zUqA-3ojUoM974XEX5Cro1Er" },
+    { name: "Faiqr Raza", role: "CEO/Trainer", bio: "Former NCAA D1 player with international experience.", img: "https://lh3.googleusercontent.com/d/1JADQ3XN7kdFJjcRGfB7Mo8X2Qp3m0-1S" },
     { name: "Santiago Pedraza", role: "Creative Strategist / Operations Manager", bio: "Driving REX's creative vision and operational excellence.", img: "https://lh3.googleusercontent.com/d/1etZ43OxAu9o0txlet_IVg5o2SBpjEl1I" },
     { name: "Robin Amritt Jr", role: "Photographer", bio: "Capturing the intensity and passion of every REX session.", img: "https://lh3.googleusercontent.com/d/1IIry7hEJtJuvOzPFOXIRZWcI4AkBLUpE" },
-    { name: "Elena Rodriguez", role: "Goalkeeper Coach", bio: "Expert in shot-stopping and distribution techniques.", img: "https://lh3.googleusercontent.com/d/1Q-Wdxqnsb0L1ZVPvi7GXYIbdZQCf--GU" },
   ],
   backgroundColor = "bg-black",
 }: {
@@ -36,7 +35,7 @@ export const TeamPage = ({
           dangerouslySetInnerHTML={{ __html: title }}
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-0">
           {team.map((member, i) => (
             <motion.div 
               key={i}
@@ -87,10 +86,9 @@ Builder.registerComponent(TeamPage, {
         { name: 'img', type: 'file' },
       ],
       defaultValue: [
-        { name: "Faiqr Raza", role: "CEO/Trainer", bio: "Former NCAA D1 player with international experience.", img: "https://lh3.googleusercontent.com/d/1rToMtbq6zUqA-3ojUoM974XEX5Cro1Er" },
+        { name: "Faiqr Raza", role: "CEO/Trainer", bio: "Former NCAA D1 player with international experience.", img: "https://lh3.googleusercontent.com/d/1JADQ3XN7kdFJjcRGfB7Mo8X2Qp3m0-1S" },
         { name: "Santiago Pedraza", role: "Creative Strategist / Operations Manager", bio: "Driving REX's creative vision and operational excellence.", img: "https://lh3.googleusercontent.com/d/1etZ43OxAu9o0txlet_IVg5o2SBpjEl1I" },
         { name: "Robin Amritt Jr", role: "Media Specialist", bio: "Capturing the intensity and passion of every REX session.", img: "https://lh3.googleusercontent.com/d/1IIry7hEJtJuvOzPFOXIRZWcI4AkBLUpE" },
-        { name: "Elena Rodriguez", role: "Goalkeeper Coach", bio: "Expert in shot-stopping and distribution techniques.", img: "https://lh3.googleusercontent.com/d/1Q-Wdxqnsb0L1ZVPvi7GXYIbdZQCf--GU" },
       ],
     },
   ],
