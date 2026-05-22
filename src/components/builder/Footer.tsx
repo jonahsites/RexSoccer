@@ -18,7 +18,7 @@ export const Footer = ({
     { icon: "instagram", href: "https://www.instagram.com/rex.soccer" },
     { icon: "facebook", href: "https://www.facebook.com/profile.php?id=61578792965551" }
   ],
-  copyright = "© 2025 REX Soccer Training. All rights reserved.",
+  copyright = "© 2026 REX Soccer Training. All rights reserved.",
   links = [
     { label: "Privacy Policy", href: "#" },
     { label: "Terms of Service", href: "#" }
@@ -160,7 +160,7 @@ Builder.registerComponent(Footer, {
         { icon: "facebook", href: "https://www.facebook.com/profile.php?id=61578792965551" }
       ],
     },
-    { name: 'copyright', type: 'string', defaultValue: "© 2025 REX Soccer Training. All rights reserved." },
+    { name: 'copyright', type: 'string', defaultValue: "© 2026 REX Soccer Training. All rights reserved." },
     {
       name: 'links',
       type: 'list',
