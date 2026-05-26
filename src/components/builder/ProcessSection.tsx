@@ -93,18 +93,7 @@ export const ProcessSection = ({
               </p>
             </div>
             
-            {/* Visual Scroll Progress Sidebar */}
-            <div className="hidden lg:flex items-center gap-6">
-               <div className="h-[300px] w-[1px] bg-white/5 relative overflow-hidden">
-                 <motion.div 
-                   style={{ scaleY: scrollYProgress, transformOrigin: 'top' }}
-                   className="absolute inset-0 bg-ice-blue shadow-[0_0_20px_rgba(165,243,252,0.4)]"
-                 />
-               </div>
-               <div className="text-[10px] font-black uppercase tracking-[0.5em] text-white/20 [writing-mode:vertical-lr]">
-                 Scroll to evolve
-               </div>
-            </div>
+
           </div>
 
           {/* Right Column: The Stacking Collection */}
