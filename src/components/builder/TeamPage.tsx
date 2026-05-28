@@ -10,7 +10,7 @@ export const TeamPage = ({
   team = [
     { name: "Faiqr Raza", role: "CEO/Trainer", bio: "Former NCAA D1 player with professional international experience.", img: "https://lh3.googleusercontent.com/d/1JADQ3XN7kdFJjcRGfB7Mo8X2Qp3m0-1S" },
     { name: "Santiago Pedraza", role: "Creative Strategist / Operations Manager", bio: "Driving REX's creative vision and operational excellence.", img: "https://lh3.googleusercontent.com/d/1etZ43OxAu9o0txlet_IVg5o2SBpjEl1I" },
-    { name: "Robin Amritt Jr", role: "Photographer", bio: "Capturing the intensity and passion of every REX session.", img: "https://lh3.googleusercontent.com/d/1IIry7hEJtJuvOzPFOXIRZWcI4AkBLUpE" },
+    { name: "Robin Amritt Jr", role: "Photographer", bio: "Capturing the intensity and passion of every REX session.", img: "https://lh3.googleusercontent.com/d/1DO6U33Y-Nobg6aALsAPpNzU8ZnPxBmRV" },
   ],
   backgroundColor = "bg-black",
 }: {
@@ -89,7 +89,7 @@ Builder.registerComponent(TeamPage, {
       defaultValue: [
         { name: "Faiqr Raza", role: "CEO/Trainer", bio: "Former NCAA D1 player with international experience.", img: "https://lh3.googleusercontent.com/d/1JADQ3XN7kdFJjcRGfB7Mo8X2Qp3m0-1S" },
         { name: "Santiago Pedraza", role: "Creative Strategist / Operations Manager", bio: "Driving REX's creative vision and operational excellence.", img: "https://lh3.googleusercontent.com/d/1etZ43OxAu9o0txlet_IVg5o2SBpjEl1I" },
-        { name: "Robin Amritt Jr", role: "Media Specialist", bio: "Capturing the intensity and passion of every REX session.", img: "https://lh3.googleusercontent.com/d/1IIry7hEJtJuvOzPFOXIRZWcI4AkBLUpE" },
+        { name: "Robin Amritt Jr", role: "Media Specialist", bio: "Capturing the intensity and passion of every REX session.", img: "https://lh3.googleusercontent.com/d/1DO6U33Y-Nobg6aALsAPpNzU8ZnPxBmRV" },
       ],
     },
   ],
