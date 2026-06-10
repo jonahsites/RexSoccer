@@ -15,8 +15,8 @@ export const PricingSection = ({
       price: "55",
       description: "Elite 1-on-1 development tailored to your specific technical and tactical needs.",
       packages: [
-        { name: "6 Sessions Package", price: "$315", note: "Save $15 (4.55% off) • Expires in 2 weeks" },
-        { name: "10 Sessions Package", price: "$510", note: "Save $40 (7.27% off) • Expires in 4 weeks" }
+        { name: "6 Sessions Package", price: "$315", note: "Expires in 2 weeks" },
+        { name: "10 Sessions Package", price: "$510", note: "Expires in 4 weeks" }
       ]
     },
     {
@@ -25,8 +25,8 @@ export const PricingSection = ({
       description: "Semi-private training for 2 players. Competition-driven and highly effective.",
       perPlayer: true,
       packages: [
-        { name: "6 Sessions Package", price: "$225", note: "Save $15 (6.25% off) • Expires in 2 weeks" },
-        { name: "10 Sessions Package", price: "$375", note: "Save $25 (6.25% off) • Expires in 4 weeks" }
+        { name: "6 Sessions Package", price: "$225", note: "Expires in 2 weeks" },
+        { name: "10 Sessions Package", price: "$375", note: "Expires in 4 weeks" }
       ]
     },
     {
@@ -232,8 +232,8 @@ Builder.registerComponent(PricingSection, {
           price: "55",
           features: [
             { f: "Single Session: $55" },
-            { f: "6 Sessions Package: $315 (Save $15 • 4.55% off • Expires in 2 weeks)" },
-            { f: "10 Sessions Package: $510 (Save $40 • 7.27% off • Expires in 4 weeks)" }
+            { f: "6 Sessions Package: $315 (Expires in 2 weeks)" },
+            { f: "10 Sessions Package: $510 (Expires in 4 weeks)" }
           ],
         },
         {
@@ -242,8 +242,8 @@ Builder.registerComponent(PricingSection, {
           features: [
             { f: "Price per player" },
             { f: "Single Session: $40" },
-            { f: "6 Sessions Package: $225 (Save $15 • 6.25% off • Expires in 2 weeks)" },
-            { f: "10 Sessions Package: $375 (Save $25 • 6.25% off • Expires in 4 weeks)" }
+            { f: "6 Sessions Package: $225 (Expires in 2 weeks)" },
+            { f: "10 Sessions Package: $375 (Expires in 4 weeks)" }
           ],
         },
         {
