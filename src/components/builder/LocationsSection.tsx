@@ -31,10 +31,10 @@ export const LocationsSection = ({
     {
       id: 3,
       name: "Location 3",
-      address: "Palm Beach Gardens",
-      city: "Palm Beach Gardens, FL",
+      address: "Palm City",
+      city: "SW Newfield Pkwy, Palm City, FL 34990, United States",
       img: "https://lh3.googleusercontent.com/d/15Ye5MRvXJrODBozkzgzcYqPleTaA_x5h",
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=Palm+Beach+Gardens+FL",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=SW+Newfield+Pkwy+Palm+City+FL+34990",
       objectPosition: "center",
       zoom: 0.85
     }
@@ -188,10 +188,10 @@ Builder.registerComponent(LocationsSection, {
         {
           id: 3,
           name: "Location 3",
-          address: "Palm Beach Gardens",
-          city: "Palm Beach Gardens, FL",
+          address: "Palm City",
+          city: "SW Newfield Pkwy, Palm City, FL 34990, United States",
           img: "https://lh3.googleusercontent.com/d/15Ye5MRvXJrODBozkzgzcYqPleTaA_x5h",
-          mapUrl: "https://www.google.com/maps/search/?api=1&query=Palm+Beach+Gardens+FL",
+          mapUrl: "https://www.google.com/maps/search/?api=1&query=SW+Newfield+Pkwy+Palm+City+FL+34990",
           objectPosition: "center",
           zoom: 0.85
         }
