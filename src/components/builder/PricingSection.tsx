@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Builder } from '@builder.io/react';
-import { Camera, X } from 'lucide-react';
+import { Camera, X, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '../../lib/utils';
 import { SectionReveal } from './common';
@@ -12,7 +12,7 @@ export const PricingSection = ({
   plans = [
     {
       name: "Private Training",
-      price: "55",
+      price: "60",
       description: "Elite 1-on-1 development tailored to your specific technical and tactical needs.",
       packages: [
         { name: "6 Sessions Package", price: "$315", note: "Expires in 2 weeks" },
@@ -40,7 +40,7 @@ export const PricingSection = ({
   policies = [
     "All packages must be used within their time limit (no rollovers).",
     "5-hour notice is required for any cancellations. If canceled less than 5 hours before, the session will still be charged.",
-    "If a duo session is canceled, it will proceed as a private session, and the price will adjust to $55.",
+    "If a duo session is canceled, it will proceed as a private session, and the price will adjust to $60.",
     "Group sessions are priced per player and will remain as booked.",
     "Sessions must be scheduled in advance, based on availability.",
     "Payment is required upfront before the first session of any package.",
@@ -184,12 +184,23 @@ export const PricingSection = ({
             >
               <div className="p-6 border-b border-white/5 flex justify-between items-center bg-zinc-900">
                 <h3 className="text-xl font-black uppercase tracking-tight text-white">Book Your Session</h3>
-                <button 
-                  onClick={() => setShowCalendar(false)}
-                  className="p-2 hover:bg-white/5 rounded-full transition-colors text-white"
-                >
-                  <X className="w-6 h-6" />
-                </button>
+                <div className="flex items-center gap-3">
+                  <a 
+                    href={bookingUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-2 hover:bg-white/10 text-white/70 hover:text-white rounded-full transition-colors flex items-center gap-2 text-xs font-bold"
+                    title="Open Square in new tab"
+                  >
+                    <ExternalLink className="w-5 h-5" />
+                  </a>
+                  <button 
+                    onClick={() => setShowCalendar(false)}
+                    className="p-2 hover:bg-white/5 rounded-full transition-colors text-white"
+                  >
+                    <X className="w-6 h-6" />
+                  </button>
+                </div>
               </div>
               <div className="flex-grow w-full h-full bg-white">
                 <iframe 
@@ -229,9 +240,9 @@ Builder.registerComponent(PricingSection, {
       defaultValue: [
         {
           name: "Private Training",
-          price: "55",
+          price: "60",
           features: [
-            { f: "Single Session: $55" },
+            { f: "Single Session: $60" },
             { f: "6 Sessions Package: $315 (Expires in 2 weeks)" },
             { f: "10 Sessions Package: $510 (Expires in 4 weeks)" }
           ],
