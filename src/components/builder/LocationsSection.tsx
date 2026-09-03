@@ -1,6 +1,5 @@
 import React from 'react';
 import { Builder } from '@builder.io/react';
-import { ArrowRight } from 'lucide-react';
 import { SectionReveal } from './common';
 
 export const LocationsSection = ({
@@ -27,25 +26,7 @@ export const LocationsSection = ({
       mapUrl: "https://www.google.com/maps/search/?api=1&query=12151+SW+Community+Blvd+Port+St.+Lucie+FL+34987",
       objectPosition: "center",
       zoom: 0.85
-    },
-    {
-      id: 3,
-      name: "Location 3",
-      address: "Palm City",
-      city: "1050 SW Prairie Ave, Palm City, FL 34990, United States",
-      img: "https://lh3.googleusercontent.com/d/15Ye5MRvXJrODBozkzgzcYqPleTaA_x5h",
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=1050+SW+Prairie+Ave+Palm+City+FL+34990",
-      objectPosition: "center",
-      zoom: 0.85
     }
-  ],
-  mobileBadge = "Mobile Training",
-  mobileTitle = "We Drive To You.",
-  mobileDesc = "Can't make it to our locations? No problem. We bring the elite training experience to your local field or backyard.",
-  travelFees = [
-    { label: "Under 10 miles", price: "FREE" },
-    { label: "10 - 20 miles", price: "$25" },
-    { label: "20+ miles", price: "$35" }
   ],
   backgroundColor = "bg-black",
 }: {
@@ -53,10 +34,6 @@ export const LocationsSection = ({
   title?: string;
   description?: string;
   locations?: { id: number, name: string, address: string, city: string, img: string, mapUrl: string, objectPosition?: string, zoom?: number }[];
-  mobileBadge?: string;
-  mobileTitle?: string;
-  mobileDesc?: string;
-  travelFees?: { label: string, price: string }[];
   backgroundColor?: string;
   key?: React.Key;
 }) => {
@@ -75,8 +52,8 @@ export const LocationsSection = ({
           </p>
         </SectionReveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-          {locations.map((loc, i) => (
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-12">
+          {locations.map((loc) => (
             <SectionReveal key={loc.id}>
               <div className="group relative h-[600px] overflow-hidden bg-zinc-900 border border-white/5 shadow-2xl">
                 <img 
@@ -116,29 +93,6 @@ export const LocationsSection = ({
             </SectionReveal>
           ))}
         </div>
-
-        <SectionReveal className="mt-24 bg-zinc-900 p-12 rounded-[3rem] border border-white/5">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-            <div className="max-w-xl">
-              <span className="text-ice-blue font-black uppercase tracking-[0.4em] text-[10px] mb-4 block">{mobileBadge}</span>
-              <h3 className="text-4xl font-black tracking-tighter text-white mb-6 uppercase">{mobileTitle}</h3>
-              <p className="text-white/60 font-medium leading-relaxed">
-                {mobileDesc}
-              </p>
-            </div>
-            <div className="bg-black p-8 rounded-[2rem] shadow-xl border border-white/5 min-w-[300px]">
-              <h4 className="text-[10px] font-black uppercase tracking-widest text-ice-blue mb-6">Travel Fees</h4>
-              <ul className="space-y-4">
-                {travelFees.map((fee, i) => (
-                  <li key={i} className={`flex justify-between items-center ${i < travelFees.length - 1 ? 'pb-4 border-b border-white/5' : ''}`}>
-                    <span className="text-sm font-bold text-white">{fee.label}</span>
-                    <span className="text-lg font-black text-white">{fee.price}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </SectionReveal>
       </div>
     </section>
   );
@@ -170,7 +124,7 @@ Builder.registerComponent(LocationsSection, {
           name: "Location 1",
           address: "Port St. Lucie FL",
           city: "1585 SW Cashmere Blvd, Port St. Lucie, FL 34986",
-          img: "https://image2url.com/r2/default/images/1775342660072-e8a552b4-ed8e-4a03-82d7-1fc0b708d302.png",
+          img: "https://lh3.googleusercontent.com/d/1NdipT27Mnet9X7WZB0o28-lVTMbNAp61",
           mapUrl: "https://www.google.com/maps/search/?api=1&query=1585+SW+Cashmere+Blvd+Port+St.+Lucie+FL+34986",
           objectPosition: "center 20%",
           zoom: 0.85
@@ -184,33 +138,7 @@ Builder.registerComponent(LocationsSection, {
           mapUrl: "https://www.google.com/maps/search/?api=1&query=12151+SW+Community+Blvd+Port+St.+Lucie+FL+34987",
           objectPosition: "center",
           zoom: 0.85
-        },
-        {
-          id: 3,
-          name: "Location 3",
-          address: "Palm City",
-          city: "1050 SW Prairie Ave, Palm City, FL 34990, United States",
-          img: "https://lh3.googleusercontent.com/d/15Ye5MRvXJrODBozkzgzcYqPleTaA_x5h",
-          mapUrl: "https://www.google.com/maps/search/?api=1&query=1050+SW+Prairie+Ave+Palm+City+FL+34990",
-          objectPosition: "center",
-          zoom: 0.85
         }
-      ],
-    },
-    { name: 'mobileBadge', type: 'string', defaultValue: "Mobile Training" },
-    { name: 'mobileTitle', type: 'string', defaultValue: "We Drive To You." },
-    { name: 'mobileDesc', type: 'string', defaultValue: "Can't make it to our locations? No problem. We bring the elite training experience to your local field or backyard." },
-    {
-      name: 'travelFees',
-      type: 'list',
-      subFields: [
-        { name: 'label', type: 'string' },
-        { name: 'price', type: 'string' },
-      ],
-      defaultValue: [
-        { label: "Under 10 miles", price: "FREE" },
-        { label: "10 - 20 miles", price: "$25" },
-        { label: "20+ miles", price: "$35" }
       ],
     },
   ],
