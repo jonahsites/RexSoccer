@@ -4,7 +4,7 @@ import { Instagram, Facebook } from 'lucide-react';
 
 export const Footer = ({
   logo = "https://image2url.com/r2/default/images/1774894049292-b9fe06c3-7e1a-4415-a0c6-1f107619d1bb.png",
-  description = "Elite soccer training for the next generation of athletes. Built on discipline, technique, and tactical intelligence.",
+  description = "",
   navTitle = "Navigation",
   navItems = [
     { label: "About", href: "#about" },
@@ -65,9 +65,11 @@ export const Footer = ({
                 referrerPolicy="no-referrer"
               />
             </div>
-            <p className="text-white/30 text-lg font-light max-w-sm leading-relaxed">
-              {description}
-            </p>
+            {description ? (
+              <p className="text-white/30 text-lg font-light max-w-sm leading-relaxed">
+                {description}
+              </p>
+            ) : null}
           </div>
           
           <div>
@@ -130,7 +132,7 @@ Builder.registerComponent(Footer, {
     { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
     { name: 'backgroundImage', type: 'file', defaultValue: "https://lh3.googleusercontent.com/d/1ZXBGv_nDOk4sAUp7rPwcXHaNo_niAJwS" },
     { name: 'logo', type: 'file', defaultValue: "https://image2url.com/r2/default/images/1774894049292-b9fe06c3-7e1a-4415-a0c6-1f107619d1bb.png" },
-    { name: 'description', type: 'string', defaultValue: "Elite soccer training for the next generation of athletes. Built on discipline, technique, and tactical intelligence." },
+    { name: 'description', type: 'string', defaultValue: "" },
     { name: 'navTitle', type: 'string', defaultValue: "Navigation" },
     {
       name: 'navItems',

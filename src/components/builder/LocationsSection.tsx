@@ -26,6 +26,16 @@ export const LocationsSection = ({
       mapUrl: "https://www.google.com/maps/search/?api=1&query=12151+SW+Community+Blvd+Port+St.+Lucie+FL+34987",
       objectPosition: "center",
       zoom: 0.85
+    },
+    {
+      id: 3,
+      name: "Location 3",
+      address: "Palm City",
+      city: "1050 SW Prairie Ave, Palm City, FL 34990, United States",
+      img: "https://lh3.googleusercontent.com/d/15Ye5MRvXJrODBozkzgzcYqPleTaA_x5h",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=1050+SW+Prairie+Ave+Palm+City+FL+34990",
+      objectPosition: "center",
+      zoom: 0.85
     }
   ],
   backgroundColor = "bg-black",
@@ -52,7 +62,7 @@ export const LocationsSection = ({
           </p>
         </SectionReveal>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {locations.map((loc) => (
             <SectionReveal key={loc.id}>
               <div className="group relative h-[600px] overflow-hidden bg-zinc-900 border border-white/5 shadow-2xl">
@@ -136,6 +146,16 @@ Builder.registerComponent(LocationsSection, {
           city: "12151 SW Community Blvd, Port St. Lucie, FL 34987",
           img: "https://lh3.googleusercontent.com/d/16fQvw_EPauX9Sgr_0TaNVz1nmBChNYqa",
           mapUrl: "https://www.google.com/maps/search/?api=1&query=12151+SW+Community+Blvd+Port+St.+Lucie+FL+34987",
+          objectPosition: "center",
+          zoom: 0.85
+        },
+        {
+          id: 3,
+          name: "Location 3",
+          address: "Palm City",
+          city: "1050 SW Prairie Ave, Palm City, FL 34990, United States",
+          img: "https://lh3.googleusercontent.com/d/15Ye5MRvXJrODBozkzgzcYqPleTaA_x5h",
+          mapUrl: "https://www.google.com/maps/search/?api=1&query=1050+SW+Prairie+Ave+Palm+City+FL+34990",
           objectPosition: "center",
           zoom: 0.85
         }
