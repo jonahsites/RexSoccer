@@ -9,7 +9,7 @@ export const StepSection = ({
       id: "01",
       title: "Technical Mastery",
       desc: "Precision ball control and elite technique development.",
-      img: "/technical_training_session.jpg"
+      img: "https://lh3.googleusercontent.com/d/1mNbQIFWPv9rLsYoQwPwFn5qF8zWdS2uD"
     },
     {
       id: "02",
@@ -75,7 +75,7 @@ Builder.registerComponent(StepSection, {
           id: "01",
           title: "Technical Mastery",
           desc: "Precision ball control and elite technique development.",
-          img: "/technical_training_session.jpg"
+          img: "https://lh3.googleusercontent.com/d/1mNbQIFWPv9rLsYoQwPwFn5qF8zWdS2uD"
         },
         {
           id: "02",
