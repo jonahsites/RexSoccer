@@ -87,7 +87,7 @@ export const PricingSection = ({
                 PRIVATE TRAINING
               </h2>
               <p className="text-white/60 text-base md:text-lg font-normal max-w-2xl mx-auto leading-relaxed">
-                Private sessions with one or two players, tailored to exactly what you need. Whether that's an elite
+                Private sessions with only one player, tailored to exactly what you need. Whether that's an elite
                 player sharpening technique and decision-making, or a beginner building the fundamentals. All ages
                 welcome. Book a single session or save with a package.
               </p>
