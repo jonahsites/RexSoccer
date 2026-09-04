@@ -175,7 +175,7 @@ export const PricingSection = ({
             <div className="p-8 md:p-10 rounded-[2.5rem] bg-[#141416] text-white border border-white/15 shadow-2xl flex flex-col justify-between items-center text-center transition-all duration-300 hover:-translate-y-1 min-h-[380px]">
               <span className="text-zinc-400 font-bold text-sm tracking-tight">8 privates</span>
               <div className="my-6">
-                <span className="text-6xl md:text-7xl font-black font-display tracking-tight text-white">$400</span>
+                <span className="text-6xl md:text-7xl font-black font-display tracking-tight text-white">$420</span>
                 <span className="block text-[11px] font-bold text-zinc-400 uppercase tracking-widest mt-2">
                   Expires in 4 weeks
                 </span>
