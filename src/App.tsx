@@ -16,7 +16,6 @@ import { PricingSection } from './components/builder/PricingSection';
 import { LocationsSection } from './components/builder/LocationsSection';
 import { ProcessSection } from './components/builder/ProcessSection';
 import { LogoCarousel } from './components/builder/LogoCarousel';
-import { ContactSection } from './components/builder/ContactSection';
 import { Footer } from './components/builder/Footer';
 import { TeamPage } from './components/builder/TeamPage';
 import { VisionPage } from './components/builder/VisionPage';
@@ -71,7 +70,6 @@ function App() {
               <ProcessSection backgroundColor="bg-black" />
               <PricingSection backgroundColor="bg-black" />
               <LocationsSection backgroundColor="bg-black" />
-              <ContactSection backgroundColor="bg-black" />
               <Footer backgroundColor="bg-black" />
             </motion.main>
           )}
