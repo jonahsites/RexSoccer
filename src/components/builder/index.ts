@@ -5,6 +5,7 @@ export * from './MissionSection';
 export * from './AboutSection';
 export * from './PricingSection';
 export * from './LocationsSection';
+export * from './PolicySection';
 export * from './ContactSection';
 export * from './Footer';
 export * from './Navbar';

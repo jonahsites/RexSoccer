@@ -1,6 +1,6 @@
 import React from 'react';
 import { Builder } from '@builder.io/react';
-import { Instagram, Facebook } from 'lucide-react';
+import { Instagram, Facebook, Youtube } from 'lucide-react';
 
 export const Footer = ({
   logo = "https://image2url.com/r2/default/images/1774894049292-b9fe06c3-7e1a-4415-a0c6-1f107619d1bb.png",
@@ -20,8 +20,9 @@ export const Footer = ({
     { label: "Merch", href: "#merch", isPage: true, page: "merch" }
   ],
   socials = [
-    { icon: "instagram", name: "Instagram", href: "https://www.instagram.com/rex.soccer" },
-    { icon: "facebook", name: "Facebook", href: "https://www.facebook.com/profile.php?id=61578792965551" }
+    { icon: "instagram", href: "https://www.instagram.com/rex.soccer" },
+    { icon: "youtube", href: "https://www.youtube.com" },
+    { icon: "facebook", href: "https://www.facebook.com/profile.php?id=61578792965551" }
   ],
   copyright = "© 2026 REX Soccer Training. All rights reserved.",
   links = [
@@ -38,17 +39,21 @@ export const Footer = ({
   address?: string;
   navTitle?: string;
   navItems?: { label: string, href: string, isPage?: boolean, page?: string }[];
-  socials?: { icon: string, name?: string, href: string }[];
+  socials?: { icon: string, href: string }[];
   copyright?: string;
   links?: { label: string, href: string }[];
   backgroundColor?: string;
   backgroundImage?: string;
 }) => {
-  const getIcon = (name: string) => {
-    switch (name.toLowerCase()) {
-      case 'facebook': return <Facebook className="w-4 h-4 text-white/60 group-hover:text-white transition-colors" />;
+  const getIcon = (iconName: string) => {
+    switch (iconName.toLowerCase()) {
+      case 'youtube':
+        return <Youtube className="w-5 h-5 text-white/70 hover:text-white transition-colors" />;
+      case 'facebook':
+        return <Facebook className="w-5 h-5 text-white/70 hover:text-white transition-colors" />;
       case 'instagram':
-      default: return <Instagram className="w-4 h-4 text-white/60 group-hover:text-white transition-colors" />;
+      default:
+        return <Instagram className="w-5 h-5 text-white/70 hover:text-white transition-colors" />;
     }
   };
 
@@ -71,113 +76,108 @@ export const Footer = ({
   };
 
   return (
-    <footer id="contact" className={`relative py-24 md:py-32 px-6 md:px-16 border-t border-white/10 ${backgroundColor} overflow-hidden`}>
-      {/* Subtle Background Accent Image */}
+    <footer id="contact" className={`relative pt-24 pb-12 px-8 md:px-16 lg:px-24 ${backgroundColor} overflow-hidden`}>
+      {/* Background Graphic Accent - kept prominently as requested */}
       {backgroundImage && (
         <img 
           src={backgroundImage}
           alt=""
-          className="absolute right-0 top-0 h-full w-auto opacity-15 pointer-events-none object-contain object-right"
+          className="absolute right-0 top-0 h-full w-auto max-w-none opacity-30 md:opacity-35 pointer-events-none object-contain object-right select-none"
           referrerPolicy="no-referrer"
         />
       )}
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24 mb-20 md:mb-28">
-          {/* Left Column: Brand, Phone, Email, Address, Socials */}
-          <div className="md:col-span-8 flex flex-col items-start">
-            {/* Logo Mark */}
-            <div className="mb-8 cursor-pointer" onClick={() => handleNavClick({ label: 'Home', href: '#' })}>
+        {/* Main Content Grid */}
+        <div className="flex flex-col md:flex-row justify-between items-start gap-16 md:gap-8 mb-20 md:mb-24">
+          
+          {/* Left Column: Brand & Details */}
+          <div className="flex flex-col items-start max-w-xl">
+            {/* White Monogram Logo */}
+            <div 
+              className="mb-14 cursor-pointer" 
+              onClick={() => handleNavClick({ label: 'Home', href: '#' })}
+            >
               <img 
                 src={logo} 
                 alt="REX Logo" 
-                className="h-12 md:h-14 brightness-0 invert object-contain"
+                className="h-14 md:h-16 brightness-0 invert object-contain"
                 referrerPolicy="no-referrer"
               />
             </div>
 
-            {/* Brand Title */}
-            <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight text-white font-display mb-8">
+            {/* Brand Title (Tall Condensed Uppercase matching image.png) */}
+            <h2 className="text-2xl md:text-3xl font-extrabold uppercase tracking-wide text-white mb-8 font-sans">
               {brandName}
             </h2>
 
-            {/* Contact Details (Styled after image.png) */}
-            <div className="flex flex-col items-start gap-3 mb-6">
+            {/* Contact Details with exact underline styling & muted silver colors */}
+            <div className="flex flex-col items-start space-y-4">
+              {/* Phone Number */}
               <a 
                 href={`tel:${phoneNumber.replace(/[^0-9+]/g, '')}`} 
-                className="text-white/70 hover:text-white text-base md:text-lg underline underline-offset-8 decoration-white/30 hover:decoration-white transition-all"
+                className="text-[#8e949e] hover:text-white text-sm md:text-base underline underline-offset-[6px] decoration-[#4a505b] hover:decoration-white transition-all"
               >
                 {phoneNumber}
               </a>
 
+              {/* Email */}
               <a 
                 href={`mailto:${email}`} 
-                className="text-white/70 hover:text-white text-base md:text-lg underline underline-offset-8 decoration-white/30 hover:decoration-white transition-all"
+                className="text-[#8e949e] hover:text-white text-sm md:text-base underline underline-offset-[6px] decoration-[#4a505b] hover:decoration-white transition-all"
               >
                 {email}
               </a>
             </div>
-
-            {/* Address */}
-            <p className="text-white/50 text-base md:text-lg font-light leading-relaxed max-w-sm mb-8">
-              {address}
-            </p>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-3">
-              {socials.map((social, i) => (
-                <a
-                  key={i}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white/70 hover:text-white transition-all text-xs font-semibold uppercase tracking-wider group"
-                >
-                  {getIcon(social.icon)}
-                  <span>{social.name || social.icon}</span>
-                </a>
-              ))}
-            </div>
           </div>
 
-          {/* Right Column: Navigation */}
-          <div className="md:col-span-4 flex flex-col md:items-end">
-            <div className="w-full md:max-w-xs text-left md:text-right">
-              <h4 className="text-base md:text-lg font-medium text-white/90 mb-6 tracking-wide">
-                {navTitle}
-              </h4>
-              <ul className="space-y-3">
-                {navItems.map((item, i) => (
-                  <li key={i}>
-                    <button 
-                      onClick={() => handleNavClick(item)}
-                      className="text-white/50 hover:text-white text-sm md:text-base transition-colors py-1 cursor-pointer inline-block text-left md:text-right hover:translate-x-1 md:hover:-translate-x-1 duration-200"
-                    >
-                      {item.label}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Right Column: Navigation (Right Aligned matching image.png) */}
+          <div className="w-full md:w-auto flex flex-col md:items-end text-left md:text-right">
+            {/* Section Header: Title Case "Navigation" in muted off-white */}
+            <h4 className="text-base md:text-lg font-normal text-[#cfd3db] mb-6 md:mb-8">
+              {navTitle}
+            </h4>
+
+            {/* Nav Links: Title Case, right-aligned, muted grey, underlined */}
+            <ul className="space-y-4 flex flex-col md:items-end">
+              {navItems.map((item, i) => (
+                <li key={i}>
+                  <button 
+                    onClick={() => handleNavClick(item)}
+                    className="text-[#8e949e] hover:text-white text-sm md:text-base font-normal underline underline-offset-[6px] decoration-[#4a505b] hover:decoration-white transition-all cursor-pointer text-left md:text-right block"
+                  >
+                    {item.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        {/* Bottom Bar / Copyright */}
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-6">
-          <p className="text-white/30 text-xs uppercase tracking-[0.25em]">
-            {copyright}
-          </p>
-          <div className="flex gap-8">
-            {links.map((link, i) => (
-              <a 
-                key={i} 
-                href={link.href} 
-                className="text-white/30 text-xs uppercase tracking-[0.25em] hover:text-white transition-colors"
+        {/* Full-width Crisp White Divider Line matching image.png */}
+        <div className="w-full border-t border-white/70 mb-8 md:mb-10" />
+
+        {/* Bottom Bar: Social Logos on Left (moved to other side), Copyright on Right */}
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
+          {/* Social Icons moved to the other side (left) */}
+          <div className="flex items-center gap-5">
+            {socials.map((social, i) => (
+              <a
+                key={i}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-1 hover:opacity-100 transition-opacity opacity-80"
+                aria-label={social.icon}
               >
-                {link.label}
+                {getIcon(social.icon)}
               </a>
             ))}
           </div>
+
+          <p className="text-[#6c727f] text-xs">
+            {copyright}
+          </p>
         </div>
       </div>
     </footer>
@@ -219,13 +219,13 @@ Builder.registerComponent(Footer, {
       name: 'socials',
       type: 'list',
       subFields: [
-        { name: 'icon', type: 'string', enum: ['instagram', 'facebook'] },
-        { name: 'name', type: 'string' },
+        { name: 'icon', type: 'string', enum: ['instagram', 'youtube', 'facebook'] },
         { name: 'href', type: 'string' },
       ],
       defaultValue: [
-        { icon: "instagram", name: "Instagram", href: "https://www.instagram.com/rex.soccer" },
-        { icon: "facebook", name: "Facebook", href: "https://www.facebook.com/profile.php?id=61578792965551" }
+        { icon: "instagram", href: "https://www.instagram.com/rex.soccer" },
+        { icon: "youtube", href: "https://www.youtube.com" },
+        { icon: "facebook", href: "https://www.facebook.com/profile.php?id=61578792965551" }
       ],
     },
     { name: 'copyright', type: 'string', defaultValue: "© 2026 REX Soccer Training. All rights reserved." },

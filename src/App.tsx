@@ -14,6 +14,7 @@ import { MissionSection } from './components/builder/MissionSection';
 import { AboutSection } from './components/builder/AboutSection';
 import { PricingSection } from './components/builder/PricingSection';
 import { LocationsSection } from './components/builder/LocationsSection';
+import { PolicySection } from './components/builder/PolicySection';
 import { ProcessSection } from './components/builder/ProcessSection';
 import { LogoCarousel } from './components/builder/LogoCarousel';
 import { Footer } from './components/builder/Footer';
@@ -70,6 +71,7 @@ function App() {
               <ProcessSection backgroundColor="bg-black" />
               <PricingSection backgroundColor="bg-black" />
               <LocationsSection backgroundColor="bg-black" />
+              <PolicySection backgroundColor="bg-black" />
               <Footer backgroundColor="bg-black" />
             </motion.main>
           )}
