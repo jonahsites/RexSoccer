@@ -30,7 +30,6 @@ export const Footer = ({
     { label: "Terms of Service", href: "#" }
   ],
   backgroundColor = "bg-black",
-  backgroundImage = "https://lh3.googleusercontent.com/d/1ZXBGv_nDOk4sAUp7rPwcXHaNo_niAJwS",
 }: {
   logo?: string;
   brandName?: string;
@@ -48,12 +47,12 @@ export const Footer = ({
   const getIcon = (iconName: string) => {
     switch (iconName.toLowerCase()) {
       case 'youtube':
-        return <Youtube className="w-5 h-5 text-white/70 hover:text-white transition-colors" />;
+        return <Youtube className="w-5 h-5 text-[#8c93a0] hover:text-white transition-colors" />;
       case 'facebook':
-        return <Facebook className="w-5 h-5 text-white/70 hover:text-white transition-colors" />;
+        return <Facebook className="w-5 h-5 text-[#8c93a0] hover:text-white transition-colors" />;
       case 'instagram':
       default:
-        return <Instagram className="w-5 h-5 text-white/70 hover:text-white transition-colors" />;
+        return <Instagram className="w-5 h-5 text-[#8c93a0] hover:text-white transition-colors" />;
     }
   };
 
@@ -76,47 +75,40 @@ export const Footer = ({
   };
 
   return (
-    <footer id="contact" className={`relative pt-24 pb-12 px-8 md:px-16 lg:px-24 ${backgroundColor} overflow-hidden`}>
-      {/* Background Graphic Accent - kept prominently as requested */}
-      {backgroundImage && (
-        <img 
-          src={backgroundImage}
-          alt=""
-          className="absolute right-0 top-0 h-full w-auto max-w-none opacity-30 md:opacity-35 pointer-events-none object-contain object-right select-none"
-          referrerPolicy="no-referrer"
-        />
-      )}
-
+    <footer id="contact" className={`relative pt-12 md:pt-16 pb-8 px-8 md:px-16 lg:px-24 ${backgroundColor} overflow-hidden`}>
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Main Content Grid */}
-        <div className="flex flex-col md:flex-row justify-between items-start gap-16 md:gap-8 mb-20 md:mb-24">
+        {/* Main Content Grid lowered closer to the line */}
+        <div className="flex flex-col md:flex-row justify-between items-start gap-12 md:gap-8 mb-6 md:mb-8">
           
           {/* Left Column: Brand & Details */}
           <div className="flex flex-col items-start max-w-xl">
             {/* White Monogram Logo */}
             <div 
-              className="mb-14 cursor-pointer" 
+              className="mb-8 md:mb-10 cursor-pointer" 
               onClick={() => handleNavClick({ label: 'Home', href: '#' })}
             >
               <img 
                 src={logo} 
                 alt="REX Logo" 
-                className="h-14 md:h-16 brightness-0 invert object-contain"
+                className="h-12 md:h-14 brightness-0 invert object-contain"
                 referrerPolicy="no-referrer"
               />
             </div>
 
-            {/* Brand Title (Tall Condensed Uppercase matching image.png) */}
-            <h2 className="text-2xl md:text-3xl font-extrabold uppercase tracking-wide text-white mb-8 font-sans">
+            {/* Brand Title: Tall Condensed Bebas Neue with exact silver-grey hue from attached screenshot */}
+            <h2 
+              className="text-4xl md:text-5xl font-normal uppercase tracking-[0.03em] leading-none mb-6 text-[#b4b9c2]"
+              style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+            >
               {brandName}
             </h2>
 
-            {/* Contact Details with exact underline styling & muted silver colors */}
-            <div className="flex flex-col items-start space-y-4">
+            {/* Contact Details with exact underline styling & slate-gray hue matching attached screenshot */}
+            <div className="flex flex-col items-start space-y-3.5">
               {/* Phone Number */}
               <a 
                 href={`tel:${phoneNumber.replace(/[^0-9+]/g, '')}`} 
-                className="text-[#8e949e] hover:text-white text-sm md:text-base underline underline-offset-[6px] decoration-[#4a505b] hover:decoration-white transition-all"
+                className="text-[#5e6674] hover:text-[#9ea5b3] text-[15px] md:text-base font-sans underline underline-offset-[5px] decoration-[#454c5a] hover:decoration-[#858c9a] transition-all"
               >
                 {phoneNumber}
               </a>
@@ -124,27 +116,27 @@ export const Footer = ({
               {/* Email */}
               <a 
                 href={`mailto:${email}`} 
-                className="text-[#8e949e] hover:text-white text-sm md:text-base underline underline-offset-[6px] decoration-[#4a505b] hover:decoration-white transition-all"
+                className="text-[#5e6674] hover:text-[#9ea5b3] text-[15px] md:text-base font-sans underline underline-offset-[5px] decoration-[#454c5a] hover:decoration-[#858c9a] transition-all"
               >
                 {email}
               </a>
             </div>
           </div>
 
-          {/* Right Column: Navigation (Right Aligned matching image.png) */}
+          {/* Right Column: Navigation (Right Aligned matching attached reference) */}
           <div className="w-full md:w-auto flex flex-col md:items-end text-left md:text-right">
-            {/* Section Header: Title Case "Navigation" in muted off-white */}
-            <h4 className="text-base md:text-lg font-normal text-[#cfd3db] mb-6 md:mb-8">
+            {/* Section Header: Title Case "Navigation" in soft muted off-white/gray */}
+            <h4 className="text-[15px] md:text-base font-normal text-[#8c93a0] mb-4 md:mb-5">
               {navTitle}
             </h4>
 
             {/* Nav Links: Title Case, right-aligned, muted grey, underlined */}
-            <ul className="space-y-4 flex flex-col md:items-end">
+            <ul className="space-y-3 flex flex-col md:items-end">
               {navItems.map((item, i) => (
                 <li key={i}>
                   <button 
                     onClick={() => handleNavClick(item)}
-                    className="text-[#8e949e] hover:text-white text-sm md:text-base font-normal underline underline-offset-[6px] decoration-[#4a505b] hover:decoration-white transition-all cursor-pointer text-left md:text-right block"
+                    className="text-[#5e6674] hover:text-[#9ea5b3] text-[14px] md:text-[15px] font-sans font-normal underline underline-offset-[5px] decoration-[#454c5a] hover:decoration-[#858c9a] transition-all cursor-pointer text-left md:text-right block"
                   >
                     {item.label}
                   </button>
@@ -154,12 +146,12 @@ export const Footer = ({
           </div>
         </div>
 
-        {/* Full-width Crisp White Divider Line matching image.png */}
-        <div className="w-full border-t border-white/70 mb-8 md:mb-10" />
+        {/* Full-width Crisp White/Silver Divider Line */}
+        <div className="w-full border-t border-white/60 mb-6 md:mb-7" />
 
-        {/* Bottom Bar: Social Logos on Left (moved to other side), Copyright on Right */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
-          {/* Social Icons moved to the other side (left) */}
+        {/* Bottom Bar: Social Logos on Left, Copyright on Right */}
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+          {/* Social Icons on Left */}
           <div className="flex items-center gap-5">
             {socials.map((social, i) => (
               <a
@@ -167,7 +159,7 @@ export const Footer = ({
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1 hover:opacity-100 transition-opacity opacity-80"
+                className="p-1 hover:opacity-100 transition-opacity opacity-75"
                 aria-label={social.icon}
               >
                 {getIcon(social.icon)}
@@ -175,7 +167,7 @@ export const Footer = ({
             ))}
           </div>
 
-          <p className="text-[#6c727f] text-xs">
+          <p className="text-[#555c69] text-xs">
             {copyright}
           </p>
         </div>

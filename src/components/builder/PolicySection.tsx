@@ -13,12 +13,24 @@ export const PolicySection = ({
     "No refunds or rollovers."
   ],
   backgroundColor = "bg-black",
+  backgroundImage = "https://lh3.googleusercontent.com/d/1ZXBGv_nDOk4sAUp7rPwcXHaNo_niAJwS",
 }: {
   policies?: string[];
   backgroundColor?: string;
+  backgroundImage?: string;
 }) => {
   return (
-    <section id="policy" className={`relative py-20 px-6 ${backgroundColor} overflow-hidden`}>
+    <section id="policy" className={`relative py-24 px-6 ${backgroundColor} overflow-hidden`}>
+      {/* Background Graphic Accent on the side of the page and behind the div component */}
+      {backgroundImage && (
+        <img 
+          src={backgroundImage}
+          alt=""
+          className="absolute -right-10 md:right-0 top-1/2 -translate-y-1/2 h-[110%] md:h-[130%] max-h-[750px] w-auto max-w-none opacity-30 md:opacity-40 pointer-events-none object-contain object-right select-none z-0"
+          referrerPolicy="no-referrer"
+        />
+      )}
+
       <div className="max-w-7xl mx-auto relative z-10">
         <SectionReveal>
           <div className="max-w-5xl mx-auto bg-zinc-900/50 backdrop-blur-[2px] border border-white/5 rounded-[3rem] p-12 md:p-20 flex flex-col gap-16">
@@ -63,6 +75,7 @@ Builder.registerComponent(PolicySection, {
   name: 'PolicySection',
   inputs: [
     { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
+    { name: 'backgroundImage', type: 'file', defaultValue: "https://lh3.googleusercontent.com/d/1ZXBGv_nDOk4sAUp7rPwcXHaNo_niAJwS" },
     {
       name: 'policies',
       type: 'list',

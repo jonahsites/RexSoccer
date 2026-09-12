@@ -3,6 +3,7 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", sans-serif;
+  --font-condensed: "Bebas Neue", sans-serif;
   
   --color-oxford-blue: #10457a;
   --color-dark-grey: #18181b;
