@@ -36,7 +36,7 @@ export const LoginPage = ({ onBack, backgroundColor = "bg-black" }: { onBack: ()
           {/* Contained Background Image */}
           <div className="absolute inset-2 md:inset-4 rounded-[2rem] md:rounded-[3.2rem] overflow-hidden z-0">
             <img 
-              src="https://lh3.googleusercontent.com/d/1An213JU1Vq5Hatk8Rlg7xu9E9Vqb7KJY" 
+              src="https://lh3.googleusercontent.com/d/18PlubFXls43fQ95Pl3vUcARSL5b2HOeJ" 
               alt="Soccer Training" 
               className="w-full h-full object-cover opacity-90"
               referrerPolicy="no-referrer"

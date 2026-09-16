@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { Builder } from '@builder.io/react';
 
 export const Hero = ({
-  backgroundImage = "https://lh3.googleusercontent.com/d/1diZlEpiObJPvznAetfS9Mstaoz_i4nC3",
+  backgroundImage = "https://lh3.googleusercontent.com/d/10xDBaRYG6gIn7mJFgIzyOLcDpNEju-4s",
   badgeText = "RAZA ELITE XPERIENCE",
   rLogo = "https://image2url.com/r2/default/images/1774365332136-abfdbeec-2f4c-4764-b03d-28d5f258f9d0.png",
   soccerBall = "https://lh3.googleusercontent.com/d/1_0Zz9I3EBG0HB1jdFZ8nJuuFg-QFaiDM",
@@ -69,8 +69,8 @@ export const Hero = ({
           <motion.div style={{ y, opacity }}>
             <div className="absolute inset-0 z-[-1] opacity-30 pointer-events-none overflow-hidden">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2 w-[110%] h-[110%] -translate-x-5 -translate-y-5 bg-black">
-                <img src="https://lh3.googleusercontent.com/d/1maxTUPXlGr4-ZQRY4lxazQ-tlGQwIgtO" className="w-full h-full object-cover contrast-[1.1]" referrerPolicy="no-referrer" />
-                <img src="https://lh3.googleusercontent.com/d/12QZ-jqWJ5Z5pWAic3ULAIViRjJBZ3IUA" className="w-full h-full object-cover contrast-[1.1]" referrerPolicy="no-referrer" />
+                <img src="https://lh3.googleusercontent.com/d/130WTg3L4SvKc6GZnQ67TSaB3pcc1uwQR" className="w-full h-full object-cover contrast-[1.1]" referrerPolicy="no-referrer" />
+                <img src="https://lh3.googleusercontent.com/d/14XY6i4m_3xmJfXhNCu5OUpdThJ09JovO" className="w-full h-full object-cover contrast-[1.1]" referrerPolicy="no-referrer" />
                 <img src="https://lh3.googleusercontent.com/d/1dgo0R5kV4CiFJbPrbWYXXkiEYZB_tpur" className="w-full h-full object-cover contrast-[1.1]" referrerPolicy="no-referrer" />
                 <img src="https://lh3.googleusercontent.com/d/1IIry7hEJtJuvOzPFOXIRZWcI4AkBLUpE" className="w-full h-full object-cover contrast-[1.1]" referrerPolicy="no-referrer" />
                 <div className="w-full h-full bg-black" />
@@ -200,7 +200,7 @@ export const Hero = ({
 Builder.registerComponent(Hero, {
   name: 'Hero',
   inputs: [
-    { name: 'backgroundImage', type: 'file', defaultValue: "https://lh3.googleusercontent.com/d/1CRzZMW7F_n3qJwgMfKOBA-b0mjl8Hb5v" },
+    { name: 'backgroundImage', type: 'file', defaultValue: "https://lh3.googleusercontent.com/d/10xDBaRYG6gIn7mJFgIzyOLcDpNEju-4s" },
     { name: 'badgeText', type: 'string', defaultValue: "RAZA ELITE XPERIENCE" },
     { name: 'rLogo', type: 'file', defaultValue: "https://image2url.com/r2/default/images/1774365332136-abfdbeec-2f4c-4764-b03d-28d5f258f9d0.png" },
     { name: 'soccerBall', type: 'file', defaultValue: "https://lh3.googleusercontent.com/d/1_0Zz9I3EBG0HB1jdFZ8nJuuFg-QFaiDM" },

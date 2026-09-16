@@ -10,14 +10,13 @@ import { Navbar } from './components/builder/Navbar';
 import { Hero } from './components/builder/Hero';
 import { QuoteSection } from './components/builder/QuoteSection';
 import { StepSection } from './components/builder/StepSection';
-import { MissionSection } from './components/builder/MissionSection';
-import { AboutSection } from './components/builder/AboutSection';
 import { PricingSection } from './components/builder/PricingSection';
 import { LocationsSection } from './components/builder/LocationsSection';
 import { PolicySection } from './components/builder/PolicySection';
 import { ProcessSection } from './components/builder/ProcessSection';
 import { LogoCarousel } from './components/builder/LogoCarousel';
 import { Footer } from './components/builder/Footer';
+import { AboutPage } from './components/builder/AboutPage';
 import { TeamPage } from './components/builder/TeamPage';
 import { VisionPage } from './components/builder/VisionPage';
 import { MerchPage } from './components/builder/MerchPage';
@@ -61,19 +60,28 @@ function App() {
             >
               <Hero />
               <LogoCarousel />
-              <MissionSection backgroundColor="bg-black" />
               <QuoteSection 
                 quote="1% BETTER EVERYDAY." 
                 backgroundColor="bg-black" 
               />
               <StepSection backgroundColor="bg-black" />
-              <AboutSection backgroundColor="bg-black" />
               <ProcessSection backgroundColor="bg-black" />
               <PricingSection backgroundColor="bg-black" />
               <LocationsSection backgroundColor="bg-black" />
               <PolicySection backgroundColor="bg-black" />
               <Footer backgroundColor="bg-black" />
             </motion.main>
+          )}
+
+          {currentPage === 'about' && (
+            <motion.div 
+              key="about"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <AboutPage onBack={() => setCurrentPage('home')} backgroundColor="bg-black" />
+            </motion.div>
           )}
 
           {currentPage === 'team' && (

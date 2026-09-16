@@ -13,12 +13,8 @@ export const VisionPage = ({
     { title: "Pro Pathway.", content: "We are committed to creating direct pathways for our players to reach professional levels, attracting scouts and professional partners who recognize the REX standard of excellence." }
   ],
   visionImages = [
-    { image: "https://lh3.googleusercontent.com/d/1wq393XSpzGDJwD_wDCCfRVcvrIR-l8Ok", chapter: "01", title: "Technical Excellence" },
-    { image: "https://lh3.googleusercontent.com/d/1MBbifo3jdiiC_r0S6PwjjBmYffXdjCvp", chapter: "02", title: "Mental Resilience" },
-    { image: "https://lh3.googleusercontent.com/d/1w1HQPsKHTUyIpw-64IaLcfobBhZXEFVw", chapter: "03", title: "Tactical Intelligence" },
-    { image: "https://lh3.googleusercontent.com/d/1B5QJLikuDbjQ5DhL_cnwENcZHfeNQzdw", chapter: "04", title: "Elite Community" },
-    { image: "https://lh3.googleusercontent.com/d/1pyCG8F5nSUBvwv0DQfMHDXgjwfpjOPmm", chapter: "05", title: "Performance Analysis" },
-    { image: "https://lh3.googleusercontent.com/d/1rEaE_LgvE7kh2QdJG9vNiLihQ8b-jjyH", chapter: "06", title: "Global Expansion" }
+    { image: "https://lh3.googleusercontent.com/d/15USpUTVSQ_u1fNvLattOrKAZAG6qF7TD", chapter: "01", title: "Technical Excellence" },
+    { image: "https://lh3.googleusercontent.com/d/1fVysLf7KxXB_HV7xHaCjNAgCW0z0v0v6", chapter: "02", title: "Mental Resilience" },
   ],
   backgroundColor = "bg-black",
 }: {
@@ -51,7 +47,7 @@ export const VisionPage = ({
       
       {/* Vision Image Grid */}
       <div className="w-full mb-0">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
+        <div className={`grid grid-cols-1 ${visionImages.length === 2 ? 'md:grid-cols-2' : 'sm:grid-cols-2 lg:grid-cols-3'} gap-0`}>
           {visionImages.map((item, i) => (
             <SectionReveal key={i}>
               <div className="group relative overflow-hidden bg-zinc-900 aspect-[16/10]">
@@ -131,12 +127,8 @@ Builder.registerComponent(VisionPage, {
         { name: 'title', type: 'string' }
       ],
       defaultValue: [
-        { image: "https://lh3.googleusercontent.com/d/1wq393XSpzGDJwD_wDCCfRVcvrIR-l8Ok", chapter: "01", title: "Technical Excellence" },
-        { image: "https://lh3.googleusercontent.com/d/1MBbifo3jdiiC_r0S6PwjjBmYffXdjCvp", chapter: "02", title: "Mental Resilience" },
-        { image: "https://lh3.googleusercontent.com/d/1w1HQPsKHTUyIpw-64IaLcfobBhZXEFVw", chapter: "03", title: "Tactical Intelligence" },
-        { image: "https://lh3.googleusercontent.com/d/1pcaVYD6kx-Vtv0-YX_BiZFkylNTTDMPo", chapter: "04", title: "Elite Community" },
-        { image: "https://lh3.googleusercontent.com/d/1UaLpG07ug_amLGvpDOFzGbSuoZIIQQ3M", chapter: "05", title: "Performance Analysis" },
-        { image: "https://lh3.googleusercontent.com/d/1wa-PSlepm-6-MdVl0NrfiINPCOZpQ83J", chapter: "06", title: "Global Expansion" }
+        { image: "https://lh3.googleusercontent.com/d/15USpUTVSQ_u1fNvLattOrKAZAG6qF7TD", chapter: "01", title: "Technical Excellence" },
+        { image: "https://lh3.googleusercontent.com/d/1fVysLf7KxXB_HV7xHaCjNAgCW0z0v0v6", chapter: "02", title: "Mental Resilience" },
       ]
     },
   ],

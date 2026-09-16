@@ -9,28 +9,31 @@ export const StepSection = ({
       id: "01",
       title: "Technical Mastery",
       desc: "Precision ball control and elite technique development.",
-      img: "https://lh3.googleusercontent.com/d/1mNbQIFWPv9rLsYoQwPwFn5qF8zWdS2uD"
+      img: "https://lh3.googleusercontent.com/d/1mNbQIFWPv9rLsYoQwPwFn5qF8zWdS2uD",
+      objectPosition: "center"
     },
     {
       id: "02",
       title: "Tactical Intelligence",
       desc: "Game awareness, positioning, and strategic decision making.",
-      img: "https://lh3.googleusercontent.com/d/1vrM68KNn0OB45hbWdxzjJEP21YNPXtoO"
+      img: "https://lh3.googleusercontent.com/d/14ySCDlB6spbjp9_gPPMU3WF5GTVxoRh8",
+      objectPosition: "center 60%"
     },
     {
       id: "03",
       title: "Elite Conditioning",
       desc: "High-performance speed, strength, and agility training.",
-      img: "https://lh3.googleusercontent.com/d/1vWFlEKsJB_5guDEv7Gj4lXpndSEkY7k_"
+      img: "https://lh3.googleusercontent.com/d/15dCTNWht0Wemw468HjB3RnwJo5eA2YCm",
+      objectPosition: "center 25%"
     }
   ],
   backgroundColor = "bg-zinc-900",
 }: {
-  steps?: { id: string, title: string, desc: string, img: string }[];
+  steps?: { id: string, title: string, desc: string, img: string, objectPosition?: string }[];
   backgroundColor?: string;
 }) => {
   return (
-    <section className={`py-20 px-6 ${backgroundColor} relative overflow-hidden`}>
+    <section id="steps" className={`py-20 px-6 ${backgroundColor} relative overflow-hidden`}>
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-3 gap-8">
           {steps.map((step, i) => (
@@ -46,7 +49,14 @@ export const StepSection = ({
                 <h3 className="text-2xl font-black mb-4 tracking-tight text-white uppercase">{step.title}</h3>
                 <p className="text-white/50 text-base leading-relaxed mb-8">{step.desc}</p>
                 <div className="aspect-video rounded-2xl overflow-hidden transition-all duration-700">
-                  <img src={step.img} alt={step.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img 
+                    id={`step-img-${step.id}`}
+                    src={step.img} 
+                    alt={step.title} 
+                    className="w-full h-full object-cover" 
+                    style={{ objectPosition: step.objectPosition || 'center' }}
+                    referrerPolicy="no-referrer" 
+                  />
                 </div>
               </div>
             </motion.div>
@@ -69,25 +79,29 @@ Builder.registerComponent(StepSection, {
         { name: 'title', type: 'string' },
         { name: 'desc', type: 'string' },
         { name: 'img', type: 'file' },
+        { name: 'objectPosition', type: 'string', defaultValue: 'center' },
       ],
       defaultValue: [
         {
           id: "01",
           title: "Technical Mastery",
           desc: "Precision ball control and elite technique development.",
-          img: "https://lh3.googleusercontent.com/d/1mNbQIFWPv9rLsYoQwPwFn5qF8zWdS2uD"
+          img: "https://lh3.googleusercontent.com/d/1mNbQIFWPv9rLsYoQwPwFn5qF8zWdS2uD",
+          objectPosition: "center"
         },
         {
           id: "02",
           title: "Tactical Intelligence",
           desc: "Game awareness, positioning, and strategic decision making.",
-          img: "https://lh3.googleusercontent.com/d/1_JP4BQ8__LohbkshWVxePcg4gaQNx0KR"
+          img: "https://lh3.googleusercontent.com/d/14ySCDlB6spbjp9_gPPMU3WF5GTVxoRh8",
+          objectPosition: "center 60%"
         },
         {
           id: "03",
           title: "Elite Conditioning",
           desc: "High-performance speed, strength, and agility training.",
-          img: "https://image2url.com/r2/default/files/1775314994755-dc8bd00d-a4e1-4f66-afaf-17b8ee8d6670.png"
+          img: "https://lh3.googleusercontent.com/d/15dCTNWht0Wemw468HjB3RnwJo5eA2YCm",
+          objectPosition: "center 25%"
         }
       ],
     },

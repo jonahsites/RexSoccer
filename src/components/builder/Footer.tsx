@@ -11,7 +11,7 @@ export const Footer = ({
   navTitle = "Navigation",
   navItems = [
     { label: "Home", href: "#", isPage: false },
-    { label: "About", href: "#about", isPage: false },
+    { label: "About", href: "#about", isPage: true, page: "about" },
     { label: "In-Person Training", href: "#pricing", isPage: false },
     { label: "Pricing", href: "#pricing", isPage: false },
     { label: "Locations", href: "#locations", isPage: false },
@@ -198,7 +198,7 @@ Builder.registerComponent(Footer, {
       ],
       defaultValue: [
         { label: "Home", href: "#", isPage: false },
-        { label: "About", href: "#about", isPage: false },
+        { label: "About", href: "#about", isPage: true, page: "about" },
         { label: "In-Person Training", href: "#pricing", isPage: false },
         { label: "Pricing", href: "#pricing", isPage: false },
         { label: "Locations", href: "#locations", isPage: false },

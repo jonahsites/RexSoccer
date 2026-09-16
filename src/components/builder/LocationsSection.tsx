@@ -22,7 +22,7 @@ export const LocationsSection = ({
       name: "Location 2",
       address: "Port St. Lucie FL",
       city: "12151 SW Community Blvd, Port St. Lucie, FL 34987",
-      img: "https://lh3.googleusercontent.com/d/16fQvw_EPauX9Sgr_0TaNVz1nmBChNYqa",
+      img: "https://lh3.googleusercontent.com/d/17A1nEF2k_fhksM_bInS3cLmwPlKfDB47",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=12151+SW+Community+Blvd+Port+St.+Lucie+FL+34987",
       objectPosition: "center",
       zoom: 0.85
@@ -32,7 +32,7 @@ export const LocationsSection = ({
       name: "Location 3",
       address: "Palm City",
       city: "1050 SW Prairie Ave, Palm City, FL 34990, United States",
-      img: "https://lh3.googleusercontent.com/d/15Ye5MRvXJrODBozkzgzcYqPleTaA_x5h",
+      img: "https://lh3.googleusercontent.com/d/17TVpULAOzmZLkEa3MCiKW4Mk1g7Wrur_",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=1050+SW+Prairie+Ave+Palm+City+FL+34990",
       objectPosition: "center",
       zoom: 0.85
@@ -144,7 +144,7 @@ Builder.registerComponent(LocationsSection, {
           name: "Location 2",
           address: "Port St. Lucie FL",
           city: "12151 SW Community Blvd, Port St. Lucie, FL 34987",
-          img: "https://lh3.googleusercontent.com/d/16fQvw_EPauX9Sgr_0TaNVz1nmBChNYqa",
+          img: "https://lh3.googleusercontent.com/d/17A1nEF2k_fhksM_bInS3cLmwPlKfDB47",
           mapUrl: "https://www.google.com/maps/search/?api=1&query=12151+SW+Community+Blvd+Port+St.+Lucie+FL+34987",
           objectPosition: "center",
           zoom: 0.85
@@ -154,7 +154,7 @@ Builder.registerComponent(LocationsSection, {
           name: "Location 3",
           address: "Palm City",
           city: "1050 SW Prairie Ave, Palm City, FL 34990, United States",
-          img: "https://lh3.googleusercontent.com/d/15Ye5MRvXJrODBozkzgzcYqPleTaA_x5h",
+          img: "https://lh3.googleusercontent.com/d/17TVpULAOzmZLkEa3MCiKW4Mk1g7Wrur_",
           mapUrl: "https://www.google.com/maps/search/?api=1&query=1050+SW+Prairie+Ave+Palm+City+FL+34990",
           objectPosition: "center",
           zoom: 0.85

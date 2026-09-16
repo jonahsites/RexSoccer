@@ -7,7 +7,7 @@ import { cn } from '../../lib/utils';
 export const Navbar = ({
   logo = "https://image2url.com/r2/default/images/1774894049292-b9fe06c3-7e1a-4415-a0c6-1f107619d1bb.png",
   navLinks = [
-    { name: 'About', href: '#about' },
+    { name: 'About', href: '#about', isPage: true },
     { name: 'Vision', href: '#vision', isPage: true },
     { name: 'Pricing', href: '#pricing' },
     { name: 'Locations', href: '#locations' },
@@ -40,7 +40,10 @@ export const Navbar = ({
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center gap-4 group cursor-pointer"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() => {
+            window.dispatchEvent(new CustomEvent('changePage', { detail: 'home' }));
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
         >
           <img 
             src={logo} 
@@ -66,7 +69,7 @@ export const Navbar = ({
                   window.dispatchEvent(new CustomEvent('changePage', { detail: link.name.toLowerCase().replace(' ', '') }));
                 } else if (link.href.startsWith('#')) {
                   // If we're not on home page, switch to home first
-                  const isHomePage = !['photos', 'team', 'merch', 'vision'].includes(window.location.hash.replace('#', '')) && 
+                  const isHomePage = !['photos', 'team', 'merch', 'vision', 'about'].includes(window.location.hash.replace('#', '')) && 
                                    document.querySelector('main') !== null;
                   
                   // We can check the current page state if we pass it as a prop, 
@@ -195,7 +198,7 @@ Builder.registerComponent(Navbar, {
         { name: 'isPage', type: 'boolean' },
       ],
       defaultValue: [
-        { name: 'About', href: '#about' },
+        { name: 'About', href: '#about', isPage: true },
         { name: 'Vision', href: '#vision', isPage: true },
         { name: 'Pricing', href: '#pricing' },
         { name: 'Locations', href: '#locations' },
