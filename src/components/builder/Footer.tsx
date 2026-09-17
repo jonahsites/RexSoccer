@@ -1,6 +1,6 @@
 import React from 'react';
 import { Builder } from '@builder.io/react';
-import { Instagram, Facebook, Youtube } from 'lucide-react';
+import { Instagram, Facebook } from 'lucide-react';
 
 export const Footer = ({
   logo = "https://image2url.com/r2/default/images/1774894049292-b9fe06c3-7e1a-4415-a0c6-1f107619d1bb.png",
@@ -21,7 +21,6 @@ export const Footer = ({
   ],
   socials = [
     { icon: "instagram", href: "https://www.instagram.com/rex.soccer" },
-    { icon: "youtube", href: "https://www.youtube.com" },
     { icon: "facebook", href: "https://www.facebook.com/profile.php?id=61578792965551" }
   ],
   copyright = "© 2026 REX Soccer Training. All rights reserved.",
@@ -46,8 +45,6 @@ export const Footer = ({
 }) => {
   const getIcon = (iconName: string) => {
     switch (iconName.toLowerCase()) {
-      case 'youtube':
-        return <Youtube className="w-5 h-5 text-[#8c93a0] hover:text-white transition-colors" />;
       case 'facebook':
         return <Facebook className="w-5 h-5 text-[#8c93a0] hover:text-white transition-colors" />;
       case 'instagram':
@@ -95,9 +92,9 @@ export const Footer = ({
               />
             </div>
 
-            {/* Brand Title: Tall Condensed Bebas Neue with exact silver-grey hue from attached screenshot */}
+            {/* Brand Title: Tall Condensed Bebas Neue with smaller size and squished kerning */}
             <h2 
-              className="text-4xl md:text-5xl font-normal uppercase tracking-[0.03em] leading-none mb-6 text-[#b4b9c2]"
+              className="text-2xl md:text-3xl font-normal uppercase tracking-[-0.04em] leading-none mb-6 text-[#b4b9c2]"
               style={{ fontFamily: "'Bebas Neue', sans-serif" }}
             >
               {brandName}
