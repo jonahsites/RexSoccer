@@ -8,7 +8,6 @@ import { FirebaseProvider } from './contexts/FirebaseContext';
 // Import Builder components
 import { Navbar } from './components/builder/Navbar';
 import { Hero } from './components/builder/Hero';
-import { QuoteSection } from './components/builder/QuoteSection';
 import { StepSection } from './components/builder/StepSection';
 import { PricingSection } from './components/builder/PricingSection';
 import { LocationsSection } from './components/builder/LocationsSection';
@@ -60,10 +59,6 @@ function App() {
             >
               <Hero />
               <LogoCarousel />
-              <QuoteSection 
-                quote="1% BETTER EVERYDAY." 
-                backgroundColor="bg-black" 
-              />
               <StepSection backgroundColor="bg-black" />
               <ProcessSection backgroundColor="bg-black" />
               <PricingSection backgroundColor="bg-black" />

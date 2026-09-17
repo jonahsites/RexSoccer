@@ -208,12 +208,11 @@ Builder.registerComponent(Footer, {
       name: 'socials',
       type: 'list',
       subFields: [
-        { name: 'icon', type: 'string', enum: ['instagram', 'youtube', 'facebook'] },
+        { name: 'icon', type: 'string', enum: ['instagram', 'facebook'] },
         { name: 'href', type: 'string' },
       ],
       defaultValue: [
         { icon: "instagram", href: "https://www.instagram.com/rex.soccer" },
-        { icon: "youtube", href: "https://www.youtube.com" },
         { icon: "facebook", href: "https://www.facebook.com/profile.php?id=61578792965551" }
       ],
     },

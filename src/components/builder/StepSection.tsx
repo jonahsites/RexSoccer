@@ -33,7 +33,7 @@ export const StepSection = ({
   backgroundColor?: string;
 }) => {
   return (
-    <section id="steps" className={`py-20 px-6 ${backgroundColor} relative overflow-hidden`}>
+    <section id="steps" className={`pt-12 md:pt-16 pb-20 px-6 ${backgroundColor} relative overflow-hidden`}>
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-3 gap-8">
           {steps.map((step, i) => (
