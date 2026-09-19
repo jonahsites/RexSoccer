@@ -146,9 +146,13 @@ export const Footer = ({
         {/* Full-width Crisp White/Silver Divider Line */}
         <div className="w-full border-t border-white/60 mb-6 md:mb-7" />
 
-        {/* Bottom Bar: Social Logos on Left, Copyright on Right */}
+        {/* Bottom Bar: Copyright on Left, Social Logos on Right */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-          {/* Social Icons on Left */}
+          <p className="text-[#555c69] text-xs">
+            {copyright}
+          </p>
+
+          {/* Social Icons on Right */}
           <div className="flex items-center gap-5">
             {socials.map((social, i) => (
               <a
@@ -163,10 +167,6 @@ export const Footer = ({
               </a>
             ))}
           </div>
-
-          <p className="text-[#555c69] text-xs">
-            {copyright}
-          </p>
         </div>
       </div>
     </footer>
