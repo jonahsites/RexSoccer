@@ -8,7 +8,7 @@ export const TeamPage = ({
   onBack = () => window.dispatchEvent(new CustomEvent('changePage', { detail: 'home' })),
   title = "The <span class=\"text-ice-blue\">Team.</span>",
   team = [
-    { name: "Faiqr Raza", role: "CEO/Trainer", bio: "Former NCAA D1 player with professional international experience.", img: "https://lh3.googleusercontent.com/d/1xmV6bXMQPDeDCGxdxBDsZh-Au6IHe__N" },
+    { name: "Faqir Raza", role: "CEO/Trainer", bio: "Former NCAA D1 player with professional international experience.", img: "https://lh3.googleusercontent.com/d/1xmV6bXMQPDeDCGxdxBDsZh-Au6IHe__N" },
   ],
   backgroundColor = "bg-black",
 }: {
@@ -49,7 +49,7 @@ export const TeamPage = ({
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent flex flex-col justify-end p-6 md:p-8 opacity-90 group-hover:opacity-100 transition-opacity">
+              <div className="absolute inset-0 bg-gradient-to-t from-black from-5% via-black/80 via-22% to-transparent to-40% flex flex-col justify-end p-6 md:p-8 opacity-80 group-hover:opacity-100 transition-all duration-300">
                 <div className="mb-3">
                   <span className="block text-[10px] font-bold text-white/60 uppercase tracking-widest mb-1">
                     {member.role}
@@ -85,7 +85,7 @@ Builder.registerComponent(TeamPage, {
         { name: 'img', type: 'file' },
       ],
       defaultValue: [
-        { name: "Faiqr Raza", role: "CEO/Trainer", bio: "Former NCAA D1 player with international experience.", img: "https://lh3.googleusercontent.com/d/1xmV6bXMQPDeDCGxdxBDsZh-Au6IHe__N" },
+        { name: "Faqir Raza", role: "CEO/Trainer", bio: "Former NCAA D1 player with international experience.", img: "https://lh3.googleusercontent.com/d/1xmV6bXMQPDeDCGxdxBDsZh-Au6IHe__N" },
       ],
     },
   ],

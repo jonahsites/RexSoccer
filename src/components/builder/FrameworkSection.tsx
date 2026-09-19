@@ -20,9 +20,9 @@ interface FrameworkSectionProps {
 }
 
 export const FrameworkSection = ({
-  badgeText = "// DEVELOPMENT FRAMEWORK",
-  title = "BUILT FOR THE MODERN GAME.",
-  subtitle = "Whether you train online or in person, every REX athlete trains inside the same professional development framework.",
+  badgeText = "// THE DEVELOPMENT",
+  title = "BUILT FOR THE ELITE GAME.",
+  subtitle = "",
   centerImage = "https://lh3.googleusercontent.com/d/12DZSzJvEIHWLiaFVy76PR-nx2S35kGom",
   backgroundColor = "bg-black",
   features = [
@@ -83,9 +83,11 @@ export const FrameworkSection = ({
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white uppercase leading-[1.05]">
             {title}
           </h2>
-          <p className="text-white/50 text-base md:text-lg font-light mt-4 leading-relaxed max-w-2xl mx-auto">
-            {subtitle}
-          </p>
+          {subtitle && (
+            <p className="text-white/50 text-base md:text-lg font-light mt-4 leading-relaxed max-w-2xl mx-auto">
+              {subtitle}
+            </p>
+          )}
         </SectionReveal>
 
         {/* 3-Column Layout: Left Features | Center Photo Card | Right Features */}
@@ -201,9 +203,9 @@ Builder.registerComponent(FrameworkSection, {
   name: 'FrameworkSection',
   inputs: [
     { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
-    { name: 'badgeText', type: 'string', defaultValue: '// DEVELOPMENT FRAMEWORK' },
-    { name: 'title', type: 'string', defaultValue: 'BUILT FOR THE MODERN GAME.' },
-    { name: 'subtitle', type: 'string', defaultValue: 'Whether you train online or in person, every REX athlete trains inside the same professional development framework.' },
+    { name: 'badgeText', type: 'string', defaultValue: '// THE DEVELOPMENT' },
+    { name: 'title', type: 'string', defaultValue: 'BUILT FOR THE ELITE GAME.' },
+    { name: 'subtitle', type: 'string', defaultValue: '' },
     { name: 'centerImage', type: 'file', defaultValue: 'https://lh3.googleusercontent.com/d/12DZSzJvEIHWLiaFVy76PR-nx2S35kGom' },
     {
       name: 'features',
