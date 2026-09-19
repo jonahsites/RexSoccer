@@ -9,6 +9,7 @@ import { FirebaseProvider } from './contexts/FirebaseContext';
 import { Navbar } from './components/builder/Navbar';
 import { Hero } from './components/builder/Hero';
 import { StepSection } from './components/builder/StepSection';
+import { FrameworkSection } from './components/builder/FrameworkSection';
 import { PricingSection } from './components/builder/PricingSection';
 import { LocationsSection } from './components/builder/LocationsSection';
 import { PolicySection } from './components/builder/PolicySection';
@@ -60,6 +61,7 @@ function App() {
               <Hero />
               <LogoCarousel />
               <StepSection backgroundColor="bg-black" />
+              <FrameworkSection backgroundColor="bg-black" />
               <ProcessSection backgroundColor="bg-black" />
               <PricingSection backgroundColor="bg-black" />
               <LocationsSection backgroundColor="bg-black" />

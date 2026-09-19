@@ -68,11 +68,19 @@ export const Hero = ({
         <div className="relative z-30 text-center px-6 w-full">
           <motion.div style={{ y, opacity }}>
             <div className="absolute inset-0 z-[-1] opacity-30 pointer-events-none overflow-hidden">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-2 w-[110%] h-[110%] -translate-x-5 -translate-y-5 bg-black">
-                <img src="https://lh3.googleusercontent.com/d/1xlS3iy294TeCPthMCVFNupTDq3Hgq1-f" className="w-full h-full object-cover contrast-[1.1]" referrerPolicy="no-referrer" />
-                <img src="https://lh3.googleusercontent.com/d/14IUgfSeBycgOC2gys21SPMFOV6fUzaTC" className="w-full h-full object-cover contrast-[1.1]" referrerPolicy="no-referrer" />
-                <img src="https://lh3.googleusercontent.com/d/1dgo0R5kV4CiFJbPrbWYXXkiEYZB_tpur" className="w-full h-full object-cover contrast-[1.1]" referrerPolicy="no-referrer" />
-                <img src="https://lh3.googleusercontent.com/d/17-WgHpcVvqkbPtU_buTkk-NECbX4vrCy" className="w-full h-full object-cover contrast-[1.1]" referrerPolicy="no-referrer" />
+              <div className="grid grid-cols-2 md:grid-cols-[1.06fr_0.88fr_0.88fr_1.06fr] gap-2 w-[108%] h-[110%] -translate-x-3 md:-translate-x-5 -translate-y-5 bg-black">
+                <div className="w-full h-full overflow-hidden">
+                  <img src="https://lh3.googleusercontent.com/d/1xlS3iy294TeCPthMCVFNupTDq3Hgq1-f" className="w-full h-full object-cover contrast-[1.1]" referrerPolicy="no-referrer" />
+                </div>
+                <div className="w-full h-full overflow-hidden">
+                  <img src="https://lh3.googleusercontent.com/d/14IUgfSeBycgOC2gys21SPMFOV6fUzaTC" className="w-full h-full object-cover contrast-[1.1] scale-x-105" referrerPolicy="no-referrer" />
+                </div>
+                <div className="w-full h-full overflow-hidden">
+                  <img src="https://lh3.googleusercontent.com/d/1dgo0R5kV4CiFJbPrbWYXXkiEYZB_tpur" className="w-full h-full object-cover contrast-[1.1] scale-x-105" referrerPolicy="no-referrer" />
+                </div>
+                <div className="w-full h-full overflow-hidden">
+                  <img src="https://lh3.googleusercontent.com/d/17-WgHpcVvqkbPtU_buTkk-NECbX4vrCy" className="w-full h-full object-cover contrast-[1.1]" referrerPolicy="no-referrer" />
+                </div>
                 <div className="w-full h-full bg-black" />
                 <div className="w-full h-full bg-black" />
                 <div className="w-full h-full bg-black" />

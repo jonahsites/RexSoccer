@@ -76,7 +76,7 @@ export const LogoCarousel: React.FC = () => {
     <section id="partners" className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
         <h2 className="text-zinc-900 text-2xl md:text-5xl font-black tracking-tighter uppercase leading-tight max-w-4xl mx-auto">
-          Rex Soccer has developed players from more than <span className="text-zinc-400">40+ universities</span> and <span className="text-zinc-400">professional teams</span>
+          Rex Soccer has developed players from more than <span className="text-zinc-400">50+ universities</span> and <span className="text-zinc-400">professional teams</span>
         </h2>
       </div>
 
