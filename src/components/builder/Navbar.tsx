@@ -7,10 +7,9 @@ import { cn } from '../../lib/utils';
 export const Navbar = ({
   logo = "https://image2url.com/r2/default/images/1774894049292-b9fe06c3-7e1a-4415-a0c6-1f107619d1bb.png",
   navLinks = [
+    { name: 'Home', href: '#', isPage: true },
     { name: 'About', href: '#about', isPage: true },
     { name: 'Vision', href: '#vision', isPage: true },
-    { name: 'Pricing', href: '#pricing' },
-    { name: 'Locations', href: '#locations' },
     { name: 'Team', href: '#team', isPage: true },
     { name: 'Merch', href: '#merch', isPage: true },
     { name: 'Contact', href: '#contact' },
@@ -67,6 +66,7 @@ export const Navbar = ({
                 if (link.isPage) {
                   e.preventDefault();
                   window.dispatchEvent(new CustomEvent('changePage', { detail: link.name.toLowerCase().replace(' ', '') }));
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
                 } else if (link.href.startsWith('#')) {
                   // If we're not on home page, switch to home first
                   const isHomePage = !['photos', 'team', 'merch', 'vision', 'about'].includes(window.location.hash.replace('#', '')) && 
@@ -144,6 +144,7 @@ export const Navbar = ({
                     if (link.isPage) {
                       e.preventDefault();
                       window.dispatchEvent(new CustomEvent('changePage', { detail: link.name.toLowerCase().replace(' ', '') }));
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
                     } else if (link.href.startsWith('#')) {
                       e.preventDefault();
                       window.dispatchEvent(new CustomEvent('changePage', { detail: 'home' }));
@@ -198,10 +199,9 @@ Builder.registerComponent(Navbar, {
         { name: 'isPage', type: 'boolean' },
       ],
       defaultValue: [
+        { name: 'Home', href: '#', isPage: true },
         { name: 'About', href: '#about', isPage: true },
         { name: 'Vision', href: '#vision', isPage: true },
-        { name: 'Pricing', href: '#pricing' },
-        { name: 'Locations', href: '#locations' },
         { name: 'Team', href: '#team', isPage: true },
         { name: 'Merch', href: '#merch', isPage: true },
         { name: 'Contact', href: '#contact' },
