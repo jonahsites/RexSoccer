@@ -41,7 +41,7 @@ export const TeamPage = ({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
-              className="relative aspect-[4/5] overflow-hidden border border-white/10 group bg-zinc-900"
+              className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 group bg-zinc-900"
             >
               <img 
                 src={member.img} 
@@ -49,16 +49,16 @@ export const TeamPage = ({
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black from-5% via-black/80 via-22% to-transparent to-40% flex flex-col justify-end p-6 md:p-8 opacity-80 group-hover:opacity-100 transition-all duration-300">
-                <div className="mb-3">
-                  <span className="block text-[10px] font-bold text-white/60 uppercase tracking-widest mb-1">
-                    {member.role}
-                  </span>
-                  <h3 className="text-xl md:text-2xl font-black text-white leading-tight uppercase tracking-tight">
+              <div className="absolute inset-0 bg-gradient-to-t from-black from-12% via-black/90 via-24% to-transparent to-38% flex flex-col justify-end p-6 md:p-7">
+                <div className="flex items-baseline justify-between gap-4 mb-2">
+                  <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">
                     {member.name}
                   </h3>
+                  <span className="text-xs text-white/70 font-normal shrink-0">
+                    {member.role}
+                  </span>
                 </div>
-                <p className="text-xs text-white/50 font-medium leading-relaxed line-clamp-3">
+                <p className="text-xs text-zinc-400 font-normal leading-relaxed line-clamp-3">
                   {member.bio}
                 </p>
               </div>

@@ -73,9 +73,9 @@ const LogoItem: React.FC<{ logo: string; index: number }> = ({ logo, index }) =>
 
 export const LogoCarousel: React.FC = () => {
   return (
-    <section id="partners" className="py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
-        <h2 className="text-zinc-900 text-2xl md:text-5xl font-black tracking-tighter uppercase leading-tight max-w-4xl mx-auto">
+    <section id="partners" className="py-10 md:py-14 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 mb-8 md:mb-10 text-center">
+        <h2 className="text-zinc-900 text-lg sm:text-xl md:text-2xl lg:text-3xl font-black tracking-tight uppercase leading-snug max-w-3xl mx-auto">
           Rex Soccer has developed players from more than <span className="text-zinc-400">50+ universities</span> and <span className="text-zinc-400">professional teams</span>
         </h2>
       </div>

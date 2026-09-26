@@ -155,17 +155,17 @@ export const PricingSection = ({
             </div>
 
             {/* Card 2: 4 Privates */}
-            <div className="p-8 md:p-10 rounded-[2.5rem] bg-[#f5f5f7] text-black shadow-2xl flex flex-col justify-between items-center text-center transition-all duration-300 hover:-translate-y-1 min-h-[380px]">
-              <span className="text-zinc-600 font-bold text-sm tracking-tight">4 privates</span>
+            <div className="p-8 md:p-10 rounded-[2.5rem] bg-[#141416] text-white border border-white/15 shadow-2xl flex flex-col justify-between items-center text-center transition-all duration-300 hover:-translate-y-1 min-h-[380px]">
+              <span className="text-zinc-400 font-bold text-sm tracking-tight">4 privates</span>
               <div className="my-6">
-                <span className="text-6xl md:text-7xl font-black font-display tracking-tight text-black">$225</span>
-                <span className="block text-[11px] font-bold text-zinc-500 uppercase tracking-widest mt-2">
+                <span className="text-6xl md:text-7xl font-black font-display tracking-tight text-white">$225</span>
+                <span className="block text-[11px] font-bold text-zinc-400 uppercase tracking-widest mt-2">
                   Expires in 2 weeks
                 </span>
               </div>
               <button
                 onClick={handleBook}
-                className="w-full py-4 px-6 rounded-full font-black text-xs uppercase tracking-widest bg-ice-blue text-black hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center gap-1.5 shadow-md group"
+                className="w-full py-4 px-6 rounded-full font-black text-xs uppercase tracking-widest bg-ice-blue text-black hover:bg-white hover:text-black transition-all duration-300 flex items-center justify-center gap-1.5 shadow-md group"
               >
                 BOOK NOW <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </button>
