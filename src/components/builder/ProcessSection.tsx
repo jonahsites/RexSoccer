@@ -31,15 +31,15 @@ const StackingCard = ({
     >
       <motion.div
         style={{ scale }}
-        className="bg-[#18181b]/95 border border-white/10 rounded-2xl md:rounded-3xl p-8 md:p-12 shadow-[0_30px_70px_rgba(0,0,0,0.85)] backdrop-blur-xl origin-top transition-colors hover:border-white/20 flex flex-col items-start text-left"
+        className="bg-[#18181b]/95 border border-white/10 rounded-2xl md:rounded-3xl py-6 px-7 md:py-8 md:px-12 shadow-[0_30px_70px_rgba(0,0,0,0.85)] backdrop-blur-xl origin-top transition-colors hover:border-white/20 flex flex-col items-start text-left"
       >
         {/* Number at the top */}
-        <div className="text-ice-blue font-black text-3xl md:text-5xl tracking-tight mb-4 md:mb-6 select-none">
+        <div className="text-ice-blue font-black text-3xl md:text-4xl tracking-tight mb-3 md:mb-4 select-none">
           {item.number}
         </div>
 
         {/* Header beneath */}
-        <h3 className="text-white font-bold text-2xl md:text-3xl tracking-tight leading-snug mb-2 md:mb-3">
+        <h3 className="text-white font-bold text-2xl md:text-3xl tracking-tight leading-snug mb-2">
           {item.title}
         </h3>
 
@@ -54,26 +54,26 @@ const StackingCard = ({
 
 export const ProcessSection = ({
   backgroundColor = "bg-black",
-  title = "HOW IT WORKS.",
-  description = "A proven four-step pathway designed to evaluate, develop, and elevate every athlete.",
+  title = "HOW IT WORKS",
+  description = "See how the REX Soccer Training process works to understand your player’s level and find the right plan to help them improve.",
   items = [
     { 
       id: '1', 
       number: '01', 
       title: 'Book your session', 
-      description: 'Schedule your initial evaluation or training session through our platform to lock in your training slot.' 
+      description: 'Schedule a training session through our platform to lock in your training slot.' 
     },
     { 
       id: '2', 
       number: '02', 
       title: 'Come train', 
-      description: 'Step onto the pitch for an intense, high-standard technical assessment and competitive evaluation.' 
+      description: 'Step onto the pitch ready to train for an intense, high-standard technical training.' 
     },
     { 
       id: '3', 
       number: '03', 
       title: 'Development plan', 
-      description: 'Receive a tailored, comprehensive roadmap addressing your technical, tactical, and athletic milestones.' 
+      description: 'Receive a clear plan to improve your technical, tactical, and athletic skills.' 
     },
     { 
       id: '4', 
@@ -109,7 +109,7 @@ export const ProcessSection = ({
             {title}
           </h2>
           {description && (
-            <p className="text-white/40 text-sm md:text-base font-light leading-relaxed max-w-none md:whitespace-nowrap">
+            <p className="text-white/40 text-sm md:text-base font-light leading-relaxed max-w-3xl">
               {description}
             </p>
           )}

@@ -45,7 +45,8 @@ const logos = [
   "https://upload.wikimedia.org/wikipedia/commons/6/62/St._John%27s_Red_Storm_logo.svg",
   "https://upload.wikimedia.org/wikipedia/en/e/ee/Panamanian_Football_Federation_logo_2024.svg",
   "https://upload.wikimedia.org/wikipedia/en/d/d5/Austin_FC_II_logo.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/b/bc/Nashville_SC_logo%2C_2020.svg"
+  "https://upload.wikimedia.org/wikipedia/commons/b/bc/Nashville_SC_logo%2C_2020.svg",
+  "https://upload.wikimedia.org/wikipedia/en/9/96/St_bona_bonnies_logo.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original"
 ];
 
 // Double the logos for seamless infinite scroll
