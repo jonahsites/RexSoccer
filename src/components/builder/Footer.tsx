@@ -78,16 +78,16 @@ export const Footer = ({
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 md:gap-8 mb-6 md:mb-8">
           
           {/* Left Column: Brand & Details */}
-          <div className="flex flex-col items-start max-w-xl">
+          <div className="flex flex-col items-start max-w-lg scale-[0.98] origin-top-left">
             {/* White Monogram Logo */}
             <div 
-              className="mb-8 md:mb-10 cursor-pointer" 
+              className="mb-7 md:mb-8 cursor-pointer" 
               onClick={() => handleNavClick({ label: 'Home', href: '#' })}
             >
               <img 
                 src={logo} 
                 alt="REX Logo" 
-                className="h-12 md:h-14 brightness-0 invert object-contain"
+                className="h-11 md:h-13 brightness-0 invert object-contain"
                 referrerPolicy="no-referrer"
               />
             </div>

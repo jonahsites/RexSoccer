@@ -138,7 +138,7 @@ export const PricingSection = ({
             className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-24"
           >
             {/* Card 1: 1 Private */}
-            <div className="p-8 md:p-10 rounded-[2.5rem] bg-[#f5f5f7] text-black shadow-2xl flex flex-col justify-between items-center text-center transition-all duration-300 hover:-translate-y-1 min-h-[380px]">
+            <div className="p-7 md:p-9 rounded-[2.5rem] bg-[#f5f5f7] text-black shadow-2xl flex flex-col justify-between items-center text-center transition-all duration-300 hover:-translate-y-1 min-h-[370px]">
               <span className="text-zinc-600 font-bold text-sm tracking-tight">1 private</span>
               <div className="my-6">
                 <span className="text-6xl md:text-7xl font-black font-display tracking-tight text-black">$60</span>
@@ -155,34 +155,34 @@ export const PricingSection = ({
             </div>
 
             {/* Card 2: 4 Privates */}
-            <div className="p-8 md:p-10 rounded-[2.5rem] bg-[#141416] text-white border border-white/15 shadow-2xl flex flex-col justify-between items-center text-center transition-all duration-300 hover:-translate-y-1 min-h-[380px]">
+            <div className="p-8 md:p-10 rounded-[2.5rem] bg-[#141416] text-white border border-ice-blue/30 shadow-[0_0_25px_rgba(125,211,252,0.18)] flex flex-col justify-between items-center text-center transition-all duration-300 hover:-translate-y-1 hover:border-ice-blue/50 hover:shadow-[0_0_35px_rgba(125,211,252,0.28)] min-h-[380px]">
               <span className="text-zinc-400 font-bold text-sm tracking-tight">4 privates</span>
               <div className="my-6">
-                <span className="text-6xl md:text-7xl font-black font-display tracking-tight text-white">$225</span>
+                <span className="text-6xl md:text-7xl font-black font-display tracking-tight text-white">$230</span>
                 <span className="block text-[11px] font-bold text-zinc-400 uppercase tracking-widest mt-2">
                   Expires in 2 weeks
                 </span>
               </div>
               <button
                 onClick={handleBook}
-                className="w-full py-4 px-6 rounded-full font-black text-xs uppercase tracking-widest bg-ice-blue text-black hover:bg-white hover:text-black transition-all duration-300 flex items-center justify-center gap-1.5 shadow-md group"
+                className="w-full py-4 px-6 rounded-full font-black text-xs uppercase tracking-widest bg-ice-blue text-black hover:bg-white hover:text-black transition-all duration-300 flex items-center justify-center gap-1.5 shadow-[0_0_20px_rgba(125,211,252,0.45)] hover:shadow-[0_0_28px_rgba(125,211,252,0.7)] group"
               >
                 BOOK NOW <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </button>
             </div>
 
             {/* Card 3: 8 Privates (Featured Dark Card) */}
-            <div className="p-8 md:p-10 rounded-[2.5rem] bg-[#141416] text-white border border-white/15 shadow-2xl flex flex-col justify-between items-center text-center transition-all duration-300 hover:-translate-y-1 min-h-[380px]">
+            <div className="p-8 md:p-10 rounded-[2.5rem] bg-[#141416] text-white border border-ice-blue/30 shadow-[0_0_25px_rgba(125,211,252,0.18)] flex flex-col justify-between items-center text-center transition-all duration-300 hover:-translate-y-1 hover:border-ice-blue/50 hover:shadow-[0_0_35px_rgba(125,211,252,0.28)] min-h-[380px]">
               <span className="text-zinc-400 font-bold text-sm tracking-tight">8 privates</span>
               <div className="my-6">
-                <span className="text-6xl md:text-7xl font-black font-display tracking-tight text-white">$420</span>
+                <span className="text-6xl md:text-7xl font-black font-display tracking-tight text-white">$425</span>
                 <span className="block text-[11px] font-bold text-zinc-400 uppercase tracking-widest mt-2">
                   Expires in 4 weeks
                 </span>
               </div>
               <button
                 onClick={handleBook}
-                className="w-full py-4 px-6 rounded-full font-black text-xs uppercase tracking-widest bg-ice-blue text-black hover:bg-white hover:text-black transition-all duration-300 flex items-center justify-center gap-1.5 shadow-lg shadow-ice-blue/10 group"
+                className="w-full py-4 px-6 rounded-full font-black text-xs uppercase tracking-widest bg-ice-blue text-black hover:bg-white hover:text-black transition-all duration-300 flex items-center justify-center gap-1.5 shadow-[0_0_20px_rgba(125,211,252,0.45)] hover:shadow-[0_0_28px_rgba(125,211,252,0.7)] group"
               >
                 BOOK NOW <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </button>
