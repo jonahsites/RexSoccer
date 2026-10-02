@@ -72,8 +72,8 @@ export const Footer = ({
   };
 
   return (
-    <footer id="contact" className={`relative pt-12 md:pt-16 pb-8 px-8 md:px-16 lg:px-24 ${backgroundColor} overflow-hidden`}>
-      <div className="max-w-7xl mx-auto relative z-10">
+    <footer id="contact" className={`relative pt-12 md:pt-16 pb-8 px-4 sm:px-6 md:px-10 ${backgroundColor} overflow-hidden`}>
+      <div className="w-full max-w-[92rem] mx-auto relative z-10">
         {/* Main Content Grid lowered closer to the line */}
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 md:gap-8 mb-6 md:mb-8">
           
@@ -87,7 +87,7 @@ export const Footer = ({
               <img 
                 src={logo} 
                 alt="REX Logo" 
-                className="h-11 md:h-13 brightness-0 invert object-contain"
+                className="h-14 md:h-18 brightness-0 invert object-contain"
                 referrerPolicy="no-referrer"
               />
             </div>

@@ -4,7 +4,7 @@ import { SectionReveal } from './common';
 
 export const LocationsSection = ({
   badgeText = "locations",
-  title = "Come train with us in person",
+  title = "Come train in person",
   description = "Availability is open to the needs of the individual. Train at elite facilities designed for high performance.",
   locations = [
     {
