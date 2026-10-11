@@ -46,7 +46,9 @@ const logos = [
   "https://upload.wikimedia.org/wikipedia/en/e/ee/Panamanian_Football_Federation_logo_2024.svg",
   "https://upload.wikimedia.org/wikipedia/en/d/d5/Austin_FC_II_logo.svg",
   "https://upload.wikimedia.org/wikipedia/commons/b/bc/Nashville_SC_logo%2C_2020.svg",
-  "https://upload.wikimedia.org/wikipedia/en/9/96/St_bona_bonnies_logo.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original"
+  "https://upload.wikimedia.org/wikipedia/en/9/96/St_bona_bonnies_logo.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+  "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Port_St._Lucie_SC_logo.svg/250px-Port_St._Lucie_SC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+  "https://pbs.twimg.com/profile_images/1128310645022240770/w6Wb1G9R_400x400.png"
 ];
 
 // Double the logos for seamless infinite scroll

@@ -14,6 +14,7 @@ interface FrameworkSectionProps {
   title?: string;
   subtitle?: string;
   centerImage?: string;
+  videoUrl?: string;
   backgroundColor?: string;
   features?: FrameworkFeature[];
   key?: React.Key;
@@ -24,6 +25,7 @@ export const FrameworkSection = ({
   title = "BUILT FOR THE ELITE GAME.",
   subtitle = "",
   centerImage = "https://lh3.googleusercontent.com/d/12DZSzJvEIHWLiaFVy76PR-nx2S35kGom",
+  videoUrl = "/framework_training.mp4",
   backgroundColor = "bg-black",
   features = [
     {
@@ -128,11 +130,13 @@ export const FrameworkSection = ({
           <div className="lg:col-span-4 flex justify-center order-first lg:order-none">
             <SectionReveal yOffset={40} className="w-full max-w-[420px]">
               <div className="relative aspect-[3/4] w-full rounded-3xl overflow-hidden bg-zinc-950 border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.9)] group">
-                <img 
-                  src={centerImage}
-                  alt="High Intensity Training Facility"
+                <video 
+                  src={videoUrl || "/framework_training.mp4"}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                   className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
-                  referrerPolicy="no-referrer"
                 />
                 
                 {/* Gradient Shadows for atmosphere */}
