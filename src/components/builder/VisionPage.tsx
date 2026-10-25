@@ -13,12 +13,10 @@ export const VisionPage = ({
     { title: "Pro Pathway.", content: "We are committed to creating direct pathways for our players to reach professional levels, attracting scouts and professional partners who recognize the REX standard of excellence." }
   ],
   visionImages = [
-    { image: "https://lh3.googleusercontent.com/d/1EQ6CGGbwHIrWmlvYwguKUXdYfO2nClAB", chapter: "01", title: "Technical Excellence" },
-    { image: "https://lh3.googleusercontent.com/d/1G2TTak-8TY6jubXvti65dJei4-fXHFJ-", chapter: "02", title: "Tactical Mastery" },
-    { image: "https://lh3.googleusercontent.com/d/1Kj-U-ziGET1I5DP4FUM-ppEll51x8dRi", chapter: "03", title: "Mental Resilience" },
-    { image: "https://lh3.googleusercontent.com/d/1UH83YFsrMS8YXiTTHKgGQH-lXNd0XFyA", chapter: "04", title: "Athletic Performance" },
-    { image: "https://lh3.googleusercontent.com/d/1X8EFbO-MppRUFjFEcd01ckx30fLH4hGZ", chapter: "05", title: "Game Intelligence" },
-    { image: "https://lh3.googleusercontent.com/d/1_XpNPg8tixhEGYxmE-bPFVj9VSdhmqeg", chapter: "06", title: "Elite Pathway" },
+    { image: "https://lh3.googleusercontent.com/d/1EQ6CGGbwHIrWmlvYwguKUXdYfO2nClAB", chapter: "01", title: "Performance Weight Room" },
+    { image: "https://lh3.googleusercontent.com/d/1_XpNPg8tixhEGYxmE-bPFVj9VSdhmqeg", chapter: "02", title: "Indoor Match Pitch" },
+    { image: "https://lh3.googleusercontent.com/d/1G2TTak-8TY6jubXvti65dJei4-fXHFJ-", chapter: "03", title: "Technical Training Field" },
+    { image: "https://lh3.googleusercontent.com/d/1UH83YFsrMS8YXiTTHKgGQH-lXNd0XFyA", chapter: "04", title: "Elite Arena" },
   ],
   backgroundColor = "bg-black",
 }: {
@@ -49,9 +47,9 @@ export const VisionPage = ({
         </SectionReveal>
       </div>
       
-      {/* Vision Image Grid (2x3) */}
+      {/* Vision Image Grid (2x2) */}
       <div className="w-full mb-0">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
           {visionImages.map((item, i) => (
             <SectionReveal key={i}>
               <div className="group relative overflow-hidden bg-zinc-900 aspect-[16/10]">
@@ -131,12 +129,10 @@ Builder.registerComponent(VisionPage, {
         { name: 'title', type: 'string' }
       ],
       defaultValue: [
-        { image: "https://lh3.googleusercontent.com/d/1EQ6CGGbwHIrWmlvYwguKUXdYfO2nClAB", chapter: "01", title: "Technical Excellence" },
-        { image: "https://lh3.googleusercontent.com/d/1G2TTak-8TY6jubXvti65dJei4-fXHFJ-", chapter: "02", title: "Tactical Mastery" },
-        { image: "https://lh3.googleusercontent.com/d/1Kj-U-ziGET1I5DP4FUM-ppEll51x8dRi", chapter: "03", title: "Mental Resilience" },
-        { image: "https://lh3.googleusercontent.com/d/1UH83YFsrMS8YXiTTHKgGQH-lXNd0XFyA", chapter: "04", title: "Athletic Performance" },
-        { image: "https://lh3.googleusercontent.com/d/1X8EFbO-MppRUFjFEcd01ckx30fLH4hGZ", chapter: "05", title: "Game Intelligence" },
-        { image: "https://lh3.googleusercontent.com/d/1_XpNPg8tixhEGYxmE-bPFVj9VSdhmqeg", chapter: "06", title: "Elite Pathway" },
+        { image: "https://lh3.googleusercontent.com/d/1EQ6CGGbwHIrWmlvYwguKUXdYfO2nClAB", chapter: "01", title: "Performance Weight Room" },
+        { image: "https://lh3.googleusercontent.com/d/1_XpNPg8tixhEGYxmE-bPFVj9VSdhmqeg", chapter: "02", title: "Indoor Match Pitch" },
+        { image: "https://lh3.googleusercontent.com/d/1G2TTak-8TY6jubXvti65dJei4-fXHFJ-", chapter: "03", title: "Technical Training Field" },
+        { image: "https://lh3.googleusercontent.com/d/1UH83YFsrMS8YXiTTHKgGQH-lXNd0XFyA", chapter: "04", title: "Elite Arena" },
       ]
     },
   ],
