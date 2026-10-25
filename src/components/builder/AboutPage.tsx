@@ -155,33 +155,22 @@ export const AboutPage = ({
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
             {/* Left Media Column (5 cols) */}
-            <div className="lg:col-span-5 order-last lg:order-first">
-              <SectionReveal yOffset={40}>
-                <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-zinc-950 border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.85)] group">
+            <div className="lg:col-span-5 order-last lg:order-first flex justify-center">
+              <SectionReveal yOffset={40} className="w-full max-w-[380px]">
+                <div className="relative aspect-[9/16] rounded-[2.5rem] overflow-hidden bg-zinc-950 border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.85)] group">
                   <img 
                     src="https://lh3.googleusercontent.com/d/1bIRqt6PKuxzBpde8q-EjC4HkoHzG7mQu" 
                     alt="Youth Development Training" 
-                    className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+                    className="w-full h-full object-contain transition-transform duration-1000 ease-out group-hover:scale-105"
                     referrerPolicy="no-referrer"
                   />
                   
-                  {/* Ambient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
+                  {/* Ambient Ring */}
                   <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[2.5rem] pointer-events-none" />
 
                   {/* Corner Accent Badge */}
-                  <div className="absolute top-6 left-6 px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-mono tracking-widest uppercase text-ice-blue font-bold">
+                  <div className="absolute top-5 left-5 px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-mono tracking-widest uppercase text-ice-blue font-bold">
                     HIGH PERFORMANCE
-                  </div>
-
-                  {/* Bottom Strip */}
-                  <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-zinc-900/80 backdrop-blur-md border border-white/10 flex items-center justify-between">
-                    <span className="text-xs font-bold text-white uppercase tracking-wider">
-                      Game-Speed Execution
-                    </span>
-                    <span className="text-[11px] font-mono text-ice-blue font-bold">
-                      IQ & INTELLECT
-                    </span>
                   </div>
                 </div>
               </SectionReveal>
