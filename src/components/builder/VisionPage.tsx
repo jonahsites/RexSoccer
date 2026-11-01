@@ -14,7 +14,7 @@ export const VisionPage = ({
   ],
   visionImages = [
     { image: "https://lh3.googleusercontent.com/d/1EQ6CGGbwHIrWmlvYwguKUXdYfO2nClAB", chapter: "01", title: "Performance Weight Room" },
-    { image: "https://lh3.googleusercontent.com/d/1_XpNPg8tixhEGYxmE-bPFVj9VSdhmqeg", chapter: "02", title: "Indoor Match Pitch" },
+    { image: "/vision_turf_facility.webp", chapter: "02", title: "Indoor Training Arena" },
     { image: "https://lh3.googleusercontent.com/d/1G2TTak-8TY6jubXvti65dJei4-fXHFJ-", chapter: "03", title: "Technical Training Field" },
     { image: "https://lh3.googleusercontent.com/d/1UH83YFsrMS8YXiTTHKgGQH-lXNd0XFyA", chapter: "04", title: "Elite Arena" },
   ],
@@ -130,7 +130,7 @@ Builder.registerComponent(VisionPage, {
       ],
       defaultValue: [
         { image: "https://lh3.googleusercontent.com/d/1EQ6CGGbwHIrWmlvYwguKUXdYfO2nClAB", chapter: "01", title: "Performance Weight Room" },
-        { image: "https://lh3.googleusercontent.com/d/1_XpNPg8tixhEGYxmE-bPFVj9VSdhmqeg", chapter: "02", title: "Indoor Match Pitch" },
+        { image: "/vision_turf_facility.webp", chapter: "02", title: "Indoor Training Arena" },
         { image: "https://lh3.googleusercontent.com/d/1G2TTak-8TY6jubXvti65dJei4-fXHFJ-", chapter: "03", title: "Technical Training Field" },
         { image: "https://lh3.googleusercontent.com/d/1UH83YFsrMS8YXiTTHKgGQH-lXNd0XFyA", chapter: "04", title: "Elite Arena" },
       ]
