@@ -16,7 +16,7 @@ export const VisionPage = ({
     { image: "https://lh3.googleusercontent.com/d/1EQ6CGGbwHIrWmlvYwguKUXdYfO2nClAB", chapter: "01", title: "Performance Weight Room" },
     { image: "/vision_turf_facility.webp", chapter: "02", title: "Indoor Training Arena" },
     { image: "https://lh3.googleusercontent.com/d/1G2TTak-8TY6jubXvti65dJei4-fXHFJ-", chapter: "03", title: "Technical Training Field" },
-    { image: "https://lh3.googleusercontent.com/d/1UH83YFsrMS8YXiTTHKgGQH-lXNd0XFyA", chapter: "04", title: "Elite Arena" },
+    { image: "/vision_indoor_field_2.webp", chapter: "04", title: "Elite Arena" },
   ],
   backgroundColor = "bg-black",
 }: {
@@ -132,7 +132,7 @@ Builder.registerComponent(VisionPage, {
         { image: "https://lh3.googleusercontent.com/d/1EQ6CGGbwHIrWmlvYwguKUXdYfO2nClAB", chapter: "01", title: "Performance Weight Room" },
         { image: "/vision_turf_facility.webp", chapter: "02", title: "Indoor Training Arena" },
         { image: "https://lh3.googleusercontent.com/d/1G2TTak-8TY6jubXvti65dJei4-fXHFJ-", chapter: "03", title: "Technical Training Field" },
-        { image: "https://lh3.googleusercontent.com/d/1UH83YFsrMS8YXiTTHKgGQH-lXNd0XFyA", chapter: "04", title: "Elite Arena" },
+        { image: "/vision_indoor_field_2.webp", chapter: "04", title: "Elite Arena" },
       ]
     },
   ],
