@@ -17,6 +17,7 @@ export const Footer = ({
     { label: "Locations", href: "#locations", isPage: false },
     { label: "Vision", href: "#vision", isPage: true, page: "vision" },
     { label: "Team", href: "#team", isPage: true, page: "team" },
+    { label: "Camps", href: "#camps", isPage: true, page: "camps" },
     { label: "Merch", href: "#merch", isPage: true, page: "merch" }
   ],
   socials = [
@@ -201,6 +202,7 @@ Builder.registerComponent(Footer, {
         { label: "Locations", href: "#locations", isPage: false },
         { label: "Vision", href: "#vision", isPage: true, page: "vision" },
         { label: "Team", href: "#team", isPage: true, page: "team" },
+        { label: "Camps", href: "#camps", isPage: true, page: "camps" },
         { label: "Merch", href: "#merch", isPage: true, page: "merch" }
       ],
     },

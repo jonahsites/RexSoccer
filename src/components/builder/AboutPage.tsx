@@ -155,8 +155,8 @@ export const AboutPage = ({
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
             {/* Left Media Column (5 cols) */}
-            <div className="lg:col-span-5 order-last lg:order-first flex justify-center">
-              <SectionReveal yOffset={40} className="w-full max-w-[410px]">
+            <div className="lg:col-span-5 order-last lg:order-first flex justify-center lg:justify-end">
+              <SectionReveal yOffset={40} className="w-full max-w-[410px] lg:mr-[-1rem]">
                 <div className="relative aspect-[9.8/16] rounded-[2.5rem] overflow-hidden bg-zinc-950 border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.85)] group">
                   <img 
                     src="https://lh3.googleusercontent.com/d/1bIRqt6PKuxzBpde8q-EjC4HkoHzG7mQu" 

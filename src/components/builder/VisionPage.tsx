@@ -48,11 +48,11 @@ export const VisionPage = ({
       </div>
       
       {/* Vision Image Grid (2x2) */}
-      <div className="w-full mb-0">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
+      <div className="w-full mb-0 px-4 sm:px-0 max-w-md sm:max-w-none mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-0">
           {visionImages.map((item, i) => (
             <SectionReveal key={i}>
-              <div className="group relative overflow-hidden bg-zinc-900 aspect-[16/10]">
+              <div className="group relative overflow-hidden bg-zinc-900 aspect-[16/8.5] sm:aspect-[16/10] rounded-2xl sm:rounded-none">
                 <img 
                   src={item.image} 
                   alt={item.title || `Vision ${i}`} 

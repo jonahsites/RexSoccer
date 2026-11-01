@@ -13,5 +13,6 @@ export * from './PhotosPage';
 export * from './TeamPage';
 export * from './VisionPage';
 export * from './MerchPage';
+export * from './CampsPage';
 export * from './FrameworkSection';
 export * from './SectionReveal';

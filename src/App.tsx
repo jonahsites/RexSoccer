@@ -19,6 +19,7 @@ import { AboutPage } from './components/builder/AboutPage';
 import { TeamPage } from './components/builder/TeamPage';
 import { VisionPage } from './components/builder/VisionPage';
 import { MerchPage } from './components/builder/MerchPage';
+import { CampsPage } from './components/builder/CampsPage';
 
 // --- Error Boundary ---
 interface ErrorBoundaryProps {
@@ -109,6 +110,17 @@ function App() {
               exit={{ opacity: 0 }}
             >
               <MerchPage onBack={() => setCurrentPage('home')} backgroundColor="bg-black" />
+            </motion.div>
+          )}
+
+          {currentPage === 'camps' && (
+            <motion.div 
+              key="camps"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <CampsPage onBack={() => setCurrentPage('home')} backgroundColor="bg-black" />
             </motion.div>
           )}
         </AnimatePresence>
