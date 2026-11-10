@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Sparkles, Trophy, Flame } from 'lucide-react';
+import { ArrowRight, Trophy, Flame } from 'lucide-react';
 import { Builder } from '@builder.io/react';
 import { SectionReveal } from './common';
 import { Footer } from './Footer';
@@ -66,11 +66,6 @@ export const AboutPage = ({
             {/* Left Content Column (7 cols) */}
             <div className="lg:col-span-7 space-y-8">
               <SectionReveal>
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-ice-blue/10 border border-ice-blue/30 text-ice-blue font-mono font-bold uppercase tracking-widest text-[11px] mb-4">
-                  <Sparkles className="w-3.5 h-3.5 text-ice-blue" />
-                  THE FUTURE
-                </div>
-                
                 <h3 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tighter text-white uppercase mb-6">
                   TRAIN WITH <span className="text-ice-blue">PURPOSE.</span>
                 </h3>
@@ -121,21 +116,8 @@ export const AboutPage = ({
                   />
                   
                   {/* Atmospheric Gradients */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-90" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80" />
                   <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[2.5rem] pointer-events-none" />
-
-                  {/* Floating Mission Card Overlay */}
-                  <div className="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-black/80 backdrop-blur-xl border border-white/15 shadow-2xl">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="w-2 h-2 rounded-full bg-ice-blue animate-pulse" />
-                      <span className="text-[10px] font-mono tracking-widest uppercase text-white/60 font-bold">
-                        The Mission
-                      </span>
-                    </div>
-                    <p className="text-base md:text-lg font-medium text-white leading-snug">
-                      Unlock your true potential through elite, intentional experience.
-                    </p>
-                  </div>
                 </div>
               </SectionReveal>
             </div>
@@ -156,8 +138,8 @@ export const AboutPage = ({
             
             {/* Left Media Column (5 cols) */}
             <div className="lg:col-span-5 order-last lg:order-first flex justify-center lg:justify-end">
-              <SectionReveal yOffset={40} className="w-full max-w-[410px] lg:mr-[-1rem]">
-                <div className="relative aspect-[9.8/16] rounded-[2.5rem] overflow-hidden bg-zinc-950 border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.85)] group">
+              <SectionReveal yOffset={40} className="w-full max-w-[425px] lg:mr-[-1rem]">
+                <div className="relative aspect-[10.2/16] rounded-[2.5rem] overflow-hidden bg-zinc-950 border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.85)] group">
                   <img 
                     src="https://lh3.googleusercontent.com/d/1bIRqt6PKuxzBpde8q-EjC4HkoHzG7mQu" 
                     alt="Youth Development Training" 
@@ -179,10 +161,6 @@ export const AboutPage = ({
             {/* Right Content Column (7 cols) */}
             <div className="lg:col-span-7 space-y-8">
               <SectionReveal>
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-ice-blue font-mono font-bold uppercase tracking-widest text-[11px] mb-4">
-                  Our Mission
-                </div>
-
                 <h3 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tighter text-white uppercase mb-6">
                   FIXING THE <span className="text-ice-blue">U.S.</span><br />YOUTH SYSTEM.
                 </h3>

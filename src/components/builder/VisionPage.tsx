@@ -48,18 +48,18 @@ export const VisionPage = ({
       </div>
       
       {/* Vision Image Grid (2x2) */}
-      <div className="w-full mb-0 px-4 sm:px-0 max-w-md sm:max-w-none mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-0">
+      <div className="w-full mb-16 px-4 sm:px-6 max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto">
+        <div className="grid grid-cols-2 gap-2 sm:gap-1.5 rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.8)] bg-zinc-950 p-1 sm:p-1.5">
           {visionImages.map((item, i) => (
-            <SectionReveal key={i}>
-              <div className="group relative overflow-hidden bg-zinc-900 aspect-[16/8.5] sm:aspect-[16/10] rounded-2xl sm:rounded-none">
+            <SectionReveal key={i} className="h-full">
+              <div className="group relative overflow-hidden bg-zinc-900 aspect-[16/10] rounded-lg sm:rounded-xl">
                 <img 
                   src={item.image} 
                   alt={item.title || `Vision ${i}`} 
                   className="w-full h-full object-cover block transition-transform duration-[3000ms] group-hover:scale-105"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-black/10 transition-colors duration-700" />
+                <div className="absolute inset-0 bg-black/15 group-hover:bg-transparent transition-colors duration-700 pointer-events-none" />
               </div>
             </SectionReveal>
           ))}

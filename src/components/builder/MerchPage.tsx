@@ -22,10 +22,10 @@ export const MerchPage = ({
       className={`min-h-screen ${backgroundColor} flex items-center justify-center px-6`}
     >
       <div className="text-center">
-        <button onClick={onBack} className="mb-12 inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white/40 hover:text-ice-blue transition-all">
+        <button onClick={onBack} className="mb-12 inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white/40 hover:text-ice-blue transition-all cursor-pointer">
           <ArrowRight className="w-4 h-4 rotate-180" /> Back to Home
         </button>
-        <h2 className="text-6xl md:text-9xl font-black tracking-tighter text-white uppercase mb-4">{title}</h2>
+        <h2 className="text-6xl md:text-9xl font-black tracking-tighter text-white uppercase mb-4 whitespace-nowrap">{title}</h2>
         <p className="text-ice-blue font-black uppercase tracking-[0.4em] text-xs">{subtitle}</p>
       </div>
     </motion.div>

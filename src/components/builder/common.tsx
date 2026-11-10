@@ -26,10 +26,19 @@ export const SplitText = ({ text, className, delay = 0 }: { text: string, classN
   );
 };
 
-export const SectionReveal = ({ children, className }: { children: React.ReactNode, className?: string, key?: React.Key }) => {
+export const SectionReveal = ({ 
+  children, 
+  className, 
+  yOffset = 40 
+}: { 
+  children: React.ReactNode; 
+  className?: string; 
+  key?: React.Key; 
+  yOffset?: number; 
+}) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: yOffset }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
