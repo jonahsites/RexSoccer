@@ -182,7 +182,7 @@ export const Hero = ({
               <motion.button 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => window.dispatchEvent(new CustomEvent('changePage', { detail: 'vision' }))}
+                onClick={() => window.dispatchEvent(new CustomEvent('changePage', { detail: 'about' }))}
                 className="bg-white text-black hover:bg-ice-blue hover:text-black px-12 py-5 rounded-xl font-black uppercase tracking-widest text-xs flex items-center gap-3 transition-all shadow-2xl shadow-white/5"
               >
                 {cta2Text} <ArrowRight className="w-4 h-4" />

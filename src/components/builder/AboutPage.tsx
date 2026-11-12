@@ -162,7 +162,7 @@ export const AboutPage = ({
             <div className="lg:col-span-7 space-y-8">
               <SectionReveal>
                 <h3 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tighter text-white uppercase mb-6">
-                  FIXING THE <span className="text-ice-blue">U.S.</span><br />YOUTH SYSTEM.
+                  FIXING THE <br /><span className="text-ice-blue">YOUTH</span> SYSTEM.
                 </h3>
 
                 <div className="space-y-6 text-white/70 text-base md:text-lg font-normal leading-relaxed">

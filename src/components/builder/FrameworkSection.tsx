@@ -21,7 +21,7 @@ interface FrameworkSectionProps {
 }
 
 export const FrameworkSection = ({
-  badgeText = "// THE DEVELOPMENT",
+  badgeText = "THE DEVELOPMENT",
   title = "BUILT FOR THE ELITE GAME.",
   subtitle = "",
   centerImage = "https://lh3.googleusercontent.com/d/12DZSzJvEIHWLiaFVy76PR-nx2S35kGom",
@@ -79,9 +79,9 @@ export const FrameworkSection = ({
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <SectionReveal className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-          <span className="text-ice-blue font-bold uppercase tracking-[0.25em] text-xs mb-3 block">
-            {badgeText}
-          </span>
+          <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-zinc-900 border border-white/10 mb-8 shadow-inner">
+            <span className="text-xs font-black uppercase tracking-[0.25em] text-ice-blue">{badgeText.replace(/^\/\/\s*/, '')}</span>
+          </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white uppercase leading-[1.05]">
             {title}
           </h2>
@@ -207,7 +207,7 @@ Builder.registerComponent(FrameworkSection, {
   name: 'FrameworkSection',
   inputs: [
     { name: 'backgroundColor', type: 'string', defaultValue: 'bg-black' },
-    { name: 'badgeText', type: 'string', defaultValue: '// THE DEVELOPMENT' },
+    { name: 'badgeText', type: 'string', defaultValue: 'THE DEVELOPMENT' },
     { name: 'title', type: 'string', defaultValue: 'BUILT FOR THE ELITE GAME.' },
     { name: 'subtitle', type: 'string', defaultValue: '' },
     { name: 'centerImage', type: 'file', defaultValue: 'https://lh3.googleusercontent.com/d/12DZSzJvEIHWLiaFVy76PR-nx2S35kGom' },
